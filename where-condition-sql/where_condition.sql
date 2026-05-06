@@ -27,10 +27,13 @@
 
         SELECT * FROM movies
         WHERE year > 2000;
+    -- Explanation: This query selects all columns from the 'movies' table where the 'year' is greater than 2000. The '>' operator is used to filter the results based on a condition that specifies that the year must be greater than 2000.
 
 
 ##  6.Find all movies directed by John Lasseter.
 
+        SELECT * FROM MOVIES
+        WHERE director="John Lasseter";
 
 
 ##  7.Find all movies with length greater than 100 minutes.
