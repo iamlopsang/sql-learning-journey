@@ -58,3 +58,7 @@
 
 
 ##  10.Find movies whose title contains "Toy" (use LIKE — covered in a later lesson, but you can try).
+
+        SELECT *FROM movies
+        WHERE title  LIKE "%Toy%";
+    -- Explanation: This query selects all columns from the 'movies' table where the 'title
