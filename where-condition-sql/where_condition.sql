@@ -34,18 +34,27 @@
 
         SELECT * FROM MOVIES
         WHERE director="John Lasseter";
-
+    -- Explanation: This query selects all columns from the 'movies' table where the 'director' is equal to "John Lasseter". The '=' operator is used to filter the results based on a specific value in the 'director' column.
 
 ##  7.Find all movies with length greater than 100 minutes.
 
+        SELECT * FROM movies
+        WHERE length_minutes > 100;
+    -- Explanation: This query selects all columns from the 'movies' table where the 'length_minutes' is greater than 100. The '>' operator is used to filter the results based on a condition that specifies that the length of the movie must be greater than 100 minutes.
 
 
 ##  8.Find movies that are between 95 and 105 minutes (inclusive).
 
+        SELECT * FROM movies
+        WHERE length_minutes BETWEEN 95 AND 105;
+    -- Explanation: This query selects all columns from the 'movies' table where the 'length_minutes' is between 95 and 105, inclusive. The 'BETWEEN' operator is used to filter the results based on a range of values, and it includes the boundary values (95 and 105) in the results.
 
 
 ##  9.Find movies directed by Brad Bird OR Andrew Stanton (use IN).
 
+        SELECT * FROM movies
+        WHERE director IN ("Brad Bird", "Andrew Stanton");
+    -- Explanation: This query selects all columns from the 'movies' table where the 'director' is either "Brad Bird" or "Andrew Stanton". The 'IN' operator is used to filter the results based on a list of specified values in the 'director' column.
 
 
 ##  10.Find movies whose title contains "Toy" (use LIKE — covered in a later lesson, but you can try).
