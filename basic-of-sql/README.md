@@ -1,4 +1,4 @@
-##  Pixar Movies Queries-Exercise 1
+##  Pixar Movies Queries-Exercise 1 of SQL Lesson 1
     This exercise focuses on basic SQL SELECT queries using a simple movies table.
 
 ## Table Overview 
