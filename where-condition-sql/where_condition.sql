@@ -1,7 +1,7 @@
 ##  Exercise 2 — Tasks
 ##  1.Find the movie with a row id of 6
 
-        SELECT * FROM movies WHERE rowid = 6;
+        SELECT * FROM movies WHERE id = 6;
     -- Explanation: This query selects all columns from the 'movies' table where the 'rowid' is equal to 6. The 'WHERE' clause is used to filter the results based on a specified condition.
 
 ##  2.Find the movies released in the year's between 2000 and 2010.
