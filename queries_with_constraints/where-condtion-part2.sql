@@ -78,10 +78,45 @@
         WHERE title LIKE "Story%";
         -- Explanation: This query selects all columns from the 'movies' table where the 'title ends with "Story". The 'LIKE' operator is used to filter the results based on a specified pattern, and the '%' wildcard character allows for any characters to precede "Story" in the title.    
 
-Find movies NOT directed by Brad Bird or Pete Docter.
-Find movies with “Toy” in the title AND released after 1995.
-Find movies released before 2005 OR longer than 110 minutes.
-Find movies whose director name starts with “John”.
-Find movies whose title contains “Monsters”.
-Find movies released between 2000 and 2010.
-Find movies with titles that do NOT contain “Cars”.
+    --  13.Find movies NOT directed by Brad Bird or Pete Docter.
+
+        SELECT * FROM movies
+        WHERE director !="Brad Bird" AND director !="Pete Docter";
+        -- Explanation: This query selects all columns from the 'movies' table where the 'director' is not equal to "Brad Bird" and not equal to "Pete Docter". This will return movies that are directed by neither Brad Bird nor Pete Docter.
+
+    -- 14.Find movies with “Toy” in the title AND released after 1995.
+
+        SELECT * FROM movies
+        WHERE title LIKE "%Toy%" AND year > 1995;
+        -- Explanation: This query selects all columns from the 'movies' table where the 'title contains "Toy" and the 'year' is greater than 1995. The 'LIKE' operator is used to filter the results based on a specified pattern in the 'title', and the 'AND' operator is used to ensure that both conditions must be true for a movie to be included in the results.    
+        
+    -- 15.Find movies released before 2005 OR longer than 110 minutes.
+
+        SELECT * FROM movies
+        WHERE year < 2005 or length_minutes > 110;
+        -- Explanation: This query selects all columns from the 'movies' table where the 'year  is less than 2005 or the 'length_minutes' is greater than 110. The 'OR' operator is used to filter the results based on multiple conditions where at least one condition must be true for a movie to be included in the results.    
+
+    -- 16.Find movies whose director name starts with “John”.
+
+        SELECT * FROM movies
+        WHERE director LIKE "%John%";
+        -- Explanation: This query selects all columns from the 'movies' table where the 'director' contains "John". The 'LIKE' operator is used to filter the results based on a specified pattern, and the '%' wildcard character allows for any characters to precede or follow "John" in the director's name.   
+
+    -- 17. Find movies whose title contains “Monsters”.
+
+        SELECT * FROM movies
+        where tile LIKE "%Monsters%";
+        -- Explanation: This query selects all columns from the 'movies' table where the 'title' contains "Monsters". The 'LIKE' operator is used to filter the results based on a specified pattern, and the '%' wildcard character allows for any characters to precede or follow "Monsters" in the title.    
+
+    -- 18. Find movies released between 2000 and 2010.
+
+        SELECT * FROM movies
+        WJERE year BETWEEN 2000 AND 2010;
+        -- Explanation: This query selects all columns from the 'movies' table where the 'year' is between 2000 and 2010, inclusive. The 'BETWEEN' operator is used to filter the results based on a range of values in the 'year' column.  
+
+
+    -- 19. Find movies with titles that do NOT contain “Cars”.
+
+        SELECT * FROM movies
+        WHERE title NOT LIKE "%Cars%";
+        -- Explanation: This query selects all columns from the 'movies' table where the 'title' does not contain "Cars". The 'NOT LIKE' operator is used to filter the results based on a specified pattern that should be excluded, and the '%' wildcard character allows for any characters to precede or follow "Cars" in the title.    
