@@ -26,4 +26,20 @@ FROM movies
 WHERE studio = 'Pixar' AND release_date >= '1990-01-01' AND release_date < '2000-01-01'
 ORDER BY release_date ASC;
 
+List the next five Pixar movies sorted alphabetically
+
+    SELECT title
+    FROM movies         
+    WHERE studio = 'Pixar' AND release_date > '2020-01-01'
+    ORDER BY title ASC  
+    LIMIT 5;
+
+List all Pixar movies released in the 2000s, sorted by release date (oldest to newest)
+SELECT title, release_date
+FROM movies
+WHERE studio = 'Pixar' AND release_date >= '2000-01-01' AND release_date < '2010-01-01' 
+ORDER BY release_date ASC;
+
+    
+
 
