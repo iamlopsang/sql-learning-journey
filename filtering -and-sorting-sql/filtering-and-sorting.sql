@@ -1,45 +1,35 @@
-List all directors of Pixar movies (alphabetically), without duplicates
+-- ## Exercises of SQL Lesson 4: Filtering and sorting Query results.
 
-SELECT DISTINCT director
-FROM movies
-WHERE studio = 'Pixar'
-ORDER BY director ASC;
+    -- 1.List all directors of Pixar movies (alphabetically), without duplicates.
 
-List the last four Pixar movies released (ordered from most recent to least)
+        SELECT DISTINCT DIRECTOR fROM MOVIES
+        ORDER BY director ASC;
+        -- Explanation: This query selects the unique directors from the 'movies' table and orders them in ascending alphabetical order. The 'DISTINCT' keyword is used to ensure that duplicate director names are not included in the results, and the 'ORDER BY' clause sorts the results alphabetically.   
 
-SELECT title, release_date
-FROM movies WHERE studio = 'Pixar'
-ORDER BY release_date DESC  
-LIMIT 4;
+    -- 2. List the last four Pixar movies released (ordered from most recent to least).
 
-List the first five Pixar movies sorted alphabetically.
+        SELECT * FROM movies
+        OREDER BY year DESC
+        LIMIT 4;
+        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in descending order (most recent to least), and limits the output to the first four records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to four.    
 
-SELECT title
-FROM movies WHERE studio = 'Pixar'
-ORDER BY title ASC
-LIMIT 5;
+    -- 3. List the first five Pixar movies sorted alphabetically.
 
+        SELECT * FROM movies
+        ORDER BY title ASC
+        LIMIT 5;
+        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'title' column in ascending alphabetical order, and limits the output to the first five records. The 'ORDER BY' clause sorts the results based on the movie titles, and the 'LIMIT' clause restricts the number of records returned to five.  
+        
 List all Pixar movies released in the 1990s, sorted by release date (oldest to newest)  
 
-SELECT title, release_date
-FROM movies                 
-WHERE studio = 'Pixar' AND release_date >= '1990-01-01' AND release_date < '2000-01-01'
-ORDER BY release_date ASC;
+
+
 
 List the next five Pixar movies sorted alphabetically
 
-    SELECT title
-    FROM movies         
-    WHERE studio = 'Pixar' AND release_date > '2020-01-01'
-    ORDER BY title ASC  
-    LIMIT 5;
+    
 
 List all Pixar movies released in the 2000s, sorted by release date (oldest to newest)
-SELECT title, release_date
-FROM movies
-WHERE studio = 'Pixar' AND release_date >= '2000-01-01' AND release_date < '2010-01-01' 
-ORDER BY release_date ASC;
 
-    
 
 
