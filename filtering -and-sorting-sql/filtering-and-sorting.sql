@@ -37,6 +37,58 @@
     -- 6. List all Pixar movies released in the 2000s, sorted by release date (oldest to newest).
 
         SELECT * FROM movvies
-        WHERE year >= 2000 AND year < 2013
+        WHERE year > = 2000 AND year < 2013
         ORDER BY  year ASC;
-        -- Explanation: This query selects all columns from the 'movies' table, filters the results to include only movies released between 2000 and 2009 using the 'WHERE' clause, and orders the results by the 'year' column in ascending order (oldest to newest). The 'WHERE' clause ensures that only movies from the 2000s are included in the results, and the 'ORDER BY' clause sorts them by their release year.  
+        -- Explanation: This query selects all columns from the 'movies' table, filters the results to include   only movies released between 2000 and 2009 using the 'WHERE' clause, and orders the results by the 'year' column in ascending order (oldest to newest). The 'WHERE' clause ensures that only movies from the 2000s are included in the results, and the 'ORDER BY' clause sorts them by their release year.  
+
+            -- Level 1 — Basic Understanding
+
+    -- 7. Show all movie titles only.
+
+        SELECT title 
+        FROM movies;
+        -- Explanation: This query selects only the 'title' column from the 'movies' table, which will return a list of all movie titles. The 'SELECT' statement specifies that only the 'title' field should be included in the results, and since there is no 'WHERE' clause or 'ORDER BY' clause, it will return all movie titles in the order they are stored in the database.  
+
+    -- 8. Show all unique directors.
+
+        SELECT DISTINCT director
+        FROM movies;
+        -- Explanation: This query selects the unique values from the 'director' column in the 'movies' table. The 'DISTINCT' keyword ensures that duplicate director names are not included in the results, so it will return a list of all unique directors from the movies database. 
+
+    -- 9. Show movie titles sorted alphabetically.
+
+        SELECT title
+        FROM movies
+        ORDER BY year ASC;
+         -- Expalnation: This query selects all movie titles and sorts them from the oldest year to the newest.
+
+    -- 10. Show movie titles sorted reverse alphabetically.
+
+        SELECT title
+        FROM movies
+        ORDER BY year DESC;
+        -- Explanation: This query selects all movie titles and sorts them from the newest year to the oldest.
+
+    -- 11. Show all movies from oldest to newest.
+
+        SELECT * FROM movies
+        ORDER BY year ASC;
+        -- Explanation: This query selects all columns from the 'movies' table and orders the results by the 'year' column in ascending order, which means it will display the movies starting from the oldest release year to the newest. The 'ORDER BY' clause is used to sort the results based on the release year. 
+
+    -- 12. Show all movies from newest to oldest.
+
+        SELECT * FROM movies
+        ORDER BY year DESC;
+        -- Explanation: This query selects all columns from the 'movies' table and orders the results by the 'year' column in descending order, which means it will display the movies starting from the newest release year to the oldest. The 'ORDER BY' clause is used to sort the results based on the release year.
+
+    -- 13. Show only the first 5 movies.
+
+        SELECT * FROM movies
+        LIMIT 5;
+        -- Explanation: This query selects all columns from the 'movies' table and limits the output to the first five records. The 'LIMIT' clause is used to specify the maximum number of records to return, so in this case, it will return only the first five movies from the database.    
+
+    -- 14. Show 3 movies after skipping the first 2 rows.
+
+        SELECT * FROM movies
+        LIMIT 3 OFFEST 2;
+        -- Explanation: This query selects all columns from the 'movies' table, limits the output to three records, and skips the first two records. The 'LIMIT' clause specifies that only three records should be returned, while the 'OFFSET' clause tells the database to skip the first two records in the result set before starting to return records.   
