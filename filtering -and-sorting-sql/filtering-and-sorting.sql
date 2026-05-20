@@ -136,4 +136,10 @@
         LIMIT 5;
         -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), and limits the output to the first five records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to five. 
 
-    -- 21. Skip first 5 movies and show next 5
+    -- 21. Skip first 5 movies and show next 5.
+
+        SELECT * FROM movies
+        ORDER BY year ASC
+        LIMIT 5 OFFEST 5;
+        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), limits the output to five records, and skips the first five records. The 'ORDER BY' clause sorts the results based on the release year, the 'LIMIT' clause restricts the number of records returned to five, and the 'OFFSET' clause tells the database to skip the first five records in the sorted list before starting to return records. 
+        
