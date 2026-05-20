@@ -92,3 +92,48 @@
         SELECT * FROM movies
         LIMIT 3 OFFEST 2;
         -- Explanation: This query selects all columns from the 'movies' table, limits the output to three records, and skips the first two records. The 'LIMIT' clause specifies that only three records should be returned, while the 'OFFSET' clause tells the database to skip the first two records in the result set before starting to return records.   
+
+
+        -- Level 2 — Intermediate Practice
+
+    -- 15. Show movie title and length, sorted by shortest movie first.
+
+        SELECT title, length_minutes
+        FROM movies
+        ORDER BY lenth_minutes ASC;
+        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table and orders the results by the 'length_minutes' column in ascending order, which means it will display the movies starting from the shortest duration to the longest. The 'ORDER BY' clause is used to sort the results based on the length of the movies.   
+
+    -- 16. Show movie title and length, sorted by longest movie first.
+
+        SELECT title, length_minutes
+        FROM movies
+        ORDER BY length_minutes DESC;
+        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the    'movies' table and orders the results by the 'length_minutes' column in descending order, which means it will display the movies starting from the longest duration to the shortest. The 'ORDER BY' clause is used to sort the results based on the length of the movies.   
+
+    -- 17. Show the 4 newest movies.
+
+        SELECT * FROM movies
+        ORDER BY year DESC
+        LIMIT 4;
+        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in descending order (newest to oldest), and limits the output to the first four records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to four.    
+
+    -- 18. Show unique years in which movies were released.
+
+        SELECT DISTINCT year 
+        FROM movies;
+        -- Explanation: This query selects the unique values from the 'year' column in the 'movies' table. The 'DISTINCT' keyword ensures that duplicate years are not included in the results, so it will return a list of all unique years in which movies were released. 
+        
+    -- 19. Show movies sorted by director name alphabetically.
+
+        SELECT * FROM movies
+        ORDER BY director ASC;
+        -- Explanation: This query selects all columns from the 'movies' table and orders the results  by the 'director' column in ascending alphabetical order. The 'ORDER BY' clause is used to sort the results based on the director's name.   
+
+    -- 20. Show the 5 oldest movies.
+
+        SELECT * FROM movies
+        ORDER BY year ASC
+        LIMIT 5;
+        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), and limits the output to the first five records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to five. 
+
+    -- 21. Skip first 5 movies and show next 5
