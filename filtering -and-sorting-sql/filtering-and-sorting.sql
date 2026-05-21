@@ -143,3 +143,45 @@
         LIMIT 5 OFFEST 5;
         -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), limits the output to five records, and skips the first five records. The 'ORDER BY' clause sorts the results based on the release year, the 'LIMIT' clause restricts the number of records returned to five, and the 'OFFSET' clause tells the database to skip the first five records in the sorted list before starting to return records. 
         
+
+        -- Level 3 — Combining Concepts
+
+      --22.Show unique directors sorted alphabetically.
+
+
+        SELECT DISTINCT director
+        FROM movies
+        ORDER BY director ASC;
+        -- Explanation: This query selects the unique directors from the 'movies' table and orders them in ascending alphabetical order. The 'DISTINCT' keyword is used to ensure that duplicate director names are not included in the results, and the 'ORDER BY' clause sorts the results alphabetically.    
+
+    --23. Show movie title and year for movies after 2005, sorted newest first.
+
+        SELECT title, year FROM movies
+        WHERE year > 2005
+        ORDER BY year DESC;
+        -- Explanation: This query selects the 'title' and 'year' columns from the 'movies' table, filters the results to include only movies released after 2005 using the 'WHERE' clause, and orders the results by the 'year' column in descending order (newest to oldest). The 'WHERE' clause ensures that only movies released after 2005 are included in the results, and the 'ORDER BY' clause sorts them by their release year.    
+
+    -- 24. Show the 3 shortest movies.
+
+        SELECT title, length_minutes
+        FROM movies
+        ODER BY length_minutes ASC
+        LIMIT 3;
+        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table, orders the results by the 'length_minutes' column in ascending order (shortest to longest), and limits the output to the first three records. The 'ORDER BY' clause is used to sort the results based on the length of the movies, and the 'LIMIT' clause restricts the number of records returned to three.   
+        
+    -- 25. Show the 2 longest movies released after 2000.
+
+        SELECT title, length_minutes 
+        FROM movies
+        WHERE year > 2000
+        ORDER BY length_minutes DESC;
+        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table, filters the results to include only movies released after 2000 using the 'WHERE' clause, orders the results by the 'length_minutes' column in descending order (longest to shortest), and limits the output to the first two records. The 'WHERE' clause ensures that only movies released after 2000 are included in the results, the 'ORDER BY' clause sorts them by their length, and the 'LIMIT' clause restricts the number of records returned to two.   
+
+    -- 26. Show titles alphabetically, but skip first 3 movies and display next 4.
+
+        SELECT title 
+        FROM movies
+        ORDER BY title ASC
+        MINIT 4 OFFSET 3;
+        -- Explanation: This query selects the 'title' column from the 'movies' table, orders the results alphabetically by the 'title' column in ascending order, limits the output to four records, and skips the first three records. The 'ORDER BY' clause sorts the results based on the movie titles, the 'LIMIT' clause restricts the number of records returned to four, and the 'OFFSET' clause tells the database to skip the first three records in the sorted list before starting to return records.   
+        
