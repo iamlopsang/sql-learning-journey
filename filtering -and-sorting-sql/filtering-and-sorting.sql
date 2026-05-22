@@ -185,3 +185,55 @@
         MINIT 4 OFFSET 3;
         -- Explanation: This query selects the 'title' column from the 'movies' table, orders the results alphabetically by the 'title' column in ascending order, limits the output to four records, and skips the first three records. The 'ORDER BY' clause sorts the results based on the movie titles, the 'LIMIT' clause restricts the number of records returned to four, and the 'OFFSET' clause tells the database to skip the first three records in the sorted list before starting to return records.   
         
+
+        -- Challenge Questions
+
+        -- 27. Show unique directors of movies released after 2000.
+            
+            SELECT DISTINCT director
+            FROM movies
+            WHERE year  > 2000;
+        -- Explanation: This query selects the unique directors from the 'movies' table, filters the results to include only movies released after 2000 using the 'WHERE' clause, and returns a list of unique directors. The 'DISTINCT' keyword ensures that duplicate director names are not included in the results, and the 'WHERE' clause ensures that only movies released after 2000 are considered when determining the unique directors.
+
+
+        -- 28. Show movie title, year, and length sorted:
+
+        --     by year descending
+        --     then by title ascending
+
+            SELECT title, year, length_minutes
+            FROM movies
+            ORDER BY year DESC, title ASC
+            -- Explanation: This query selects the 'title', 'year', and 'length_minutes' columns from the 'movies' table and orders the results first by the 'year' column in descending order (newest to oldest) and then by the 'title' column in ascending order (A to Z) for movies released in the same year. The 'ORDER BY' clause is used to specify multiple sorting criteria, with the primary sort being by year and the secondary sort being by title.                               
+
+
+        -- 29. Find the newest movie.
+
+        --     (Hint: Use ORDER BY + LIMIT)
+
+            SELECT title, year
+            FROM movies
+            ORDER BY year DESC
+            LIMIT 1;
+        -- Explanation: This query selects the 'title' and 'year' columns from the 'movies' table, orders the results by the 'year' column in descending order (newest to oldest), and limits the output to the first record. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to one, which will be the newest movie in the database.    
+
+
+        -- 30. Find the oldest movie.
+
+            SELECT title, year
+            FROM movies
+            ORDER BY year ASC
+            LIMIT 1;
+        -- Explanation: This query selects the 'title' and 'year' columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), and limits the output to the first record. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to one, which will be the oldest movie in the database. 
+
+
+        -- 31. Show movies sorted by length:
+
+        --     longest first
+        --     only top 5 results
+
+            SELECT title, length_minutes
+            FROM movies
+            ORDER BY length_minutes DESC
+            LIMIT 5;
+        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table, orders the results by the 'length_minutes' column in descending order (longest to shortest), and limits the output to the first five records. The 'ORDER BY' clause is used to sort the results based on the length of the movies, and the 'LIMIT' clause restricts the number of records returned to five, which will be the top 5 longest movies in the database.        
