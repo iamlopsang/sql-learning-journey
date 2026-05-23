@@ -237,3 +237,22 @@
             ORDER BY length_minutes DESC
             LIMIT 5;
         -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table, orders the results by the 'length_minutes' column in descending order (longest to shortest), and limits the output to the first five records. The 'ORDER BY' clause is used to sort the results based on the length of the movies, and the 'LIMIT' clause restricts the number of records returned to five, which will be the top 5 longest movies in the database.        
+
+-- ##  32. Show:
+
+--         movie title
+--         director
+--         year
+
+--         Conditions:
+
+--         only movies released after 2000
+--         sort by year from newest to oldest
+--         show only top 4 movies.
+
+            SELECT title, director, year
+            FROM movies
+            WHERE yerar > 2000
+            ORDER BY year DESC
+            LIMIT 4;
+        -- Explanation: This query selects the 'title', 'director', and 'year' columns from the 'movies' table, filters the results to include only movies released after 2000 using the 'WHERE' clause, orders the results by the 'year' column in descending order (newest to oldest), and limits the output to the first four records. The 'WHERE' clause ensures that only movies released after 2000 are included in the results, the 'ORDER BY' clause sorts them by their release year, and the 'LIMIT' clause restricts the number of records returned to four.         
