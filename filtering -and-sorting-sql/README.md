@@ -101,5 +101,50 @@
     > How to combine sorting and filtering together.
     > How to write cleaner and more efficient SQL queries.
 
+##  Skills Covered:
+
+    > DISTINCT
+    > ORDER BY
+    > ASC / DESC
+    > LIMIT
+    > OFFSET
+    > Filtering and Sorting query results
+    > SQL result optimization
+
+##  Cheat codes and better understanding:
+
+    ##  Quick understanding of ASC and DESC
+
+        > ASC (Ascending):
+
+            A → Z
+            0 → 9
+            Old → New
+            Small → Large
+
+        Used for:
+
+        > alphabetical sorting,
+        > oldest records,
+        > shortest values,
+        > smallest numbers.
+
+        > DESC (Descending):
+
+            Z → A
+            9 → 0
+            New → Old
+            Large → Small
+
+        Used for:
+
+        > newest records,
+        > highest values,
+        > longest movies,
+        > reverse alphabetical sorting.
+
+##  Goal:
     
+    To strengthen SQL querying skills by practicing filtering, sorting, limitng, and organzing query results using real-world movie databases examples.
+
 
