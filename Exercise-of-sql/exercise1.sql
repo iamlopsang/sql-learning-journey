@@ -30,18 +30,47 @@
         |-----------------------------------------------------------------------------|
 
 ##  Questions:
-    1.List all the Canadian cities and their populations.
-    select city, population
-    from cities
-    where country="Canada";
+    -- 1.List all the Canadian cities and their populations.
+
+        SELECT city, population
+        FROM cities
+        WHERE country="Canada";
+        -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It will return a list of all Canadian cities along with their populations.
+
     2.Order all the cities in the United States by their latitude from north to south.
-    selet city,latitude
-    from cities
-    where country="United States"
-    order by latitude desc;
+
+        SELECT city,latitude
+        FROM cities
+        WHERE country="United States"
+        ORDER BY latitude DESC;
+        -- Explanation: This query selects the city and latitude columns from the cities table where the country is "United States". It orders the results by latitude in descending order, which means it will list the cities from north to south.    
+
     3.List all the cities west of Chicago, ordered from west to east.
-    select city, longitude
-    from cities
-    where city="Chicago" order by longitude desc;
+
+        SELECT city, longitude
+        FROM cities
+        WHERE longitude<(
+            SELECT longitude 
+            FROM cities
+            WHERE city="Chicago"
+        )
+        ORDER BY logitude ASC;
+        -- Explanation: This query selects the city and longitude columns from the cities table where the longitude is less than the longitude of Chicago. It uses a subquery to find the longitude of Chicago. The results are ordered by longitude in ascending order, which means it will list the cities from west to east. 
+
     4.List the two largest cities in Mexico (by population).
+
+        SELECT city, population
+        FROM cities
+        WHERE country="Mexico"
+        ORDER BY population DESC
+        LIMIT 2;
+        -- Explanation: This query selects the city and population columns from the cities table, orders the results by population in descending order, and limits the output to the top 2 rows. This will return the two largest cities in Mexico by population.   
+
     5.List the third and fourth largest cities (by population) in the United States and their population.
+
+        SELECT country, population
+        FROM cities
+        WHERE country="United States"
+        ORDER BY population DESC
+        LIMIT 4 OFFSET 2;
+        -- Explanation: This query selects the country and population columns from the cities table where the country is "United States". It orders the results by population in descending order, limits the output to 4 rows, and offsets the first 2 rows. This means it will return the third and fourth largest cities in the United States by population.     
