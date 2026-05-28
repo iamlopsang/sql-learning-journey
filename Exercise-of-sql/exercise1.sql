@@ -74,3 +74,79 @@
         ORDER BY population DESC
         LIMIT 4 OFFSET 2;
         -- Explanation: This query selects the country and population columns from the cities table where the country is "United States". It orders the results by population in descending order, limits the output to 4 rows, and offsets the first 2 rows. This means it will return the third and fourth largest cities in the United States by population.     
+
+
+        --    ## Easy Level ##
+
+    -- List all cities in Mexico.
+
+        SELECT city
+        FROM cities
+        WHERE country = "Mexico";
+        -- Explanation: This query selects the city column from the cities table where the country is "Mexico". It will return a list of all cities in Mexico. 
+
+    -- Show the city and population of all cities in Canada.
+
+        SELECT city, population
+        FROM cities
+        WHERE country = "Canada";
+        -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It will return a list of all cities in Canada along with their populations. 
+        
+    -- List all cities with a population greater than 3,000,000.
+
+        SELECT city, population
+        FROM cities
+        WHERE population > 3000000;
+        -- Explanation: This query selects the city and population columns from the cities table where the population is greater than 3,000,000. It will return a list of all such cities.
+        
+    -- Show all cities ordered by population from highest to lowest.
+
+        SELECT city, population
+        FROM cities
+        ORDER BY population DESC;
+        -- Explanation: This query selects the city and population columns from the cities table and orders the results by population in descending order.
+
+    -- List all cities ordered alphabetically by city name.
+
+        SELECT city
+        FROM cities
+        ORDER BY city ASC;
+        -- Explanation: This query selects the city column from the cities table and orders the results alphabetically by city name.
+
+    -- Show the northernmost city (highest latitude).
+
+        SELECT city, latitude
+        FROM cities
+        ORDER BY latitude DESC
+        LIMIT 1;
+        -- Explanation: This query selects the city and latitude columns from the cities table and orders the results by latitude in descending order, limiting the output to the top row.
+
+    -- Show the westernmost city (smallest longitude).
+
+        SELECT city, longitude
+        FROM cities
+        ORDER BY longitude ASC
+        LIMIT 1;
+        -- Explanation: This query selects the city and longitude columns from the cities table and orders the results by longitude in ascending order, limiting the output to the top row.
+
+    -- List all cities in the United States.
+
+        SELECT city
+        FROM cities
+        WHERE country = "United States";
+        -- Explanation: This query selects the city column from the cities table where the country is "United States". It will return a list of all cities in the United States.
+
+    -- Show all cities with population less than 2,000,000.
+
+        SELECT city, population
+        FROM cities
+        WHERE population < 2000000;
+        -- Explanation: This query selects the city and population columns from the cities table where the population is less than 2,000,000. It will return a list of all such cities.
+
+    -- List the three largest cities in the table.
+
+        SELECT city, population
+        FROM cities
+        ORDER BY population DESC
+        LIMIT 3;
+        -- Explanation: This query selects the city and population columns from the cities table and orders the results by population in descending order, limiting the output to the top 3 rows.
