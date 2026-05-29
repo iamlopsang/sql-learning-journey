@@ -150,3 +150,97 @@
         ORDER BY population DESC
         LIMIT 3;
         -- Explanation: This query selects the city and population columns from the cities table and orders the results by population in descending order, limiting the output to the top 3 rows.
+
+
+        -- ## Intermediate Level ##
+
+    -- List all cities east of New York.
+
+        SELECT city, longitude
+        FROM cities
+        WHERE longitude > (
+            SELECT longitude
+            FROM cities
+            WHERE city = 'New York'
+        );
+        -- Explanation: This query selects the city and longitude columns from the cities table where the longitude is greater than the longitude of New York. It uses a subquery to find the longitude of New York.    
+
+    -- Show all cities south of Toronto.
+
+        SELECT city, latitude
+        FROM cities
+        WHERE latitude < (
+        SELECT latitude
+        FROM cities
+        WHERE city = "Toronto");
+        -- Explanation: This query selects the city and latitude columns from the cities table where the latitude is less than the latitude of Toronto. It uses a subquery to find the latitude of Toronto.     
+
+    -- List all Mexican cities ordered by population descending.
+
+        SELECT city, population
+        FROM cities
+        WHERE country = 'Mexico'
+        ORDER BY population DESC;
+        -- Explanation: This query selects the city and population columns from the cities table where the country is "Mexico". It orders the results by population in descending order.    
+
+    -- Find the second largest city in Canada.
+    
+        SELECT city, population
+        FROM cities
+        WHERE country = 'Canada'
+        ORDER BY population DESC
+        LIMIT 1 OFFSET 1;
+        -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It orders the results by population in descending order, limits the output to 1 row, and offsets the first row. This means it will return the second largest city in Canada by population.  
+
+    -- Show the fourth largest city overall.
+
+        SELECT city, population
+        FROM cities
+        ORDER BY population DESC
+        LIMIT 1 OFFSET 3;
+        -- Explanation: This query selects the city and population columns from the cities table and orders the results by population in descending order. It limits the output to 1 row and offsets the first 3 rows, which means it will return the fourth largest city overall by population.    
+
+    -- List cities whose longitude is smaller than Houston’s longitude.
+
+        SELECT city, population, longitude
+        FROM cities
+        WHERE longitude < (
+        SELECT longitude
+        FROM cities
+        WHERE city = "Houston");
+        -- Explanation: This query selects the city, population, and longitude columns from the cities table where the longitude is less than the longitude of Houston. It uses a subquery to find the longitude of Houston.    
+
+    -- Show all cities north of Mexico City.
+
+    
+        SELECT city, latitude
+        FROM cities
+        WHERE latitude > (
+            SELECT latitude
+            FROM cities
+            WHERE city = "Mexico City"
+        );
+        -- Explanation: This query selects the city and latitude columns from the cities table where the latitude is greater than the latitude of Mexico City. It uses a subquery to find the latitude of Mexico City.
+
+    -- List the two southernmost cities.
+
+        SELECT city, latitude
+        FROM cities
+        ORDER BY latitude ASC
+        LIMIT 2;
+        -- Explanation: This query selects the city and latitude columns from the cities table and orders the results by latitude in ascending order, limiting the output to the top 2 rows. This will return the two southernmost cities.  
+
+    -- Show all countries without duplicates.
+
+        SELECT DISTINCT country
+        FROM cities;
+        -- Explanation: This query selects the distinct country values from the cities table, which will return a list of all unique countries represented in the table.    
+
+    -- Count how many cities belong to the United States.
+
+        SELECT COUNT(*)
+        FROM cities
+        WHERE country = "United States";
+        -- Explanation: This query counts the number of rows in the cities table where the country is "United States". It will return the total number of cities that belong to the United States.      
+
+        
