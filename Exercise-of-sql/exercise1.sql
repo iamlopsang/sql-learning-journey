@@ -244,3 +244,38 @@
         -- Explanation: This query counts the number of rows in the cities table where the country is "United States". It will return the total number of cities that belong to the United States.      
 
         
+        -- ## Challenge Questions ##
+
+        -- Show cities whose population is between 1,500,000 and 3,000,000.
+
+            SELECT city, population
+            FROM cities
+            WHERE population BETWEEN 1500000 AND 3000000
+            ORDER BY population DESC;
+            -- Explanation: This query selects the city and population columns from the cities table where the population is between 1,500,000 and 3,000,000. It orders the results by population in descending order.  
+
+        -- Show the fifth largest city in the table.
+
+            SELECT city, population
+            FROM cities
+            ORDER BY population DESC
+            LIMIT 1 OFFSET 4;
+            -- Explanation: This query selects the city and population columns from the cities table and orders the results by population in descending order. It limits the output to 1 row and offsets the first 4 rows, which means it will return the fifth largest city overall by population. 
+
+        -- Find cities that are both west of Chicago and north of Houston.
+
+            SELECT city, latitude, longitude
+            FROM cities
+            WHERE longitude < (
+                SELECT longitude
+                FROM cities
+                WHERE city = 'Chicago'
+            )
+            AND latitude > (
+                SELECT latitude
+                FROM cities
+                WHERE city = 'Houston'
+            );
+            -- Explanation: This query selects the city, latitude, and longitude columns from the cities table where the longitude is less than the longitude of Chicago and the latitude is greater than the latitude of Houston. It uses subqueries to find the longitude of Chicago and the latitude of Houston. This will return cities that are both west of Chicago and north of Houston.     
+
+            
