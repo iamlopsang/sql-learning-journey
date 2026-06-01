@@ -279,7 +279,7 @@
             -- Explanation: This query selects the city, latitude, and longitude columns from the cities table where the longitude is less than the longitude of Chicago and the latitude is greater than the latitude of Houston. It uses subqueries to find the longitude of Chicago and the latitude of Houston. This will return cities that are both west of Chicago and north of Houston.     
 
 
-            List all cities whose longitude is greater than Havana's longitude.
+            -- List all cities whose longitude is greater than Havana's longitude.
 
             SELECT city, longitude
             FROM cities                     
@@ -289,5 +289,16 @@
                 WHERE city = 'Havana'
             );
             -- Explanation: This query selects the city and longitude columns from the cities table where the longitude is greater than the longitude of Havana. It uses a subquery to find the longitude of Havana. This will return a list of all cities whose longitude is greater than Havana's longitude.      
-            
+
+            -- List all cities whose latitude is greater than Chicago's latitude.
+
+            SELECT city, latitude
+            FROM cities
+            WHERE latitude > (
+                SELECT latitude
+                FROM cities
+                WHERE city = 'Chicago'
+            );
+
+            -- Explanation: This query selects the city and latitude columns from the cities table where the latitude is greater than the latitude of Chicago. It uses a subquery to find the latitude of Chicago. This will return a list of all cities whose latitude is greater than Chicago's latitude. 
             
