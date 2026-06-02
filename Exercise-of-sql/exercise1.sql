@@ -302,3 +302,14 @@
 
             -- Explanation: This query selects the city and latitude columns from the cities table where the latitude is greater than the latitude of Chicago. It uses a subquery to find the latitude of Chicago. This will return a list of all cities whose latitude is greater than Chicago's latitude. 
             
+
+            -- List the city and population of the largest city in Canada.
+
+            SELECT city, population 
+            FROM cities
+            WHERE country="Canada"
+            ORDER BY population DESC
+            LIMIT 1;
+
+            -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It orders the results by population in descending order and limits the output to the top row, which will return the city and population of the largest city in Canada.      
+            
