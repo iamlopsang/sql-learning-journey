@@ -311,5 +311,16 @@
             ORDER BY population DESC
             LIMIT 1;
 
-            -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It orders the results by population in descending order and limits the output to the top row, which will return the city and population of the largest city in Canada.      
+            -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It orders the results by population in descending order and limits the output to the top row, which will return the city and population of the largest city in Canada.    
+
+            -- List the city and population of the second largest city in Mexico.
+
+            SELECT city, population
+            FROM cities
+            WHERE country = "Mexico"
+            ORDER BY population DESC
+            LIMIT 1 OFFSET 1;  
+
+            -- Explanation: This query selects the city and population columns from the cities table where the country is "Mexico". It orders the results by population in descending order, limits the output to 1 row, and offsets the first row. This means it will return the city and population of the second largest city in Mexico.     
             
+                        
