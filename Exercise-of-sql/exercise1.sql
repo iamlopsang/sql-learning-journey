@@ -323,4 +323,21 @@
 
             -- Explanation: This query selects the city and population columns from the cities table where the country is "Mexico". It orders the results by population in descending order, limits the output to 1 row, and offsets the first row. This means it will return the city and population of the second largest city in Mexico.     
             
-                        
+        -- List all cities whose latitude is greater than Houston's latitude and less than Toronto's latitude.
+
+            SELECT city, latitude
+            FROM cities
+            WHERE latitude > (
+                SELECT latitude
+                FROM cities
+                WHERE city = "Houston"
+            )
+            AND latitude < (
+                SELECT latitude
+                FROM cities
+                WHERE city = "Toronto"
+            );            
+
+            -- Explanation: This query selects the city and latitude columns from the cities table where the latitude is greater than the latitude of Houston and less than the latitude of Toronto. It uses subqueries to find the latitude of Houston and the latitude of Toronto. This will return a list of all cities whose latitude is between that of Houston and Toronto.   
+
+            
