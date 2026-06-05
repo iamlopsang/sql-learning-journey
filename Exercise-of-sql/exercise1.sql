@@ -340,4 +340,25 @@
 
             -- Explanation: This query selects the city and latitude columns from the cities table where the latitude is greater than the latitude of Houston and less than the latitude of Toronto. It uses subqueries to find the latitude of Houston and the latitude of Toronto. This will return a list of all cities whose latitude is between that of Houston and Toronto.   
 
+            -- List all cities that are:
+
+            --  west of New York, and
+            --  north of Mexico City
+
+
+            SELECT city, longitude, latitude
+            FROM cities
+            WHERE longitude < (
+                SELECT longitude
+                FROM cities
+                WHERE city = "New York"
+            )
+            AND
+            latitude > (
+                SELECT latitude
+                FROM cities
+                WHERE city = "Mexico City"
+            );
+
+            -- Explanation: This query selects the city, longitude, and latitude columns from the cities table where the longitude is less than the longitude of New York and the latitude is greater than the latitude of Mexico City. It uses subqueries to find the longitude of New York and the latitude of Mexico City. This will return a list of all cities that are west of New York and north of Mexico City.     
             
