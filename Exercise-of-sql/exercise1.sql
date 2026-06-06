@@ -362,3 +362,16 @@
 
             -- Explanation: This query selects the city, longitude, and latitude columns from the cities table where the longitude is less than the longitude of New York and the latitude is greater than the latitude of Mexico City. It uses subqueries to find the longitude of New York and the latitude of Mexico City. This will return a list of all cities that are west of New York and north of Mexico City.     
             
+
+            -- Practice Set 1 (General SQL Basics)
+        
+        -- 1.List all cities with a population greater than 2,000,000 and order them from largest to smallest population.
+
+            SELECT city, population
+            FROM cities
+            WHERE population > 2000000
+            ORDER BY population DESC;
+
+            -- Explanation: This query selects the city and population columns from the cities table where the population is greater than 2,000,000. It orders the results by population in descending order, which means it will list the cities from largest to smallest population.  
+
+            
