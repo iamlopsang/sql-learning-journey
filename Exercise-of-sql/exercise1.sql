@@ -374,4 +374,14 @@
 
             -- Explanation: This query selects the city and population columns from the cities table where the population is greater than 2,000,000. It orders the results by population in descending order, which means it will list the cities from largest to smallest population.  
 
+            -- 2. List all cities in Mexico ordered from north to south.
+
+            -- Hint: use latitude.
+
+            SELECT city, latitude
+            FROM cities
+            WHERE country = 'Mexico'
+            ORDER BY latitude DESC;
+
+            -- Explanation: This query selects the city and latitude columns from the cities table where the country is "Mexico". It orders the results by latitude in descending order, which means it will list the cities from north to south.   
             
