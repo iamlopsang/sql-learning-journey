@@ -385,3 +385,15 @@
 
             -- Explanation: This query selects the city and latitude columns from the cities table where the country is "Mexico". It orders the results by latitude in descending order, which means it will list the cities from north to south.   
             
+            -- 3. Show the city and longitude of the easternmost city.
+
+            --     Hint: east = largest longitude.
+
+
+            SELECT city, longitude
+            FROM cities
+            ORDER BY longitude DESC
+            LIMIT 1;
+            -- Explanation: This query selects the city and longitude columns from the cities table and orders the results by longitude in descending order. It limits the output to the top row, which means it will return the city and longitude of the easternmost city (the city with the largest longitude).  
+
+            
