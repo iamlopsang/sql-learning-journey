@@ -397,3 +397,15 @@
             -- Explanation: This query selects the city and longitude columns from the cities table and orders the results by longitude in descending order. It limits the output to the top row, which means it will return the city and longitude of the easternmost city (the city with the largest longitude).  
 
             
+            -- 4.List the third largest city in Canada by population.
+
+            --   Think about what happens if there are fewer than 3 Canadian cities.
+
+                SELECT city, population
+                FROM cities
+                WHERE country = 'Canada'
+                ORDER BY population DESC
+                LIMIT 1 OFFSET 2;
+
+                -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It orders the results by population in descending order, limits the output to 1 row, and offsets the first 2 rows. This means it will return the third largest city in Canada by population. If there are fewer than 3 Canadian cities, this query will return an empty result set.     
+                
