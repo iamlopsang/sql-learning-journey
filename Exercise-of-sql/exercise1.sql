@@ -409,3 +409,13 @@
 
                 -- Explanation: This query selects the city and population columns from the cities table where the country is "Canada". It orders the results by population in descending order, limits the output to 1 row, and offsets the first 2 rows. This means it will return the third largest city in Canada by population. If there are fewer than 3 Canadian cities, this query will return an empty result set.     
                 
+
+                -- 5. List all cities whose population is between 1,700,000 and 4,000,000.
+
+
+                    SELECT city, population
+                    FROM cities
+                    WHERE population BETWEEN 1700000 AND 4000000;
+
+                    -- Explanation: This query selects the city and population columns from the cities table where the population is between 1,700,000 and 4,000,000. It will return a list of all cities that fall within this population range.       
+                    
