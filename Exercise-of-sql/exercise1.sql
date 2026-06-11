@@ -419,3 +419,22 @@
 
                     -- Explanation: This query selects the city and population columns from the cities table where the population is between 1,700,000 and 4,000,000. It will return a list of all cities that fall within this population range.       
                     
+
+                    --  Practice Set 2 (AND, OR, NOT)
+
+            6. AND
+
+            List all cities that are:
+
+            in the United States
+            and have a population greater than 2,000,000
+
+
+            SELECT city, population
+            FROM cities
+            WHERE country = 'United States'
+            AND population > 2000000;
+
+            -- Explanation: This query selects the city and population columns from the cities table where the country is "United States" and the population is greater than 2,000,000. It will return a list of all cities in the United States that have a population greater than 2,000,000. 
+
+            
