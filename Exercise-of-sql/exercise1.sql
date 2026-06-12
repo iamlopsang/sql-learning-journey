@@ -422,12 +422,12 @@
 
                     --  Practice Set 2 (AND, OR, NOT)
 
-            6. AND
+            -- 6. AND
 
-            List all cities that are:
+            -- List all cities that are:
 
-            in the United States
-            and have a population greater than 2,000,000
+            -- in the United States
+            -- and have a population greater than 2,000,000
 
 
             SELECT city, population
@@ -436,5 +436,30 @@
             AND population > 2000000;
 
             -- Explanation: This query selects the city and population columns from the cities table where the country is "United States" and the population is greater than 2,000,000. It will return a list of all cities in the United States that have a population greater than 2,000,000. 
+
+
+            -- 7. AND
+
+            -- List all cities that are:
+
+            -- west of Chicago
+            -- and south of Toronto
+
+            -- Use subqueries for Chicago and Toronto.          
+
+            SELECT city, latitude, longitude
+            FROM cities
+            WHERE latitude < (
+                SELECT latitude
+                FROM cities
+                WHERE city = 'Toronto'
+            )
+            AND longitude < (
+                SELECT longitude
+                FROM cities
+                WHERE city = 'Chicago'
+            );
+
+            -- Explanation: This query selects the city, latitude, and longitude columns from the cities table where the latitude is less than the latitude of Toronto and the longitude is less than the longitude of Chicago. It uses subqueries to find the latitude of Toronto and the longitude of Chicago. This will return a list of all cities that are west of Chicago and south of Toronto.       
 
             
