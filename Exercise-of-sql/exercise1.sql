@@ -463,3 +463,27 @@
             -- Explanation: This query selects the city, latitude, and longitude columns from the cities table where the latitude is less than the latitude of Toronto and the longitude is less than the longitude of Chicago. It uses subqueries to find the latitude of Toronto and the longitude of Chicago. This will return a list of all cities that are west of Chicago and south of Toronto.       
 
             
+            -- 8. OR
+
+            --     List all cities that are:
+
+            --     in Canada
+            --     or in Cuba
+
+
+                SELECT city
+                FROM cities
+                WHERE country = 'Canada'
+                OR country = 'Cuba';
+                -- Explanation: This query selects the city column from the cities table where the country is either "Canada" or "Cuba". It will return a list of all cities that are in Canada or in Cuba. 
+
+                -- or it can be written as
+
+                SELECT city
+                FROM cities
+                WHERE country IN ('Canada', 'Cuba');
+
+
+                -- Explanation: This query selects the city column from the cities table where the country is either "Canada" or "Cuba". It uses the IN operator to specify multiple values for the country. This will return a list of all cities that are in Canada or in Cuba.   
+
+                
