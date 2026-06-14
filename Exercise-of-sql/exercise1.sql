@@ -487,3 +487,19 @@
                 -- Explanation: This query selects the city column from the cities table where the country is either "Canada" or "Cuba". It uses the IN operator to specify multiple values for the country. This will return a list of all cities that are in Canada or in Cuba.   
 
                 
+                -- 9. OR
+
+                -- List all cities that:
+
+                -- have a population greater than 8,000,000
+                -- or are located in Canada.
+
+
+                    SELECT city, population
+                    FROM cities
+                    WHERE population > 8000000
+                    OR country = 'Canada';
+
+                    -- Explanation: This query selects the city and population columns from the cities table where the population is greater than 8,000,000 or the country is "Canada". It will return a list of all cities that either have a population greater than 8,000,000 or are located in Canada.  
+
+                    
