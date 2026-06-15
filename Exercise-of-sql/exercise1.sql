@@ -503,3 +503,13 @@
                     -- Explanation: This query selects the city and population columns from the cities table where the population is greater than 8,000,000 or the country is "Canada". It will return a list of all cities that either have a population greater than 8,000,000 or are located in Canada.  
 
                     
+            -- 10. NOT
+
+            -- List all cities that are not in the United States.
+
+            SELECT city
+            FROM cities
+            WHERE NOT country = 'United States';
+
+            -- Explanation: This query selects the city column from the cities table where the country is not "United States". It uses the NOT operator to exclude cities that are in the United States. This will return a list of all cities that are not in the United States.   
+            
