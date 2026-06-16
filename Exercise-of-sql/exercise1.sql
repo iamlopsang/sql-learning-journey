@@ -513,3 +513,22 @@
 
             -- Explanation: This query selects the city column from the cities table where the country is not "United States". It uses the NOT operator to exclude cities that are in the United States. This will return a list of all cities that are not in the United States.   
             
+
+        --  11. List all cities that satisfy:
+
+        --     country is Canada OR Mexico
+        --     AND population is greater than 1,600,000.
+
+        SELECT city, population
+        FROM cities
+        WHERE (country = 'Canada' OR country = 'Mexico')
+        AND population > 1600000;
+        -- Explanation: This query selects the city and population columns from the cities table where the country is either "Canada" or "Mexico" and the population is greater than 1,600,000. The parentheses are used to group the OR condition for the country, ensuring that the population condition applies to both countries. This will return a list of all cities that are in Canada or Mexico and have a population greater than 1,600,000.  
+
+        -- or we can write like this also
+
+        SELECT city, population
+        FROM cities
+        WHERE country IN ('Canada', 'Mexico')
+        AND population > 1600000;
+        -- Explanation: This query selects the city and population columns from the cities table where the country is either "Canada" or "Mexico" and the population is greater than 1,600,000. It uses the IN operator to specify multiple values for the country. The AND operator ensures that the population condition applies to both countries. This will return a list of all cities that are in Canada or Mexico and have a population greater than 1,600,000.  
