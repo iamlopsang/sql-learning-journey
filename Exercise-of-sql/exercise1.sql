@@ -507,9 +507,9 @@
 
             -- List all cities that are not in the United States.
 
-            SELECT city
-            FROM cities
-            WHERE NOT country = 'United States';
+                SELECT city
+                FROM cities
+                WHERE NOT country = 'United States';
 
             -- Explanation: This query selects the city column from the cities table where the country is not "United States". It uses the NOT operator to exclude cities that are in the United States. This will return a list of all cities that are not in the United States.   
             
