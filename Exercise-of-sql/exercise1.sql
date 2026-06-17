@@ -1,4 +1,4 @@
-## Exercise 1: Basic SQL Queries.
+## Exercise 1: Basic SQL Queries.(AND, OR, NOT, IN, BETWEEN, LIKE, WHERE, ORDER BY, LIMIT, OFFSET, and subqueries.)
 
 ## Table Overview
 
