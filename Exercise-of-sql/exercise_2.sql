@@ -67,4 +67,17 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         -- but we are only providing values for the StudentID, Name, and Age columns. 
         -- The Email and City columns will be set to NULL by default since we are not providing an
         -- y values for them. The INSERT INTO statement allows us to specify which columns we want to 
-        -- insert values into, and the VALUES clause provides the corresponding values for those columns.  
+        -- insert values into, and the VALUES clause provides the corresponding values for those columns. 
+
+
+        -- 4. Insert three students in a single query.
+
+        INSERT INTO Students (StudentID, Name, Age, Email, City)
+        VALUES 
+        (3, "john", 22, "john@gmail.com", "kathmandu"),
+        (4, "hendry", 20, "hendry@gmail.com", "kathmandu"),
+        (5, "hari", 25, "hari@gmail.com", "lalitpur"); 
+
+        -- Explanation: This query demonstrates how to insert multiple records into the Students table in a single query.
+        -- We specify the columns we want to insert values into (StudentID, Name, Age, Email, City) and then provide multiple 
+        -- sets of values for each student in the VALUES clause. Each set of values corresponds to a new student record that will be added to the table. This approach is more efficient than executing separate INSERT INTO statements for each student, as it reduces the number of queries
