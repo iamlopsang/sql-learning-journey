@@ -35,7 +35,10 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         INSERT INTO Students VALUES 
         (1, "Aarav", 20, "aarav@gmail.com","Kathmandu");
 
-        -- Explanation: The INSERT INTO statement is used to add new records to a table. In this case, we are inserting a new student with the specified details into the Students table. Each value corresponds to the respective column in the order they are defined in the table schema.   
+        -- Explanation: The INSERT INTO statement is used to add new records to a table.
+        --  In this case, we are inserting a new student with the specified details into the 
+        --  Students table. Each value corresponds to the respective column in the order they 
+        --  are defined in the table schema.   
 
     -- 2. Insert a student:
     -- StudentID = 2
@@ -47,6 +50,21 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         INSERT INTO Students VALUES
         (2, "Sita", 19, "sita@gmail.com.com","Pokhara");
 
-    -- Explanation: Similar to the first question, we are inserting another student into the Students table with the provided details. Each value corresponds to the respective column in the order they are defined in the table schema.      
+    -- Explanation: Similar to the first question, we are inserting another student into the Students 
+    -- table with the provided details. Each value corresponds to the respective column in the order they 
+    -- are defined in the table schema.      
 
 
+        -- 3.Insert a student with only:
+        --     StudentID = 3
+        --     Name = 'Ram'
+        --     Age = 21
+
+        INSERT INTO Students (StudentID, Name, Age)
+        VALUES (3, 'Ram', 21);
+
+        -- Explanation: In this case, we are inserting a new student into the Students table, 
+        -- but we are only providing values for the StudentID, Name, and Age columns. 
+        -- The Email and City columns will be set to NULL by default since we are not providing an
+        -- y values for them. The INSERT INTO statement allows us to specify which columns we want to 
+        -- insert values into, and the VALUES clause provides the corresponding values for those columns.  
