@@ -78,6 +78,36 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         (4, "hendry", 20, "hendry@gmail.com", "kathmandu"),
         (5, "hari", 25, "hari@gmail.com", "lalitpur"); 
 
-        -- Explanation: This query demonstrates how to insert multiple records into the Students table in a single query.
-        -- We specify the columns we want to insert values into (StudentID, Name, Age, Email, City) and then provide multiple 
-        -- sets of values for each student in the VALUES clause. Each set of values corresponds to a new student record that will be added to the table. This approach is more efficient than executing separate INSERT INTO statements for each student, as it reduces the number of queries
+        -- Explanation: This query demonstrates how to insert multiple records into the Students table in
+        --  a single query.We specify the columns we want to insert values into (StudentID, Name, Age, Email, 
+        --  City) and then provide multiple sets of values for each student in the VALUES clause. Each set of 
+        --  values corresponds to a new student record that will be added to the table. This approach is more 
+        --  efficient than executing separate INSERT INTO statements for each student, as it reduces the number
+        --  of queries
+
+
+        2. NULL Values Practice Questions
+
+        a. Insert a student whose Email is unknown.
+
+        INSERT INTO students
+        VALUES
+        (11, 'Aaryana', 21, NULL, 'Lalitpur');
+        -- Explanation: In this query, we are inserting a new student into the Students table, but
+        -- we do not have an email address for the student. Therefore, we use NULL to indicate that the
+        -- value for the Email column is unknown. The other values for StudentID, Name, Age, and City are
+        -- provided as usual. This allows us to maintain the integrity of the data while acknowledging that
+        -- certain information is not available at the time of insertion.   
+
+        or we can write the query as:
+
+        INSERT INTO students (StudentID, Name, Age, Email, Address)
+        VALUES (11, 'Aaryana', 21, NULL, 'Lalitpur');
+        -- Explanation: This query achieves the same result as the previous one, but it explicitly 
+        -- specifiesthe columns we are inserting values into. By listing the columns (StudentID, Name, Age, Email,
+        -- Address) in the INSERT INTO statement, we can provide values for those specific columns while 
+        -- leaving the Email column as NULL. This approach can be useful for clarity and to ensure that the 
+        -- correct values are inserted into the intended columns, especially when dealing with tables that
+        --  have many columns or when some columns may have default values.   
+        
+                   
