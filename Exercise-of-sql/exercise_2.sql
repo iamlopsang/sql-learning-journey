@@ -99,7 +99,7 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         -- provided as usual. This allows us to maintain the integrity of the data while acknowledging that
         -- certain information is not available at the time of insertion.   
 
-        or we can write the query as:
+        -- or we can write the query as:
 
         INSERT INTO students (StudentID, Name, Age, Email, Address)
         VALUES (11, 'Aaryana', 21, NULL, 'Lalitpur');
@@ -109,5 +109,28 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         -- leaving the Email column as NULL. This approach can be useful for clarity and to ensure that the 
         -- correct values are inserted into the intended columns, especially when dealing with tables that
         --  have many columns or when some columns may have default values.   
-        
-                   
+
+
+       b. Insert a student whose City is unknown.
+
+            INSERT INTO students
+            VALUES
+            (22, 'Minnie', 21, 'minnie@gmail.com', NULL);
+
+            -- Explanation: In this query, we are inserting a new student into the Students table, but we 
+            -- do not have information about the student's city. Therefore, we use NULL to indicate that the
+            -- value for the City column is unknown. The other values for StudentID, Name, Age, and Email are
+            -- provided as usual. This allows us to maintain the integrity of the data while acknowledging 
+            -- that certain information is not available at the time of insertion.    
+
+            -- or we can write the query as:
+
+            INSERT INTO students (StudentID, Name, Age, Email, City)
+            VALUES (22, 'Minnie', 21, 'minnie@gmail.com', NULL);
+
+        -- Explanation: Similar to the previous query, this version explicitly specifies the columns we are
+        -- inserting values into. By listing the columns (StudentID, Name, Age, Email, City) in the INSERT INTO
+        -- statement, we can provide values for those specific columns while leaving the City column as NULL. 
+        -- This approach can enhance clarity and ensure that the correct values are inserted into the intended
+        -- columns, especially when dealing with tables that have many columns or when some columns may have
+        -- default values.                   
