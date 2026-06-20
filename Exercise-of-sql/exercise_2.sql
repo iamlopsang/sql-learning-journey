@@ -78,7 +78,7 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
         a. Insert a student whose Email is unknown.
 
-        INSERT INTO students
+        INSERT INTO Students
         VALUES
         (11, 'Aaryana', 21, NULL, 'Lalitpur');
        -- Explanation: This statement inserts a new student record and uses NULL for the Email column
@@ -86,14 +86,14 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
         -- or we can write the query as:
 
-        INSERT INTO students (StudentID, Name, Age, Email, Address)
+        INSERT INTO Students (StudentID, Name, Age, Email, Address)
         VALUES (11, 'Aaryana', 21, NULL, 'Lalitpur');
         -- Explanation: This statement explicitly specifies the columns to insert values into, making the
         --  query clearer and ensuring values are placed in the correct columns.
 
        b. Insert a student whose City is unknown.
 
-            INSERT INTO students
+            INSERT INTO Students
             VALUES
             (22, 'Minnie', 21, 'minnie@gmail.com', NULL);
 
@@ -102,7 +102,7 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
             -- or we can write the query as:
 
-            INSERT INTO students (StudentID, Name, Age, Email, City)
+            INSERT INTO Students (StudentID, Name, Age, Email, City)
             VALUES (22, 'Minnie', 21, 'minnie@gmail.com', NULL);
 
         -- Explanation: This statement explicitly specifies the columns to insert values into and sets the
@@ -126,18 +126,28 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
         -- d. Write a query to display all students whose Email is NULL.
 
-            SELECT * FROM  students
-            WHERE email IS NULL;
+            SELECT * FROM  Students
+            WHERE Email IS NULL;
 
         -- Explanation: This query retrieves all student records from the Students table where the Email
         --  column has a NULL value, allowing us to identify students with unknown email addresses.
 
-            SELECT  email FROM students
-            WHERE email IS NULL;
+            SELECT  Email FROM Students
+            WHERE Email IS NULL;
         -- Explanation: This query retrieves only the Email column for students whose Email is NULL,
         --  providing a focused view of the missing email addresses.
 
-        
+
+        -- e. Write a query to display all students whose City is NOT NULL.
+
+            SELECT * FROM Students
+            WHERE City IS NOT NULL;
+
+     -- Explanation: This query retrieves all student records whose City is NOT NULL, providing a complete 
+    --  view of students with a recorded city.
+
+
+
 
 
 
