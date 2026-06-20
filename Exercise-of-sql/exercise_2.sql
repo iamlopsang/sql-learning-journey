@@ -124,3 +124,22 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
         -- Explanation: This statement inserts a new student record and uses NULL for the Age and Email
         --  columns because those values are not available.
 
+        -- d. Write a query to display all students whose Email is NULL.
+
+            SELECT * FROM  students
+            WHERE email IS NULL;
+
+        -- Explanation: This query retrieves all student records from the Students table where the Email
+        --  column has a NULL value, allowing us to identify students with unknown email addresses.
+
+            SELECT  email FROM students
+            WHERE email IS NULL;
+        -- Explanation: This query retrieves only the Email column for students whose Email is NULL,
+        --  providing a focused view of the missing email addresses.
+
+        
+
+
+
+        
+
