@@ -157,6 +157,15 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- of records with missing email addresses.
 
 
+        -- 3. UPDATE Practice Questions
+
+            a. Change the City of StudentID 2 to 'Lalitpur'.
+
+            UPDATE Students
+            SET City = 'Lalitpur'
+            WHERE StudentID = 2;
+
+            -- Explanation: This query updates the City of the student with StudentID 2 to 'Lalitpur', modifying only the specified student's record.
 
 
 
