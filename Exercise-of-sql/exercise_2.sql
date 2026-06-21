@@ -147,6 +147,18 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
     --  view of students with a recorded city.
 
 
+        --   f. Count how many students have a NULL Email.
+
+            SELECT COUNT(*)
+            FROM Students
+            WHERE Email IS NULL;
+
+-- Explanation: This query counts the number of students whose Email is NULL, providing the total number
+-- of records with missing email addresses.
+
+
+
+
 
 
 
