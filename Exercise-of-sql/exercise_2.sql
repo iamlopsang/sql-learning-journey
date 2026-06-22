@@ -186,6 +186,16 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
     --  'Kathmandu', modifying every matching record in the Students table.
 
 
-    
+            -- d. Set the Email of StudentID 3 to NULL.
+
+            UPDATE Students
+            SET Email = NULL
+            WHERE StudentID = 3;
+
+     -- Explanation: This query sets the Email of the student with StudentID 3 to NULL, removing the existing
+    --   email value for that specific student record.
+
+
+
 
 
