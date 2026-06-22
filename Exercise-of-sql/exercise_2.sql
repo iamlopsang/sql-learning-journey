@@ -167,6 +167,14 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
             -- Explanation: This query updates the City of the student with StudentID 2 to 'Lalitpur', modifying only the specified student's record.
 
+            b. Increase the Age of StudentID 1 by 1 year.
+
+            UPDATE Students
+            SET Age = Age + 1
+            WHERE StudentID = 1;
+
+      -- Explanation: This query increases the Age of the student with StudentID 1 by 1 year by adding 1 to
+    --    the current Age value and updating only the specified record.
 
 
 
