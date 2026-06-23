@@ -195,7 +195,16 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
      -- Explanation: This query sets the Email of the student with StudentID 3 to NULL, removing the existing
     --   email value for that specific student record.
 
+            -- e. Update the City to 'Unknown' for all students whose City is NULL.
 
+            UPDATE Students
+            SET City = 'Unknown'
+            WHERE City IS NULL;
+
+    -- Explanation: This query updates the City to 'Unknown' for all students whose City is NULL, replacing 
+    --  missing city values with a default value.
+
+    
 
 
 
