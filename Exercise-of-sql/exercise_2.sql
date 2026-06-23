@@ -204,7 +204,15 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
     -- Explanation: This query updates the City to 'Unknown' for all students whose City is NULL, replacing 
     --  missing city values with a default value.
 
-    
+            -- f. Increase the Age of all students by 2 years.
+
+            UPDATE Students
+            SET Age = Age + 2;
+
+  -- Explanation: This query increases the Age of all students by 2 years by adding 2 to the current Age
+  --value for every record in the Students table.
+
+
 
 
 
