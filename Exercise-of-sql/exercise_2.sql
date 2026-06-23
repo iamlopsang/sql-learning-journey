@@ -212,7 +212,15 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
   -- Explanation: This query increases the Age of all students by 2 years by adding 2 to the current Age
   --value for every record in the Students table.
 
+        -- g. Change both Age and City of StudentID 1 in one query.
 
+            UPDATE Students
+            SET Age = 25,
+                City = 'London'
+            WHERE StudentID = 1;
+
+  -- Explanation: This query updates both the Age and City of the student with StudentID 1 in a single
+--   statement by setting Age to 25 and City to 'London' for the specified record.
 
 
 
