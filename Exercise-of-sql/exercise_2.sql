@@ -224,3 +224,13 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
 
 
+        -- h. Set Email = 'notprovided@gmail.com' where Email is NULL.
+
+            UPDATE Students
+            SET Email = 'notprovided@gmail.com'
+            WHERE Email IS NULL;
+
+ -- Explanation: This query updates the Email field to '[notprovided@gmail.com](mailto:notprovided@gmail.com)'
+--   for all students whose Email is NULL, replacing missing email addresses with a default value.
+
+
