@@ -255,3 +255,11 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- from the Students table.
 
 
+         -- b. Delete all students whose City is 'Pokhara'.
+
+            DELETE FROM Students
+            WHERE City = 'Pokhara';
+
+-- Explanation: This query deletes all student records whose City is 'Pokhara', removing them from the 
+-- Students table.
+
