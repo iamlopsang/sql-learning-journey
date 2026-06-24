@@ -244,4 +244,14 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 --   every matching student record.
 
 
+            -- DELETE Practice Questions
+          
+            -- a. Delete the student whose StudentID is 3.
+
+            DELETE FROM Students
+            WHERE StudentID = 3;
+
+-- Explanation: This query deletes the student record whose StudentID is 3, removing that specific student 
+-- from the Students table.
+
 
