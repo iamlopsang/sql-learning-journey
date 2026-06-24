@@ -234,3 +234,14 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 --   for all students whose Email is NULL, replacing missing email addresses with a default value.
 
 
+        -- Update every student living in Kathmandu to have Age = 25.
+
+            UPDATE Students
+            SET Age = 25
+            WHERE City = 'Kathmandu';
+
+-- Explanation: This query updates the Age to 25 for all students whose City is 'Kathmandu', modifying
+--   every matching student record.
+
+
+
