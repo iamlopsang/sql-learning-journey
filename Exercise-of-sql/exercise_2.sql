@@ -280,7 +280,11 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- Explanation: This query deletes all student records whose Email is NULL, removing students with missing 
 -- email addresses from the Students table.
 
--- Delete all students from the table.
+        -- e. Delete all students from the table.
 
--- delete students;
+            DELETE FROM Students;
+
+-- Explanation: This query deletes all records from the Students table, removing every student while keeping
+-- the table structure unchanged.
+
 
