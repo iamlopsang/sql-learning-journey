@@ -263,3 +263,22 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- Explanation: This query deletes all student records whose City is 'Pokhara', removing them from the 
 -- Students table.
 
+        -- c. Delete students whose Age is less than 18.
+
+            DELETE FROM Students
+            WHERE Age < 18;
+
+-- Explanation: This query deletes all student records whose Age is less than 18, removing every matching 
+-- student from the Students table.
+
+
+-- Delete all students whose Email is NULL.
+
+-- delete from students
+-- where email is null;
+
+
+-- Delete all students from the table.
+
+-- delete students;
+
