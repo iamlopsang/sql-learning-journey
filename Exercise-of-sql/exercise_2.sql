@@ -272,11 +272,13 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- student from the Students table.
 
 
--- Delete all students whose Email is NULL.
+        -- d. Delete all students whose Email is NULL.
 
--- delete from students
--- where email is null;
+            DELETE FROM Students
+            WHERE Email IS NULL;
 
+-- Explanation: This query deletes all student records whose Email is NULL, removing students with missing 
+-- email addresses from the Students table.
 
 -- Delete all students from the table.
 
