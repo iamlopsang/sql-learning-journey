@@ -307,8 +307,11 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
         -- h.Delete students whose Age is greater than 25.
 
--- delete from students
--- where age> 25;
+            DELETE FROM Students
+            WHERE Age > 25;
+
+-- Explanation: This query deletes all student records whose Age is greater than 25, removing every matching
+-- student from the Students table.
 
 
  
