@@ -298,12 +298,17 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
         -- g. Delete students whose names start with 'A'.
 
-delete from students
-where name like='A%';
+            DELETE FROM Students
+            WHERE Name LIKE 'A%';
 
--- Delete students whose Age is greater than 25.
+-- Explanation: This query deletes all student records whose Name starts with the letter 'A', removing every 
+-- matching student from the Students table.
+
+
+        -- h.Delete students whose Age is greater than 25.
 
 -- delete from students
 -- where age> 25;
 
 
+ 
