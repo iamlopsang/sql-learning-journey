@@ -287,4 +287,23 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- Explanation: This query deletes all records from the Students table, removing every student while keeping
 -- the table structure unchanged.
 
+        -- f. Delete all students except those living in Kathmandu.
+
+            DELETE FROM Students
+            WHERE City != 'Kathmandu';
+
+-- Explanation: This query deletes all student records except those whose City is 'Kathmandu', keeping only 
+-- students living in Kathmandu.
+
+
+        -- g. Delete students whose names start with 'A'.
+
+delete from students
+where name like='A%';
+
+-- Delete students whose Age is greater than 25.
+
+-- delete from students
+-- where age> 25;
+
 
