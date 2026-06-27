@@ -334,6 +334,15 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- Explanation: This query deletes the oldest student(s) by removing all records whose Age is equal to the
 -- maximum Age found in the Students table.
 
+    -- or we can write the query as:
+
+            DELETE FROM Students
+            WHERE Age = (
+                SELECT Age
+                FROM Students
+                ORDER BY Age DESC
+                LIMIT 1
+            );
 
             -- Challenge Questions
             -- Insert a student with NULL values in three columns.
