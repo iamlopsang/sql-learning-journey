@@ -314,4 +314,24 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- student from the Students table.
 
 
+            -- i. Delete students where both Email and City are NULL.
+
+            DELETE FROM Students
+            WHERE Email IS NULL
+            AND City IS NULL;
+
+-- Explanation: This query deletes all student records where both the Email and City fields are NULL,
+--  removing only students who have both values missing.
+
+            -- Delete the oldest student(s) from the table.
+
+            -- delete from studens
+            -- where age >(select age from students
+            -- order by desc
+            -- limit 1);
+
+            -- Challenge Questions
+            -- Insert a student with NULL values in three columns.
+
+
  
