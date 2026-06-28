@@ -355,11 +355,15 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- columns while providing values for StudentID and Age.
 
 
-Update all NULL City values to 'Nepal'.
+            -- b. Update all NULL City values to 'Nepal'.
 
-update students
-set city='Nepal'
-where city is NULL;
+            UPDATE Students
+            SET City = 'Nepal'
+            WHERE City IS NULL;
+
+-- Explanation: This query updates the City to 'Nepal' for all students whose City is NULL, replacing missing
+-- city values with 'Nepal'.
+
 
 Delete every student who does not have an Email.
 
