@@ -365,7 +365,11 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- city values with 'Nepal'.
 
 
-Delete every student who does not have an Email.
+            -- c. Delete every student who does not have an Email.
 
-delete from students 
-where email is NULL;
+            DELETE FROM Students
+            WHERE Email IS NULL;
+
+-- Explanation: This query deletes all student records whose Email is NULL, removing every student who does
+-- not have an email address.
+           
