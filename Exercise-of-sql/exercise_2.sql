@@ -345,7 +345,23 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
             );
 
             -- Challenge Questions
-            -- Insert a student with NULL values in three columns.
+            
+            -- a. Insert a student with NULL values in three columns.
+
+            INSERT INTO Students VALUES
+            (2, NULL, 19, NULL,NULL);
+
+-- Explanation: This query inserts a new student record with NULL values in the Name, Email, and City 
+-- columns while providing values for StudentID and Age.
 
 
- 
+Update all NULL City values to 'Nepal'.
+
+update students
+set city='Nepal'
+where city is NULL;
+
+Delete every student who does not have an Email.
+
+delete from students 
+where email is NULL;
