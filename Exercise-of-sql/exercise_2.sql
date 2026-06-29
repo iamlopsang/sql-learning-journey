@@ -373,3 +373,28 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 -- Explanation: This query deletes all student records whose Email is NULL, removing every student who does
 -- not have an email address.
            
+        --    d.Insert five records and then write one query to increase everyone's Age by 5 years.
+
+            INSERT INTO Students (StudentID, Name, Age)
+            VALUES
+            (1, 'Ram', 34),
+            (2, 'John', 22),
+            (3, 'Sita', 25),
+            (4, 'Gita', 23),
+            (5, 'Rita', 26);
+
+            UPDATE Students
+            SET Age = Age + 5;
+
+-- Explanation: This query first inserts five new student records into the Students table and then updates
+--  the Age of all students by adding 5 years to their current Age values.
+
+
+            -- e.Insert a student and immediately update their City and Email.
+
+insert into students(studentid,name)
+values(101,'Johnny');
+
+update students
+set city='Lalitpur' and email='johnny@gmail.com';
+
