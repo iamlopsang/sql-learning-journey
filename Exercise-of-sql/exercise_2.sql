@@ -392,9 +392,15 @@ The table is shown below, and the queries in exercise2.sql are solved based on t
 
             -- e.Insert a student and immediately update their City and Email.
 
-insert into students(studentid,name)
-values(101,'Johnny');
+            INSERT INTO Students (StudentID, Name)
+            VALUES (101, 'Johnny');
 
-update students
-set city='Lalitpur' and email='johnny@gmail.com';
+            UPDATE Students
+            SET City = 'Lalitpur',
+                Email = 'johnny@gmail.com'
+            WHERE StudentID = 101;
+
+-- Explanation: This query first inserts a new student record with only the StudentID and Name, and then
+-- immediately updates the City and Email for that student by specifying the StudentID in the WHERE 
+-- clause to ensure the correct record is modified.    
 
