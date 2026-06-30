@@ -35,10 +35,12 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 -- Explanation: This query displays the first 3 records from the Employees table.
 
-Display the first 5 employees, showing only Name and Salary.
+        -- b. Display the first 5 employees, showing only Name and Salary.
 
-select top 5 * from employees
-where display name and salary;
+            SELECT TOP 5 Name, Salary
+            FROM Employees;
+
+-- Explanation:This query displays the Name and Salary of the first 5 employees.
 
 Display the top 2 highest-paid employees.
 
