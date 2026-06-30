@@ -42,8 +42,10 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 -- Explanation:This query displays the Name and Salary of the first 5 employees.
 
-Display the top 2 highest-paid employees.
+        -- c. Display the top 2 highest-paid employees.
 
-select top 2* from employess
-order by salary desc
-limit 2;
+            SELECT TOP 2 *
+            FROM Employees
+            ORDER BY Salary DESC;
+
+-- Explanation: This query displays the 2 employees with the highest salaries.
