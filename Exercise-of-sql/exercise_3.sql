@@ -23,3 +23,25 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
             Age INT,
             City VARCHAR(50)
         );
+
+    ## Questions
+
+                    -- SELECT TOP Practice Questions
+
+        -- a. Display the first 3 employees.
+
+            SELECT TOP 3 *
+            FROM Employees;
+
+-- Explanation: This query displays the first 3 records from the Employees table.
+
+Display the first 5 employees, showing only Name and Salary.
+
+select top 5 * from employees
+where display name and salary;
+
+Display the top 2 highest-paid employees.
+
+select top 2* from employess
+order by salary desc
+limit 2;
