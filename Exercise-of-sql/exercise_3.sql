@@ -63,6 +63,10 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
         -- e. Display the top 1 employee from the table.
 
+            SELECT TOP 1 *
+            FROM Employees;
+
+-- Explanation:This query displays the first employee record from the Employees table.
 
                     -- Intermediate
 
