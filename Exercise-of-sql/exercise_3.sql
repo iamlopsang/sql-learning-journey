@@ -72,6 +72,13 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
         -- a. Display the top 3 employees from the IT department.
 
+            SELECT TOP 3 *
+            FROM Employees
+            WHERE Department = 'IT';
+
+-- Explanation: This query displays the first 3 employees who work in the IT department by filtering the 
+-- records where the Department is 'IT'.
+
 
 
 
