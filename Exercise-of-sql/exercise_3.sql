@@ -96,7 +96,14 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query displays the 2 oldest employees by sorting the Age column in descending order 
 -- (highest to lowest) and selecting the first 2 records.
 
--- Display the top 3 employees whose salary is greater than 50,000.
+        -- d. Display the top 3 employees whose salary is greater than 50,000.
+
+            SELECT TOP 3 *
+            FROM Employees
+            WHERE Salary > 50000;
+
+-- Explanation: This query displays the first 3 employees whose salary is greater than 50,000 by filtering
+-- the records using the WHERE clause.
 
 
 
