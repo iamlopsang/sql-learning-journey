@@ -79,20 +79,21 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query displays the first 3 employees who work in the IT department by filtering the 
 -- records where the Department is 'IT'.
 
+        -- b. Display the top 5 highest salaries.
+
+            SELECT TOP 5 Salary
+            FROM Employees
+            ORDER BY Salary DESC;
+
+-- Explanation: This query displays the 5 highest salary values from the Employees table.
 
 
-
-
-
-
-
-
-
-
-
--- Display the top 5 highest salaries.
 -- Display the top 2 oldest employees.
 -- Display the top 3 employees whose salary is greater than 50,000.
+
+
+
+
 -- Display the top 5 employees ordered alphabetically by name.
 -- Part 2: Aggregate Functions Practice
 -- MIN()
