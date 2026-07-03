@@ -130,7 +130,10 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
         -- b. Find the youngest employee's age.
 
+            SELECT MIN(Age)
+            FROM Employees;
 
+-- Explanation: This query displays the youngest employee's age by finding the minimum value in the Age column.
 
 
 
