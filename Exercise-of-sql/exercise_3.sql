@@ -108,7 +108,15 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 
 
--- Display the top 5 employees ordered alphabetically by name.
+        -- e. Display the top 5 employees ordered alphabetically by name.
+
+            SELECT TOP 5 *
+            FROM Employees
+            ORDER BY Name ASC;
+
+-- Explanation: This query displays the first 5 employees by sorting their names in alphabetical 
+-- order (A to Z).
+
 -- Part 2: Aggregate Functions Practice
 -- MIN()
 -- Find the minimum salary.
