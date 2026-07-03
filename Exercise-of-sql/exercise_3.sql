@@ -117,10 +117,24 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query displays the first 5 employees by sorting their names in alphabetical 
 -- order (A to Z).
 
--- Part 2: Aggregate Functions Practice
--- MIN()
--- Find the minimum salary.
--- Find the youngest employee's age.
+            -- Part 2: Aggregate Functions Practice
+
+            -- MIN()
+
+        -- a. Find the minimum salary.
+
+            SELECT MIN(Salary)
+            FROM Employees;
+
+-- Explanation: This query displays the lowest salary in the Employees table using the MIN() aggregate function.
+
+        -- b. Find the youngest employee's age.
+
+
+
+
+
+
 -- Find the smallest EmployeeID.
 -- MAX()
 -- Find the maximum salary.
