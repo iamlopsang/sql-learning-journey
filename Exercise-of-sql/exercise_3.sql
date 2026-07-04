@@ -135,7 +135,7 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 -- Explanation: This query displays the youngest employee's age by finding the minimum value in the Age column.
 
--- Find the smallest EmployeeID.
+        -- c. Find the smallest EmployeeID.
 
             SELECT MIN(EmployeeID)
             FROM Employees;
@@ -143,9 +143,23 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query displays the smallest EmployeeID in the Employees table using the MIN() aggregate
 -- function.
 
--- MAX()
--- Find the maximum salary.
--- Find the oldest employee's age.
+                    -- MAX()
+
+        -- a. Find the maximum salary.
+
+            SELECT MAX(Salary)
+            FROM Employees;
+
+-- Explanation: This query displays the highest salary in the Employees table using the MAX() aggregate 
+-- function.
+
+        -- b.Find the oldest employee's age.
+           
+            SELECT MAX(Age)
+            FROM Employees;
+            
+-- Explanation: This query displays the oldest employee's age by finding the maximum value in the Age column.
+
 -- Find the largest EmployeeID.
 -- COUNT()
 -- Count the total number of employees.
