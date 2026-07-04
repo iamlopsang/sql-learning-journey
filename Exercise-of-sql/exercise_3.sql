@@ -157,10 +157,17 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
            
             SELECT MAX(Age)
             FROM Employees;
-            
+
 -- Explanation: This query displays the oldest employee's age by finding the maximum value in the Age column.
 
--- Find the largest EmployeeID.
+        -- c. Find the largest EmployeeID.
+
+            SELECT MAX(EmployeeID)
+            FROM Employees;
+
+-- Explanation: This query displays the largest EmployeeID in the Employees table using the MAX() aggregate
+-- function.
+
 -- COUNT()
 -- Count the total number of employees.
 -- Count the employees in the IT department.
