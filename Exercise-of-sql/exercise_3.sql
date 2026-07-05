@@ -178,7 +178,16 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query counts the total number of employees in the Employees table using the COUNT(*) 
 -- aggregate function.
 
--- b. Count the employees in the IT department.
+        -- b. Count the employees in the IT department.
+            
+            SELECT COUNT(Department)
+            FROM Employees
+            WHERE Department = 'IT';
+
+-- Explanation: This query counts the number of employees who work in the IT department by filtering the 
+-- records where the Department is 'IT'.
+
+
 -- c. Count the employees whose salary is greater than 60,000.
 -- Count how many employees live in Kathmandu.
 -- SUM()
