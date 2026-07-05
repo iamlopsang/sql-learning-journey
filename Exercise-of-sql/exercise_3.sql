@@ -189,6 +189,14 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 
 -- c. Count the employees whose salary is greater than 60,000.
+            
+            SELECT COUNT(Salary)
+            FROM Employees
+            WHERE Salary > 60000;
+
+-- Explanation: This query counts the number of employees whose salary is greater than 60,000 by filtering
+-- the records using the WHERE clause.
+
 -- Count how many employees live in Kathmandu.
 -- SUM()
 -- Find the total salary of all employees.
