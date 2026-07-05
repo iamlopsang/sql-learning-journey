@@ -168,10 +168,18 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query displays the largest EmployeeID in the Employees table using the MAX() aggregate
 -- function.
 
--- COUNT()
--- Count the total number of employees.
--- Count the employees in the IT department.
--- Count the employees whose salary is greater than 60,000.
+                -- COUNT()
+
+        -- a. Count the total number of employees.
+           
+            SELECT COUNT(*) AS TotalEmployees
+            FROM Employees;
+
+-- Explanation: This query counts the total number of employees in the Employees table using the COUNT(*) 
+-- aggregate function.
+
+-- b. Count the employees in the IT department.
+-- c. Count the employees whose salary is greater than 60,000.
 -- Count how many employees live in Kathmandu.
 -- SUM()
 -- Find the total salary of all employees.
