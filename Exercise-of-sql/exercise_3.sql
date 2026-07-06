@@ -197,7 +197,7 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- Explanation: This query counts the number of employees whose salary is greater than 60,000 by filtering
 -- the records using the WHERE clause.
 
-        -- Count how many employees live in Kathmandu.
+        -- d. Count how many employees live in Kathmandu.
             
             SELECT COUNT(*) AS TotalNumber
             FROM Employees
@@ -205,10 +205,30 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 -- Explanation: This query counts the total number of employees who live in Kathmandu by filtering the records where the City is 'Kathmandu'.
 
-        -- SUM()
-        -- Find the total salary of all employees.
-        -- Find the total salary of employees in the HR department.
-        -- Find the sum of the ages of all employees.
+                -- SUM()
+
+        -- a. Find the total salary of all employees.
+           
+            SELECT SUM(Salary) AS TotalSalary
+            FROM Employees;
+
+-- Explanation: This query calculates the total salary of all employees in the Employees table using the SUM() aggregate function.
+
+        -- b. Find the total salary of employees in the HR department.
+            
+            SELECT SUM(Salary) AS TotalSalary
+            FROM Employees
+            WHERE Department = 'HR';
+
+-- Explanation: This query calculates the total salary of employees in the HR department by filtering the records where the Department is 'HR'.
+
+        -- c. Find the sum of the ages of all employees.
+            
+            SELECT SUM(Age) AS TotalAge
+            FROM Employees;
+
+-- Explanation: This query calculates the sum of the ages of all employees in the Employees table using the SUM() aggregate function.
+
 -- AVG()
 -- Find the average salary.
 -- Find the average age.
