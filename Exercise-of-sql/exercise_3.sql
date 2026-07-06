@@ -231,6 +231,7 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 -- AVG()
 -- Find the average salary.
+select avg(salary)as averagesalary from employees;
 -- Find the average age.
 -- Find the average salary of employees in the Finance department.
 -- Find the average salary of employees older than 30.
