@@ -247,6 +247,14 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 -- column.
 
         -- c. Find the average salary of employees in the Finance department.
+            
+            SELECT AVG(Salary) AS AverageSalary
+            FROM Employees
+            WHERE Department = 'Finance';
+            
+-- Explanation: This query calculates the average salary of employees who work in the Finance department by
+-- filtering the records where the Department is 'Finance'.
+
         -- d. Find the average salary of employees older than 30.
 -- Mixed Practice Questions
 -- Display the highest salary in the company.
