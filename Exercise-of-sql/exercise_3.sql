@@ -229,12 +229,18 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
 -- Explanation: This query calculates the sum of the ages of all employees in the Employees table using the SUM() aggregate function.
 
--- AVG()
--- Find the average salary.
-select avg(salary)as averagesalary from employees;
--- Find the average age.
--- Find the average salary of employees in the Finance department.
--- Find the average salary of employees older than 30.
+                -- AVG()
+        -- a. Find the average salary.
+
+            SELECT AVG(Salary) AS AverageSalary
+            FROM Employees;
+            
+-- Explanation: This query calculates the average salary of all employees by finding the mean value of the Salary column.
+
+        
+        -- b.Find the average age.
+        -- c. Find the average salary of employees in the Finance department.
+        -- d. Find the average salary of employees older than 30.
 -- Mixed Practice Questions
 -- Display the highest salary in the company.
 -- Display the lowest salary in the HR department.
