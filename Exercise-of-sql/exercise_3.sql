@@ -234,11 +234,18 @@ The table is shown below, and the queries in exercise3.sql are solved based on t
 
             SELECT AVG(Salary) AS AverageSalary
             FROM Employees;
-            
--- Explanation: This query calculates the average salary of all employees by finding the mean value of the Salary column.
 
-        
+-- Explanation: This query calculates the average salary of all employees by finding the mean value of the
+--  Salary column.
+  
         -- b.Find the average age.
+            
+            SELECT AVG(Age) AS AverageAge
+            FROM Employees;
+
+-- Explanation: This query calculates the average age of all employees by finding the mean value of the Age 
+-- column.
+
         -- c. Find the average salary of employees in the Finance department.
         -- d. Find the average salary of employees older than 30.
 -- Mixed Practice Questions
