@@ -275,6 +275,14 @@ WHERE Age > 30;
 -- the Salary column.
 
         -- b. Display the lowest salary in the HR department.
+
+            SELECT MIN(Salary) AS LowestSalary
+            FROM Employees
+            WHERE Department = 'HR';
+            
+-- Explanation: This query displays the lowest salary in the HR department by filtering the records where 
+-- the Department is 'HR' and finding the minimum salary.
+
         -- c. Count employees whose age is greater than 25.
         -- d. Display the average age of employees from Kathmandu.
         -- e. Display the total salary paid to employees from Pokhara.
