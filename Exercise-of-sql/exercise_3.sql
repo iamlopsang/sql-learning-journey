@@ -261,20 +261,28 @@ SELECT AVG(Salary) AS AverageSalary
 FROM Employees
 WHERE Age > 30;
 
--- This query calculates the average salary of employees who are older than 30 by filtering the records where
---  the Age is greater than 30.
+-- Explanation: This query calculates the average salary of employees who are older than 30 by filtering 
+-- the records where the Age is greater than 30.
 
--- Mixed Practice Questions
--- Display the highest salary in the company.
--- Display the lowest salary in the HR department.
--- Count employees whose age is greater than 25.
--- Display the average age of employees from Kathmandu.
--- Display the total salary paid to employees from Pokhara.
--- Find the maximum age among employees in the IT department.
--- Find the minimum salary among employees older than 40.
--- Display the top 3 highest-paid employees and show only their Name and Salary.
--- Display the top 5 youngest employees with their EmployeeID, Name, and Age.
--- Count employees whose salary is between 40,000 and 70,000.
--- Find the average salary of employees whose city is Lalitpur.
--- Display the total number of employees whose name starts with A.
--- Display the top 2 employees with the lowest salaries.
+            -- Mixed Practice Questions
+
+        -- a. Display the highest salary in the company.
+
+            SELECT MAX(Salary) AS HighestSalary
+            FROM Employees;
+
+-- Explanation: This query displays the highest salary in the company by finding the maximum value in
+-- the Salary column.
+
+        -- b. Display the lowest salary in the HR department.
+        -- c. Count employees whose age is greater than 25.
+        -- d. Display the average age of employees from Kathmandu.
+        -- e. Display the total salary paid to employees from Pokhara.
+        -- f. Find the maximum age among employees in the IT department.
+        -- g. Find the minimum salary among employees older than 40.
+        -- h. Display the top 3 highest-paid employees and show only their Name and Salary.
+        -- i. Display the top 5 youngest employees with their EmployeeID, Name, and Age.
+        -- j. Count employees whose salary is between 40,000 and 70,000.
+        -- k. Find the average salary of employees whose city is Lalitpur.
+        -- l. Display the total number of employees whose name starts with A.
+        -- m. Display the top 2 employees with the lowest salaries.
