@@ -302,6 +302,14 @@ WHERE Age > 30;
 -- records where the City is 'Kathmandu'.
 
         -- e. Display the total salary paid to employees from Pokhara.
+
+            SELECT SUM(Salary) AS TotalSalary
+            FROM Employees
+            WHERE City = 'Pokhara';
+
+-- Explanation: This query calculates the total salary paid to employees who live in Pokhara by adding the
+-- Salary values of the filtered records.
+
         -- f. Find the maximum age among employees in the IT department.
         -- g. Find the minimum salary among employees older than 40.
         -- h. Display the top 3 highest-paid employees and show only their Name and Salary.
