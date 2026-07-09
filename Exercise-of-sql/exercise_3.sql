@@ -293,6 +293,14 @@ WHERE Age > 30;
 -- records using the WHERE clause.
 
         -- d. Display the average age of employees from Kathmandu.
+
+            SELECT AVG(Age) AS AverageAge
+            FROM Employees
+            WHERE City = 'Kathmandu';
+
+-- Explanation: This query calculates the average age of employees who live in Kathmandu by filtering the 
+-- records where the City is 'Kathmandu'.
+
         -- e. Display the total salary paid to employees from Pokhara.
         -- f. Find the maximum age among employees in the IT department.
         -- g. Find the minimum salary among employees older than 40.
