@@ -311,7 +311,18 @@ WHERE Age > 30;
 -- Salary values of the filtered records.
 
         -- f. Find the maximum age among employees in the IT department.
+
+            SELECT MAX(Age) AS MaximumAge
+            FROM Employees
+            WHERE Department = 'IT';
+
+-- Explanation: This query displays the maximum age among employees in the IT department by filtering the records where the Department is 'IT' and finding the highest age.
+
         -- g. Find the minimum salary among employees older than 40.
+-- This query displays the minimum salary among employees who are older than 40 by filtering the records where the Age is greater than 40.
+SELECT MIN(Salary) AS MinimumSalary
+FROM Employees
+WHERE Age > 40;
         -- h. Display the top 3 highest-paid employees and show only their Name and Salary.
         -- i. Display the top 5 youngest employees with their EmployeeID, Name, and Age.
         -- j. Count employees whose salary is between 40,000 and 70,000.
