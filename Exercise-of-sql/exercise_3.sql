@@ -329,6 +329,14 @@ WHERE Age > 30;
 -- the records where the Age is greater than 40.
 
         -- h. Display the top 3 highest-paid employees and show only their Name and Salary.
+
+            SELECT TOP 3 Name, Salary
+            FROM Employees
+            ORDER BY Salary DESC;
+
+-- Explanation: This query displays the names and salaries of the top 3 highest-paid employees by sorting
+-- the Salary column in descending order and selecting the first 3 records.
+
         -- i. Display the top 5 youngest employees with their EmployeeID, Name, and Age.
         -- j. Count employees whose salary is between 40,000 and 70,000.
         -- k. Find the average salary of employees whose city is Lalitpur.
