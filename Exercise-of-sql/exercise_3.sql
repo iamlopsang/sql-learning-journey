@@ -338,6 +338,14 @@ WHERE Age > 30;
 -- the Salary column in descending order and selecting the first 3 records.
 
         -- i. Display the top 5 youngest employees with their EmployeeID, Name, and Age.
+
+            SELECT TOP 5 EmployeeID, Name, Age
+            FROM Employees
+            ORDER BY Age ASC;
+            
+-- Explanation: This query displays the EmployeeID, Name, and Age of the 5 youngest employees by sorting
+-- the Age column in ascending order and selecting the first 5 records.
+
         -- j. Count employees whose salary is between 40,000 and 70,000.
         -- k. Find the average salary of employees whose city is Lalitpur.
         -- l. Display the total number of employees whose name starts with A.
