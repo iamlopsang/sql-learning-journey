@@ -342,11 +342,19 @@ WHERE Age > 30;
             SELECT TOP 5 EmployeeID, Name, Age
             FROM Employees
             ORDER BY Age ASC;
-            
+
 -- Explanation: This query displays the EmployeeID, Name, and Age of the 5 youngest employees by sorting
 -- the Age column in ascending order and selecting the first 5 records.
 
         -- j. Count employees whose salary is between 40,000 and 70,000.
+
+            SELECT COUNT(*) AS TotalEmployees
+            FROM Employees
+            WHERE Salary BETWEEN 40000 AND 70000;
+
+-- Explanation: This query counts the number of employees whose salary is between 40,000 and 70,000
+-- by filtering the records using the BETWEEN operator.
+
         -- k. Find the average salary of employees whose city is Lalitpur.
         -- l. Display the total number of employees whose name starts with A.
         -- m. Display the top 2 employees with the lowest salaries.
