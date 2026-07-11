@@ -356,5 +356,13 @@ WHERE Age > 30;
 -- by filtering the records using the BETWEEN operator.
 
         -- k. Find the average salary of employees whose city is Lalitpur.
+
+            SELECT AVG(Salary) AS AverageSalary
+            FROM Employees
+            WHERE City = 'Lalitpur';
+            
+-- Explanation: This query calculates the average salary of employees who live in Lalitpur
+-- by filtering the records where the City is 'Lalitpur' and finding the average Salary.
+
         -- l. Display the total number of employees whose name starts with A.
         -- m. Display the top 2 employees with the lowest salaries.
