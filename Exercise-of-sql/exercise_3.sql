@@ -365,4 +365,12 @@ WHERE Age > 30;
 -- by filtering the records where the City is 'Lalitpur' and finding the average Salary.
 
         -- l. Display the total number of employees whose name starts with A.
+
+            SELECT COUNT(*) AS TotalEmployees
+            FROM Employees
+            WHERE Name LIKE 'A%';
+            
+-- Explanation: This query counts the total number of employees whose names start with the letter 'A'
+-- by filtering the records using the LIKE operator with the pattern 'A%'.
+
         -- m. Display the top 2 employees with the lowest salaries.
