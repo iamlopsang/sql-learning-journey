@@ -369,8 +369,16 @@ WHERE Age > 30;
             SELECT COUNT(*) AS TotalEmployees
             FROM Employees
             WHERE Name LIKE 'A%';
-            
+
 -- Explanation: This query counts the total number of employees whose names start with the letter 'A'
 -- by filtering the records using the LIKE operator with the pattern 'A%'.
 
         -- m. Display the top 2 employees with the lowest salaries.
+
+            SELECT TOP 2 *
+            FROM Employees
+            ORDER BY Salary ASC;
+            
+-- Explanation: This query displays the 2 employees with the lowest salaries by sorting the Salary
+-- column in ascending order and selecting the first 2 records.
+
