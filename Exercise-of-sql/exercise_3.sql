@@ -378,7 +378,19 @@ WHERE Age > 30;
             SELECT TOP 2 *
             FROM Employees
             ORDER BY Salary ASC;
-            
+
 -- Explanation: This query displays the 2 employees with the lowest salaries by sorting the Salary
 -- column in ascending order and selecting the first 2 records.
 
+        -- n. Display the top 3 highest-paid employees from the IT department who are older 
+        -- than 30 years. Show only their EmployeeID, Name, and Salary.
+
+            SELECT TOP 3 EmployeeID, Name, Salary
+            FROM Employees
+            WHERE Age > 30
+            AND Department = 'IT'
+            ORDER BY Salary DESC;
+
+-- Explanation: This query displays the EmployeeID, Name, and Salary of the top 3 highest-paid
+-- employees who work in the IT department and are older than 30 by filtering the records
+-- and sorting the Salary column in descending order.
