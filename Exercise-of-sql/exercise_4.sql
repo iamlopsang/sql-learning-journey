@@ -48,3 +48,9 @@
 -- Explanation: This query displays all employees whose names end with the letter n.
 
     -- c. Display employees whose names contain ar.
+        
+        SELECT Name
+        FROM Employees
+        WHERE Name LIKE '%ar%';
+
+-- Explanation: This query displays the names of employees that contain "ar" anywhere in their names.
