@@ -54,3 +54,107 @@
         WHERE Name LIKE '%ar%';
 
 -- Explanation: This query displays the names of employees that contain "ar" anywhere in their names.
+
+    -- d. Find employees whose city starts with New.
+
+        SELECT *
+        FROM Employees
+        WHERE City LIKE 'New%';
+
+-- Explanation: This query displays all employees whose city starts with "New".
+
+    -- e. Find employees whose city ends with go.
+
+
+
+    -- f. Display employees whose second letter is a.
+
+-- Q7
+
+-- Display employees whose names have exactly 5 letters.
+
+-- Q8
+
+-- Display employees whose city contains York.
+
+-- Part B: IN Operator
+-- Q9
+
+-- Display employees working in HR, IT, or Finance.
+
+-- Q10
+
+-- Display employees who are not in the Sales department.
+
+-- Q11
+
+-- Find employees from Chicago, Boston, or Seattle.
+
+-- Part C: BETWEEN Operator
+-- Q12
+
+-- Find employees whose salary is between 45,000 and 60,000.
+
+-- Q13
+
+-- Display employees aged between 25 and 30.
+
+-- Q14
+
+-- Find employees who joined between 2023-01-01 and 2023-12-31.
+
+-- Q15
+
+-- Display employees whose salary is not between 50,000 and 70,000.
+
+-- Part D: Aliases
+-- Q16
+
+-- Display employee names with the alias Employee_Name.
+
+-- Q17
+
+-- Display salary with the alias Monthly_Salary.
+
+-- Q18
+
+-- Use a table alias to display employee name and department.
+
+-- Q19
+
+-- Display name, salary, and city using column aliases.
+
+-- Part E: Mixed Practice
+-- Q20
+
+-- Find employees whose:
+
+-- Name starts with A
+-- Department is HR or IT
+-- Salary is between 40,000 and 60,000
+-- Q21
+
+-- Display employees whose city starts with San or New.
+
+-- Q22
+
+-- Find employees whose names have exactly 4 letters.
+
+-- Q23
+
+-- Display employees whose department is IT and city contains San.
+
+-- Q24
+
+-- Find employees aged between 25 and 35 who work in Finance or HR.
+
+-- Q25 (Challenge)
+
+-- Write a single query that uses:
+
+-- LIKE
+-- Wildcard (% or _)
+-- IN
+-- BETWEEN
+-- Column Alias
+-- Table Alias
