@@ -69,9 +69,15 @@
         FROM Employees
         WHERE City LIKE '%go';
 
-Explanation: This query displays all employees whose city ends with "go".
+-- Explanation: This query displays all employees whose city ends with "go".
 
     -- f. Display employees whose second letter is a.
+
+        SELECT *
+        FROM Employees
+        WHERE Name LIKE '_a%';
+
+-- Explanation: This query displays all employees whose names have "a" as the second letter.
 
 -- Q7
 
