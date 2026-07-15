@@ -86,10 +86,16 @@
         SELECT *
         FROM Employees
         WHERE Name LIKE '_____';
-        
+
 -- Explanation: This query displays all employees whose names have exactly 5 letters.
 
     -- h. Display employees whose city contains York.
+
+        SELECT *
+        FROM Employees
+        WHERE City LIKE '%York%';
+
+-- Explanation: This query displays all employees whose city contains "York".
 
     -- Part B: IN Operator
 
