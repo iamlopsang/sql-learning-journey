@@ -97,12 +97,18 @@
 
 -- Explanation: This query displays all employees whose city contains "York".
 
-    -- Part B: IN Operator
+                        -- Part B: IN Operator
 
 
     -- a. Display employees working in HR, IT, or Finance.
 
-    -- Q10
+        SELECT *
+        FROM Employees
+        WHERE Department IN ('HR', 'IT', 'Finance');
+
+-- Explanation: This query displays all employees who work in the HR, IT, or Finance departments.
+
+  
 
 -- Display employees who are not in the Sales department.
 
