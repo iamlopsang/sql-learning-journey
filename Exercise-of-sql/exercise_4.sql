@@ -79,20 +79,24 @@
 
 -- Explanation: This query displays all employees whose names have "a" as the second letter.
 
--- Q7
 
--- Display employees whose names have exactly 5 letters.
 
--- Q8
+    -- g. Display employees whose names have exactly 5 letters.
 
--- Display employees whose city contains York.
+        SELECT *
+        FROM Employees
+        WHERE Name LIKE '_____';
+        
+-- Explanation: This query displays all employees whose names have exactly 5 letters.
 
--- Part B: IN Operator
--- Q9
+    -- h. Display employees whose city contains York.
 
--- Display employees working in HR, IT, or Finance.
+    -- Part B: IN Operator
 
--- Q10
+
+    -- a. Display employees working in HR, IT, or Finance.
+
+    -- Q10
 
 -- Display employees who are not in the Sales department.
 
