@@ -120,15 +120,19 @@
 
         SELECT *
         FROM Employees
-        WHERE Department != 'Sales';
+        WHERE City IN ('Chicago', 'Boston', 'Seattle');
 
--- Explanation: This query displays all employees who are not in the Sales department.
+-- Explanation: This query displays all employees whose city is Chicago, Boston, or Seattle.
             
                     -- Part C: BETWEEN Operator
 
--- a. Find employees whose salary is between 45,000 and 60,000.
+    -- a. Find employees whose salary is between 45,000 and 60,000.
 
--- Q13
+        SELECT *
+        FROM Employees
+        WHERE Salary BETWEEN 45000 AND 60000;      
+
+-- Explanation: This query displays all employees whose salary is between 45,000 and 60,000 (inclusive).
 
 -- Display employees aged between 25 and 30.
 
