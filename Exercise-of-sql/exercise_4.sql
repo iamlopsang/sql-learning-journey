@@ -108,13 +108,15 @@
 
 -- Explanation: This query displays all employees who work in the HR, IT, or Finance departments.
 
-  
+    -- b. Display employees who are not in the Sales department.
 
--- Display employees who are not in the Sales department.
+        SELECT *
+        FROM Employees
+        WHERE Department != 'Sales';
 
--- Q11
+-- Explanation: This query displays all employees who are not in the Sales department.
 
--- Find employees from Chicago, Boston, or Seattle.
+    -- c. Find employees from Chicago, Boston, or Seattle.
 
 -- Part C: BETWEEN Operator
 -- Q12
