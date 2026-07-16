@@ -118,10 +118,15 @@
 
     -- c. Find employees from Chicago, Boston, or Seattle.
 
--- Part C: BETWEEN Operator
--- Q12
+        SELECT *
+        FROM Employees
+        WHERE Department != 'Sales';
 
--- Find employees whose salary is between 45,000 and 60,000.
+-- Explanation: This query displays all employees who are not in the Sales department.
+            
+                    -- Part C: BETWEEN Operator
+
+-- a. Find employees whose salary is between 45,000 and 60,000.
 
 -- Q13
 
