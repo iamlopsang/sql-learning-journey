@@ -144,9 +144,16 @@
 
     -- a. Find employees who joined between 2023-01-01 and 2023-12-31.
 
-    
+        SELECT *
+        FROM Employees
+        WHERE JoiningDate BETWEEN '2023-01-01' AND '2023-12-31'; 
+
+-- Explanation: This query displays all employees who joined between January 1, 2023 and December 31, 2023.  
 
     -- b. Display employees whose salary is not between 50,000 and 70,000.
+
+
+
 
 -- Part D: Aliases
 -- Q16
