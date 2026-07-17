@@ -134,15 +134,19 @@
 
 -- Explanation: This query displays all employees whose salary is between 45,000 and 60,000 (inclusive).
 
--- Display employees aged between 25 and 30.
+    -- b. Display employees aged between 25 and 30.
 
--- Q14
+        SELECT *
+        FROM Employees
+        WHERE Age BETWEEN 25 AND 30;   
 
--- Find employees who joined between 2023-01-01 and 2023-12-31.
+-- Explanation: This query displays all employees whose age is between 25 and 30 (inclusive).        
 
--- Q15
+    -- a. Find employees who joined between 2023-01-01 and 2023-12-31.
 
--- Display employees whose salary is not between 50,000 and 70,000.
+    
+
+    -- b. Display employees whose salary is not between 50,000 and 70,000.
 
 -- Part D: Aliases
 -- Q16
