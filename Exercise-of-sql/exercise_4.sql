@@ -152,8 +152,11 @@
 
     -- b. Display employees whose salary is not between 50,000 and 70,000.
 
+        SELECT *
+        FROM Employees
+        WHERE Salary NOT BETWEEN 50000 AND 70000;
 
-
+-- Explanation: This query displays all employees whose salary is not between 50,000 and 70,000.
 
 -- Part D: Aliases
 -- Q16
