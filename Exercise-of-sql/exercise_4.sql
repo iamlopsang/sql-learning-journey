@@ -158,18 +158,20 @@
 
 -- Explanation: This query displays all employees whose salary is not between 50,000 and 70,000.
 
--- Part D: Aliases
--- Q16
+                    -- Part D: Aliases
 
--- Display employee names with the alias Employee_Name.
+    -- a. Display employee names with the alias Employee_Name.
 
--- Q17
+        SELECT Name AS Employee_Name
+        FROM Employees;
 
--- Display salary with the alias Monthly_Salary.
+-- Explanation: This query displays employee names with the alias Employee_Name.
 
--- Q18
+    -- b. Display salary with the alias Monthly_Salary.
 
--- Use a table alias to display employee name and department.
+
+
+    -- c. Use a table alias to display employee name and department.
 
 -- Q19
 
