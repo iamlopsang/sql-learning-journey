@@ -176,7 +176,16 @@
 
     -- c. Use a table alias to display employee name and department.
 
+        SELECT e.Name, e.Department
+        FROM Employees AS e;
 
+        -- or this query:
+
+        SELECT e.Name, e.Department
+        FROM Employees e; 
+
+-- Explanation: This query uses the table alias e to display the employee name and department. 
+     
 -- Q19
 
 -- Display name, salary, and city using column aliases.
