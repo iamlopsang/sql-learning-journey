@@ -169,9 +169,13 @@
 
     -- b. Display salary with the alias Monthly_Salary.
 
+        SELECT Salary AS Monthly_Salary
+        FROM Employees;
 
+-- Explanation: This query displays employee salaries with the alias Monthly_Salary.        
 
     -- c. Use a table alias to display employee name and department.
+
 
 -- Q19
 
