@@ -196,6 +196,7 @@
         FROM Employees;
 
 -- Explanation: This query displays the employee name, salary, and city using column aliases.
+
                          -- Part E: Mixed Practice
 
     -- a. Find employees whose:
@@ -204,6 +205,22 @@
     -- Department is HR or IT
     -- Salary is between 40,000 and 60,000
 
+        SELECT *
+        FROM Employees
+        WHERE Name LIKE 'A%'
+        AND Department IN ('HR', 'IT')
+        AND Salary BETWEEN 40000 AND 60000;
+
+        -- or the query can be written as:
+
+        SELECT *
+        FROM Employees
+        WHERE Name LIKE 'A%'
+        AND (Department = 'HR' OR Department = 'IT')
+        AND Salary BETWEEN 40000 AND 60000;
+
+-- Explanation: This query displays employees whose names start with A, 
+-- work in HR or IT, and have salaries between 40,000 and 60,000.
 
     -- b. Display employees whose city starts with San or New.
 
