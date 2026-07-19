@@ -186,23 +186,27 @@
 
 -- Explanation: This query uses the table alias e to display the employee name and department. 
      
--- Q19
 
--- Display name, salary, and city using column aliases.
+    -- d. Display name, salary, and city using column aliases.
 
--- Part E: Mixed Practice
--- Q20
+        SELECT
+        Name AS Employee_Name,
+        Salary AS Monthly_Salary,
+        City AS Employee_City
+        FROM Employees;
 
--- Find employees whose:
+-- Explanation: This query displays the employee name, salary, and city using column aliases.
+                         -- Part E: Mixed Practice
 
--- Name starts with A
--- Department is HR or IT
--- Salary is between 40,000 and 60,000
--- Q21
+    -- a. Find employees whose:
 
--- Display employees whose city starts with San or New.
+    -- Name starts with A
+    -- Department is HR or IT
+    -- Salary is between 40,000 and 60,000
 
--- Q22
+
+    -- b. Display employees whose city starts with San or New.
+
 
 -- Find employees whose names have exactly 4 letters.
 
