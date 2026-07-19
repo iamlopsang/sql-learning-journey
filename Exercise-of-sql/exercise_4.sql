@@ -224,6 +224,12 @@
 
     -- b. Display employees whose city starts with San or New.
 
+        SELECT *
+        FROM Employees
+        WHERE City LIKE 'San%'
+        OR City LIKE 'New%';
+        
+-- Explanation: This query displays all employees whose city starts with San or New.
 
 -- Find employees whose names have exactly 4 letters.
 
