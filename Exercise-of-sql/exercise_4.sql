@@ -250,7 +250,20 @@
 
     -- e. Find employees aged between 25 and 35 who work in Finance or HR.
 
+        SELECT *
+        FROM Employees
+        WHERE Age BETWEEN 25 AND 35
+        AND Department IN ('Finance', 'HR');
 
+        -- the query can also be written as:
+
+        SELECT *
+        FROM Employees
+        WHERE Age BETWEEN 25 AND 35
+        AND (Department = 'Finance' OR Department = 'HR');
+
+-- Explanation: This query displays employees aged between 25 and 35 who work
+--  in the Finance or HR department.
 
 -- Write a single query that uses:
 
