@@ -231,17 +231,21 @@
         
 -- Explanation: This query displays all employees whose city starts with San or New.
 
--- Find employees whose names have exactly 4 letters.
+    -- c. Find employees whose names have exactly 4 letters.
 
--- Q23
+        SELECT *
+        FROM Employees
+        WHERE Name LIKE '____';
 
--- Display employees whose department is IT and city contains San.
+-- Explanation: This query displays all employees whose names have exactly 4 letters.
 
--- Q24
+    -- d. Display employees whose department is IT and city contains San.
 
--- Find employees aged between 25 and 35 who work in Finance or HR.
 
--- Q25 (Challenge)
+
+    -- e. Find employees aged between 25 and 35 who work in Finance or HR.
+
+
 
 -- Write a single query that uses:
 
