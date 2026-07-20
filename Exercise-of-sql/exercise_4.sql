@@ -241,7 +241,12 @@
 
     -- d. Display employees whose department is IT and city contains San.
 
+        SELECT *
+        FROM Employees
+        WHERE Department = 'IT'
+        AND City LIKE '%San%';
 
+-- Explanation: This query displays employees who work in the IT department and whose city contains "San".
 
     -- e. Find employees aged between 25 and 35 who work in Finance or HR.
 
