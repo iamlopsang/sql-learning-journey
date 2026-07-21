@@ -265,11 +265,30 @@
 -- Explanation: This query displays employees aged between 25 and 35 who work
 --  in the Finance or HR department.
 
--- Write a single query that uses:
+    -- f. Write a single query that uses:
 
--- LIKE
--- Wildcard (% or _)
--- IN
--- BETWEEN
--- Column Alias
--- Table Alias
+    -- LIKE
+    -- Wildcard (% or _)
+    -- IN
+    -- BETWEEN
+    -- Column Alias
+    -- Table Alias
+
+        SELECT e.Name AS Employee_Name, e.Department, e.Salary AS Monthly_Salary, e.City
+        FROM Employees AS e
+        WHERE e.Name LIKE 'A%'
+        AND e.Department IN ('HR', 'IT')
+        AND e.Salary BETWEEN 40000 AND 60000
+        AND e.City LIKE '%San%';
+
+        -- or the query can also be written as:
+
+        SELECT
+        e.Name AS Employee_Name
+        FROM Employees AS e
+        WHERE e.Department IN ('HR', 'IT')
+        AND e.Salary BETWEEN 20000 AND 40000
+        AND e.City LIKE '%Ka%';
+
+-- Explanation: This query uses a table alias, column alias, LIKE with a wildcard (%), IN, and 
+-- BETWEEN to display employee names that meet the specified conditions.
