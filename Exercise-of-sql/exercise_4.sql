@@ -292,3 +292,27 @@
 
 -- Explanation: This query uses a table alias, column alias, LIKE with a wildcard (%), IN, and 
 -- BETWEEN to display employee names that meet the specified conditions.
+
+
+
+    -- g. Display the top 3 employees' Name (alias it as Employee_Name) and Salary who:
+
+    -- work in HR or IT
+    -- have salaries between 40,000 and 70,000
+    -- order the results by Salary in descending order.
+
+        SELECT TOP 3 Name AS Employee_Name, Salary
+        FROM Employees
+        WHERE Department IN ('HR', 'IT')
+        AND BETWEEN 40000 AND 70000
+        ORDER BY Salary DESC;
+
+-- Explanation: This query displays the top 3 employees' names and salaries who work in HR or IT, have 
+-- salaries between 40,000 and 70,000, and orders the results by salary in descending order.
+
+    -- h. Display all employees who:
+
+    -- have names that start with A
+    -- are between 25 and 35 years old
+    -- use a table alias.
+
