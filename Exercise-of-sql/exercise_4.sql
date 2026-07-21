@@ -316,3 +316,5 @@
     -- are between 25 and 35 years old
     -- use a table alias.
 
+-- Explanation: This query displays all employees whose names start with A and whose age is
+-- between 25 and 35 using a table alias.
