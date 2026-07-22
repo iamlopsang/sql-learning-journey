@@ -46,11 +46,11 @@
    
     -- 6. List all Pixar movies released in the 2000s, sorted by release date (oldest to newest).
 
-        SELECT * FROM movvies
-        WHERE year > = 2000 AND year < 2013
+        SELECT * FROM movies
+        WHERE year >= 2000 AND year < 2013
         ORDER BY  year ASC;
 
--- Explanation: This query displays all movies released between 2000 and 2009 and sorts them by release
+-- Explanation: This query displays all movies released between 2000 and 2012 and sorts them by release
 --  year from oldest to newest.
 
             -- Level 1 — Basic Understanding
@@ -89,26 +89,29 @@
 
         SELECT * FROM movies
         ORDER BY year ASC;
-        -- Explanation: This query selects all columns from the 'movies' table and orders the results by the 'year' column in ascending order, which means it will display the movies starting from the oldest release year to the newest. The 'ORDER BY' clause is used to sort the results based on the release year. 
+
+-- Explanation: This query displays all movies and sorts them by release year from oldest to newest.
 
     -- 12. Show all movies from newest to oldest.
 
         SELECT * FROM movies
         ORDER BY year DESC;
-        -- Explanation: This query selects all columns from the 'movies' table and orders the results by the 'year' column in descending order, which means it will display the movies starting from the newest release year to the oldest. The 'ORDER BY' clause is used to sort the results based on the release year.
+
+-- Explanation: This query displays all movies and sorts them by release year from newest to oldest.
 
     -- 13. Show only the first 5 movies.
 
         SELECT * FROM movies
         LIMIT 5;
-        -- Explanation: This query selects all columns from the 'movies' table and limits the output to the first five records. The 'LIMIT' clause is used to specify the maximum number of records to return, so in this case, it will return only the first five movies from the database.    
+
+-- Explanation: This query displays the first 5 records from the 'movies' table.        
 
     -- 14. Show 3 movies after skipping the first 2 rows.
 
         SELECT * FROM movies
-        LIMIT 3 OFFEST 2;
-        -- Explanation: This query selects all columns from the 'movies' table, limits the output to three records, and skips the first two records. The 'LIMIT' clause specifies that only three records should be returned, while the 'OFFSET' clause tells the database to skip the first two records in the result set before starting to return records.   
+        LIMIT 3 OFFSET 2;
 
+-- Explanation: This query skips the first 2 records and displays the next 3 records from the 'movies' table.
 
         -- Level 2 — Intermediate Practice
 
@@ -116,49 +119,57 @@
 
         SELECT title, length_minutes
         FROM movies
-        ORDER BY lenth_minutes ASC;
-        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table and orders the results by the 'length_minutes' column in ascending order, which means it will display the movies starting from the shortest duration to the longest. The 'ORDER BY' clause is used to sort the results based on the length of the movies.   
+        ORDER BY length_minutes ASC;
+
+-- Explanation: This query displays movie titles and their durations, sorted from shortest to longest.
 
     -- 16. Show movie title and length, sorted by longest movie first.
 
         SELECT title, length_minutes
         FROM movies
         ORDER BY length_minutes DESC;
-        -- Explanation: This query selects the 'title' and 'length_minutes' columns from the    'movies' table and orders the results by the 'length_minutes' column in descending order, which means it will display the movies starting from the longest duration to the shortest. The 'ORDER BY' clause is used to sort the results based on the length of the movies.   
+
+-- Explanation: This query displays movie titles and their durations, sorted from longest to shortest.
 
     -- 17. Show the 4 newest movies.
 
         SELECT * FROM movies
         ORDER BY year DESC
         LIMIT 4;
-        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in descending order (newest to oldest), and limits the output to the first four records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to four.    
+
+-- Explanation: This query displays the 4 newest movies from the 'movies' table by sorting 
+-- them from newest to oldest.
 
     -- 18. Show unique years in which movies were released.
 
         SELECT DISTINCT year 
         FROM movies;
-        -- Explanation: This query selects the unique values from the 'year' column in the 'movies' table. The 'DISTINCT' keyword ensures that duplicate years are not included in the results, so it will return a list of all unique years in which movies were released. 
-        
+
+-- Explanation: This query displays each movie release year only once from the 'movies' table.
+
     -- 19. Show movies sorted by director name alphabetically.
 
         SELECT * FROM movies
         ORDER BY director ASC;
-        -- Explanation: This query selects all columns from the 'movies' table and orders the results  by the 'director' column in ascending alphabetical order. The 'ORDER BY' clause is used to sort the results based on the director's name.   
+
+-- Explanation: This query displays all movies and sorts them by director name in alphabetical order.
 
     -- 20. Show the 5 oldest movies.
 
         SELECT * FROM movies
         ORDER BY year ASC
         LIMIT 5;
-        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), and limits the output to the first five records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to five. 
+
+-- Explanation: This query displays the first 5 movies sorted by release year from oldest to newest.
 
     -- 21. Skip first 5 movies and show next 5.
 
         SELECT * FROM movies
         ORDER BY year ASC
-        LIMIT 5 OFFEST 5;
-        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in ascending order (oldest to newest), limits the output to five records, and skips the first five records. The 'ORDER BY' clause sorts the results based on the release year, the 'LIMIT' clause restricts the number of records returned to five, and the 'OFFSET' clause tells the database to skip the first five records in the sorted list before starting to return records. 
-        
+        LIMIT 5 OFFSET 5;
+
+-- Explanation: This query sorts movies by release year, skips the first 5 records, and displays 
+-- the next 5 records.
 
         -- Level 3 — Combining Concepts
 
@@ -181,7 +192,7 @@
 
         SELECT title, length_minutes
         FROM movies
-        ODER BY length_minutes ASC
+        ORDER BY length_minutes ASC
         LIMIT 3;
         -- Explanation: This query selects the 'title' and 'length_minutes' columns from the 'movies' table, orders the results by the 'length_minutes' column in ascending order (shortest to longest), and limits the output to the first three records. The 'ORDER BY' clause is used to sort the results based on the length of the movies, and the 'LIMIT' clause restricts the number of records returned to three.   
         
@@ -198,7 +209,7 @@
         SELECT title 
         FROM movies
         ORDER BY title ASC
-        MINIT 4 OFFSET 3;
+        LIMIT 4 OFFSET 3;
         -- Explanation: This query selects the 'title' column from the 'movies' table, orders the results alphabetically by the 'title' column in ascending order, limits the output to four records, and skips the first three records. The 'ORDER BY' clause sorts the results based on the movie titles, the 'LIMIT' clause restricts the number of records returned to four, and the 'OFFSET' clause tells the database to skip the first three records in the sorted list before starting to return records.   
         
 
