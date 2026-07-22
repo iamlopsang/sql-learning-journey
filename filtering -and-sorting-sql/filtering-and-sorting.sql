@@ -4,42 +4,54 @@
 
         SELECT DISTINCT DIRECTOR fROM MOVIES
         ORDER BY director ASC;
-        -- Explanation: This query selects the unique directors from the 'movies' table and orders them in ascending alphabetical order. The 'DISTINCT' keyword is used to ensure that duplicate director names are not included in the results, and the 'ORDER BY' clause sorts the results alphabetically.   
+
+-- Explanation: This query displays each director only once from the movies table and sorts the names in
+--  alphabetical order. 
 
     -- 2. List the last four Pixar movies released (ordered from most recent to least).
 
         SELECT * FROM movies
         OREDER BY year DESC
         LIMIT 4;
-        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'year' column in descending order (most recent to least), and limits the output to the first four records. The 'ORDER BY' clause sorts the results based on the release year, and the 'LIMIT' clause restricts the number of records returned to four.    
+        
+-- Explanation: This query displays all columns from the 'movies' table, sorts the movies by release
+--  year from newest to oldest, and shows only the first 4 records.
 
     -- 3. List the first five Pixar movies sorted alphabetically.
 
         SELECT * FROM movies
         ORDER BY title ASC
         LIMIT 5;
-        -- Explanation: This query selects all columns from the 'movies' table, orders the results by the 'title' column in ascending alphabetical order, and limits the output to the first five records. The 'ORDER BY' clause sorts the results based on the movie titles, and the 'LIMIT' clause restricts the number of records returned to five.  
-        
+
+-- Explanation: This query displays all columns from the 'movies' table, sorts the movies by title
+--  in alphabetical order, and shows only the first 5 records.
+
     -- 4. List all Pixar movies released in the 1990s, sorted by release date (oldest to newest).
 
         SELECT * FROM movies
         WHERE year >=1990 AND year <2000
         ORDER BY year ASC;
-        -- Explanation: This query selects all columns from the 'movies' table, filters the results to include only movies released between 1990 and 1999 using the 'WHERE' clause, and orders the results by the 'year' column in ascending order (oldest to newest). The 'WHERE' clause ensures that only movies from the 1990s are included in the results, and the 'ORDER BY' clause sorts them by their release year.  
+        
+-- Explanation: This query displays all movies released between 1990 and 1999 and sorts them by 
+--  release year from oldest to newest.
 
     -- 5. List the next five Pixar movies sorted alphabetically.
 
         SELECT * FROM movies
         ORDER BY title ASC
         LIMIT 5 OFFSET 5;
-        -- Explanation: This query selects all columns from the 'movies' table, orders the results alphabetically by the 'title' column in ascending order, and limits the output to five records starting from the sixth record (offset of 5). The 'ORDER BY' clause sorts the results based on the movie titles, the 'LIMIT' clause restricts the number of records returned to five, and the 'OFFSET' clause skips the first five records in the sorted list.
-
+       
+-- Explanation: This query sorts the movies by title, skips the first 5 records, and displays 
+-- the next 5 records.    
+   
     -- 6. List all Pixar movies released in the 2000s, sorted by release date (oldest to newest).
 
         SELECT * FROM movvies
         WHERE year > = 2000 AND year < 2013
         ORDER BY  year ASC;
-        -- Explanation: This query selects all columns from the 'movies' table, filters the results to include   only movies released between 2000 and 2009 using the 'WHERE' clause, and orders the results by the 'year' column in ascending order (oldest to newest). The 'WHERE' clause ensures that only movies from the 2000s are included in the results, and the 'ORDER BY' clause sorts them by their release year.  
+
+-- Explanation: This query displays all movies released between 2000 and 2009 and sorts them by release
+--  year from oldest to newest.
 
             -- Level 1 — Basic Understanding
 
@@ -47,27 +59,31 @@
 
         SELECT title 
         FROM movies;
-        -- Explanation: This query selects only the 'title' column from the 'movies' table, which will return a list of all movie titles. The 'SELECT' statement specifies that only the 'title' field should be included in the results, and since there is no 'WHERE' clause or 'ORDER BY' clause, it will return all movie titles in the order they are stored in the database.  
+
+-- Explanation: This query displays the titles of all movies from the 'movies' table.
 
     -- 8. Show all unique directors.
 
         SELECT DISTINCT director
         FROM movies;
-        -- Explanation: This query selects the unique values from the 'director' column in the 'movies' table. The 'DISTINCT' keyword ensures that duplicate director names are not included in the results, so it will return a list of all unique directors from the movies database. 
+        
+-- Explanation: This query displays each director only once from the 'movies' table.
 
     -- 9. Show movie titles sorted alphabetically.
 
         SELECT title
         FROM movies
         ORDER BY year ASC;
-         -- Expalnation: This query selects all movie titles and sorts them from the oldest year to the newest.
+
+-- Explanation: This query selects all movie titles and sorts them from the oldest year to the newest.
 
     -- 10. Show movie titles sorted reverse alphabetically.
 
         SELECT title
         FROM movies
         ORDER BY year DESC;
-        -- Explanation: This query selects all movie titles and sorts them from the newest year to the oldest.
+
+-- Explanation: This query selects all movie titles and sorts them from the newest year to the oldest.
 
     -- 11. Show all movies from oldest to newest.
 
