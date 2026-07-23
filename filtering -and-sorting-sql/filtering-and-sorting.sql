@@ -1,4 +1,4 @@
--- ## Exercises of SQL Lesson 4: Filtering and sorting Query results.
+        -- ## Exercises of SQL Lesson 4: Filtering and sorting Query results.
 
     -- 1.List all directors of Pixar movies (alphabetically), without duplicates.
 
