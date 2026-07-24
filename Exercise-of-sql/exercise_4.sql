@@ -324,3 +324,19 @@
 
 -- Explanation: This query displays all employees whose names start with A and whose age is
 -- between 25 and 35 using a table alias.
+
+        -- Practice Questions (Aliases Only)
+
+        -- a. Display the Name column with the alias Employee_Name.
+
+        SELECT Name AS Employee_Name
+        FROM Employees;
+
+-- Explanation: This query displays the Name column with the alias Employee_Name.
+
+        -- b. Display Salary and Age with the aliases:
+
+        -- Monthly_Salary
+        -- Employee_Age
+
+
