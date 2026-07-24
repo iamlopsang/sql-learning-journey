@@ -339,4 +339,9 @@
         -- Monthly_Salary
         -- Employee_Age
 
+        SELECT Salary AS Monthly_Salary,
+        Age AS Employee_Age
+        FROM Employees;
 
+-- Explanation: This query displays the Salary and Age columns using the aliases 
+-- Monthly_Salary and Employee_Age.
