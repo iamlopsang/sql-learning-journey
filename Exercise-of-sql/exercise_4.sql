@@ -369,4 +369,9 @@
 
 -- Explanation: This query displays the total number of employees with the alias Total_Employees.
 
-    -- Display the AVG(Salary) with the alias Average_Salary.
+    -- e. Display the AVG(Salary) with the alias Average_Salary.
+
+        SELECT AVG(Salary) AS Average_Salary
+        FROM Employees;
+
+-- Explanation: This query displays the average salary with the alias Average_Salary.
