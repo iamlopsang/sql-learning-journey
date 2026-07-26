@@ -345,3 +345,25 @@
 
 -- Explanation: This query displays the Salary and Age columns using the aliases 
 -- Monthly_Salary and Employee_Age.
+
+
+    -- c. Display Name, Department, and City using these aliases:
+
+    -- Employee_Name
+    -- Dept
+    -- Employee_City
+
+        SELECT Name AS Employee_Name,
+        Department AS Dept,
+        City AS Employee_City
+        FROM Employees;   
+
+-- Explanation: This query displays the Name, Department, and City columns using column aliases.
+
+    -- d. Display the COUNT of employees and alias it as Total_Employees.
+
+    -- (Good practice for aggregate function aliases.)
+
+
+
+    -- Display the AVG(Salary) with the alias Average_Salary.
