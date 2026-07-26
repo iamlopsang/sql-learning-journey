@@ -364,6 +364,9 @@
 
     -- (Good practice for aggregate function aliases.)
 
+        SELECT COUNT(*) AS Total_Employees
+        FROM Employees;
 
+-- Explanation: This query displays the total number of employees with the alias Total_Employees.
 
     -- Display the AVG(Salary) with the alias Average_Salary.
