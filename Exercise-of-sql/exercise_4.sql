@@ -389,7 +389,10 @@
 
     b. Use the table alias emp to display Department, City, and Age.
 
-select emp.department, emp.city, emp.age from employees as emp;
+        SELECT emp.Department, emp.City, emp.Age
+        FROM Employees AS emp;
+
+-- Explanation: This query uses the table alias emp to display the employee's Department, City, and Age.
 
     c. Use the table alias e to display all employees whose salary is greater than 50,000.
 
