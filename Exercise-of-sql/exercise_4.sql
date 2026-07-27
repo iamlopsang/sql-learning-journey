@@ -396,8 +396,12 @@
 
     c. Use the table alias e to display all employees whose salary is greater than 50,000.
 
-select e.salary from employees as e
-where e.salary > 50000;
+        SELECT *
+        FROM Employees AS e
+        WHERE e.Salary > 50000;
+
+-- Explanation: This query uses the table alias e to display all employees whose salary is
+--  greater than 50,000.
 
 Use the table alias emp to display employees whose department is IT.
 
