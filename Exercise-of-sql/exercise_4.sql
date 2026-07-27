@@ -375,3 +375,34 @@
         FROM Employees;
 
 -- Explanation: This query displays the average salary with the alias Average_Salary.
+
+
+                -- Table Alias
+
+    a. Use the table alias e to display Name and Salary.
+
+        SELECT e.Name, e.Salary
+        FROM Employees AS e;
+
+-- Explanation: This query uses the table alias e to display the employee's Name and Salary.
+
+
+    b. Use the table alias emp to display Department, City, and Age.
+
+select emp.department, emp.city, emp.age from employees as emp;
+
+    c. Use the table alias e to display all employees whose salary is greater than 50,000.
+
+select e.salary from employees as e
+where e.salary > 50000;
+
+Use the table alias emp to display employees whose department is IT.
+
+Q10 (Mixed)
+
+Use: 
+
+a table alias (e)
+a column alias (Employee_Name)
+
+Display the employee's Name and Salary for employees aged between 25 and 35.
