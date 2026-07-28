@@ -419,3 +419,21 @@
 
 -- Explanation: This query uses the table alias e and the column alias Employee_Name to display the 
 -- employee's name and salary for employees aged between 25 and 35.
+
+    -- f. Using the Employees table:
+
+    -- Write a query to:
+
+    -- Display the EmployeeID, Name, and Department.
+    -- Use the table alias emp.
+    -- Rename the Name column as Employee_Name.
+    -- Show only employees whose City is Chicago or Seattle.
+
+        SELECT emp.EmployeeID,
+        emp.Name AS Employee_Name,
+        emp.Department
+        FROM Employees AS emp
+        WHERE emp.City IN ('Chicago', 'Seattle');
+
+-- Explanation: This query uses the table alias emp and the column alias Employee_Name to display the
+--  EmployeeID, Name, and Department of employees whose city is Chicago or Seattle.
