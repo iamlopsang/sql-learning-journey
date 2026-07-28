@@ -416,4 +416,6 @@
         e.Salary
         FROM Employees AS e
         WHERE e.Age BETWEEN 25 AND 35;
-        
+
+-- Explanation: This query uses the table alias e and the column alias Employee_Name to display the 
+-- employee's name and salary for employees aged between 25 and 35.
