@@ -38,7 +38,6 @@
 
 -- Explanation: This query displays all employees whose names start with the letter A.
 
-
     -- b. Display all employees whose names end with n.
         
         SELECT *
@@ -78,8 +77,6 @@
         WHERE Name LIKE '_a%';
 
 -- Explanation: This query displays all employees whose names have "a" as the second letter.
-
-
 
     -- g. Display employees whose names have exactly 5 letters.
 
@@ -142,7 +139,7 @@
 
 -- Explanation: This query displays all employees whose age is between 25 and 30 (inclusive).        
 
-    -- a. Find employees who joined between 2023-01-01 and 2023-12-31.
+    -- c. Find employees who joined between 2023-01-01 and 2023-12-31.
 
         SELECT *
         FROM Employees
@@ -150,7 +147,7 @@
 
 -- Explanation: This query displays all employees who joined between January 1, 2023 and December 31, 2023.  
 
-    -- b. Display employees whose salary is not between 50,000 and 70,000.
+    -- d. Display employees whose salary is not between 50,000 and 70,000.
 
         SELECT *
         FROM Employees
@@ -293,8 +290,6 @@
 -- Explanation: This query uses a table alias, column alias, LIKE with a wildcard (%), IN, and 
 -- BETWEEN to display employee names that meet the specified conditions.
 
-
-
     -- g. Display the top 3 employees' Name (alias it as Employee_Name) and Salary who:
 
     -- work in HR or IT
@@ -346,7 +341,6 @@
 -- Explanation: This query displays the Salary and Age columns using the aliases 
 -- Monthly_Salary and Employee_Age.
 
-
     -- c. Display Name, Department, and City using these aliases:
 
     -- Employee_Name
@@ -379,22 +373,21 @@
 
                 -- Table Alias
 
-    a. Use the table alias e to display Name and Salary.
+    -- a. Use the table alias e to display Name and Salary.
 
         SELECT e.Name, e.Salary
         FROM Employees AS e;
 
 -- Explanation: This query uses the table alias e to display the employee's Name and Salary.
 
-
-    b. Use the table alias emp to display Department, City, and Age.
+    -- b. Use the table alias emp to display Department, City, and Age.
 
         SELECT emp.Department, emp.City, emp.Age
         FROM Employees AS emp;
 
 -- Explanation: This query uses the table alias emp to display the employee's Department, City, and Age.
 
-    c. Use the table alias e to display all employees whose salary is greater than 50,000.
+    -- c. Use the table alias e to display all employees whose salary is greater than 50,000.
 
         SELECT *
         FROM Employees AS e
@@ -403,13 +396,24 @@
 -- Explanation: This query uses the table alias e to display all employees whose salary is
 --  greater than 50,000.
 
-Use the table alias emp to display employees whose department is IT.
+    -- d. Use the table alias emp to display employees whose department is IT.
 
-Q10 (Mixed)
+        SELECT *
+        FROM Employees AS emp
+        WHERE emp.Department = 'IT';
 
-Use: 
+-- Explanation: This query uses the table alias emp to display all employees who work in the IT department.
 
-a table alias (e)
-a column alias (Employee_Name)
+    -- e. Use: 
 
-Display the employee's Name and Salary for employees aged between 25 and 35.
+    -- a table alias (e)
+    -- a column alias (Employee_Name)
+
+    -- Display the employee's Name and Salary for employees aged between 25 and 35.
+
+        SELECT
+        e.Name AS Employee_Name,
+        e.Salary
+        FROM Employees AS e
+        WHERE e.Age BETWEEN 25 AND 35;
+        
