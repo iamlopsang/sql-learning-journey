@@ -50,3 +50,9 @@
 | 8             | Ratatouille     | Brad Bird      | 2007 | 115            |
 | 9             | WALL-E          | Andrew Stanton | 2008 | 104            |
 | 10            | Up              | Pete Docter    | 2009 | 101            |
+
+
+Exercise 6 — Tasks
+Find the domestic and international sales for each movie
+Show the sales numbers for each movie that did better internationally rather than domestically
+List all the movies by their ratings in descending order
