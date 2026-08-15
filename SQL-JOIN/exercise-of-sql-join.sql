@@ -31,3 +31,43 @@
 
 -- Explanation: Join both tables and list all movies with their ratings, starting from the highest-rated
 -- movie.
+
+                ----- Level 1: Basic JOIN-----
+
+    -- a. Display the movie title and its rating.
+
+    SELECT m.title, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id;
+
+-- Explanation: Join movies with boxoffice using their matching IDs to display each movie's title and 
+-- rating.
+
+    -- b. Show the title and year of every movie along with its domestic sales.
+
+    -- c. Display the title, director, and international sales.
+
+    -- Level 2: Filtering with JOIN
+
+    -- Find all movies with a rating of 8.0 or higher.
+
+    -- Show movies that earned more than 300,000,000 domestically.
+
+    -- Display movies directed by John Lasseter with their ratings.
+
+    -- Level 3: Sorting
+
+    -- List all movies by international sales from highest to lowest.
+
+    -- Show the top 5 highest-rated movies with their titles.
+
+    -- Level 4: Calculations
+
+    -- Display each movie's total sales (domestic + international) as a new column named Total_Sales.
+
+    -- Hint: Use + and AS.
+
+    -- Find the movie with the highest total sales.
+
+    -- Hint: Combine ORDER BY and TOP.
