@@ -46,6 +46,14 @@
 
     -- b. Show the title and year of every movie along with its domestic sales.
 
+    SELECT m.title, m.year, b.domestic_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id;
+
+-- Explanation: Join both tables using matching movie IDs to display the movie's title, year, and 
+-- domestic sales.
+
     -- c. Display the title, director, and international sales.
 
     -- Level 2: Filtering with JOIN
