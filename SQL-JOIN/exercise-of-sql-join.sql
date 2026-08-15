@@ -22,3 +22,12 @@
 -- domestic sales.
 
     -- c. List all the movies by their ratings in descending order.
+
+    SELECT movies.title, boxoffice.rating
+    FROM movies
+    INNER JOIN boxoffice
+    ON movies.id = boxoffice.movie_id
+    ORDER BY boxoffice.rating DESC;
+
+-- Explanation: Join both tables and list all movies with their ratings, starting from the highest-rated
+-- movie.
