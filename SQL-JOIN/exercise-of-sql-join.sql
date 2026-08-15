@@ -56,6 +56,14 @@
 
     -- c. Display the title, director, and international sales.
 
+    SELECT m.title, m.director, b.international_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id;
+
+-- Explanation: Join both tables using matching movie IDs to display the movie's title, director, and
+ --international sales. 
+
     -- Level 2: Filtering with JOIN
 
     -- Find all movies with a rating of 8.0 or higher.
