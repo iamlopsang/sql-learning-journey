@@ -75,7 +75,16 @@
     WHERE b.rating >= 8.0;
 
 -- Explanation: Join both tables and display movies with a rating of 8.0 or higher.
-    -- Show movies that earned more than 300,000,000 domestically.
+    
+    -- b. Show movies that earned more than 300,000,000 domestically.
+
+    SELECT m.title, b.domestic_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.domestic_sales > 300000000;
+
+-- Explanation: Join both tables and show movies with domestic sales above 300 million.
 
     -- Display movies directed by John Lasseter with their ratings.
 
