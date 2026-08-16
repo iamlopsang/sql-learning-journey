@@ -98,7 +98,15 @@
 
             ----- Level 3: Sorting -----
 
-    -- List all movies by international sales from highest to lowest.
+    -- a. List all movies by international sales from highest to lowest.
+
+    SELECT m.title, b.international_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    ORDER BY b.international_sales DESC;
+
+-- Explanation: Join both tables and sort movies by international sales from highest to lowest.
 
     -- Show the top 5 highest-rated movies with their titles.
 
