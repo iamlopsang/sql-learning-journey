@@ -86,9 +86,17 @@
 
 -- Explanation: Join both tables and show movies with domestic sales above 300 million.
 
-    -- Display movies directed by John Lasseter with their ratings.
+    -- c. Display movies directed by John Lasseter with their ratings.
 
-    -- Level 3: Sorting
+    SELECT m.title, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE m.director = 'John Lasseter';
+
+-- Explanation: Join both tables and display John Lasseter's movies with their ratings.
+
+            ----- Level 3: Sorting -----
 
     -- List all movies by international sales from highest to lowest.
 
