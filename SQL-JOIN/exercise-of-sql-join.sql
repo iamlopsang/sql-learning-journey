@@ -64,10 +64,17 @@
 -- Explanation: Join both tables using matching movie IDs to display the movie's title, director, and
  --international sales. 
 
-    -- Level 2: Filtering with JOIN
+            ----- Level 2: Filtering with JOIN-----
 
-    -- Find all movies with a rating of 8.0 or higher.
+    -- a. Find all movies with a rating of 8.0 or higher.
 
+    SELECT m.title, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.rating >= 8.0;
+
+-- Explanation: Join both tables and display movies with a rating of 8.0 or higher.
     -- Show movies that earned more than 300,000,000 domestically.
 
     -- Display movies directed by John Lasseter with their ratings.
