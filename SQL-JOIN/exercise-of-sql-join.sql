@@ -108,7 +108,15 @@
 
 -- Explanation: Join both tables and sort movies by international sales from highest to lowest.
 
-    -- Show the top 5 highest-rated movies with their titles.
+    -- b. Show the top 5 highest-rated movies with their titles.
+
+    SELECT TOP 5 m.title, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    ORDER BY b.rating DESC;
+
+-- Explanation: Join both tables and display the top 5 highest-rated movies.
 
     -- Level 4: Calculations
 
@@ -119,3 +127,44 @@
     -- Find the movie with the highest total sales.
 
     -- Hint: Combine ORDER BY and TOP.
+
+
+
+
+
+
+
+--     Level 1 — Basic INNER JOIN
+-- Display the movie title, year, and rating for every movie.
+-- Display the movie title, director, and domestic sales for every movie.
+-- Display the movie title, length in minutes, and international sales.
+-- 🟡 Level 2 — INNER JOIN + WHERE
+-- Find movies released after 2005 and display their title and rating.
+-- Find movies with a rating below 8.0 and display their title and rating.
+-- Find movies whose international sales are greater than 400,000,000.
+-- Find movies directed by Brad Bird and display their title and domestic sales.
+-- Find movies with a length of 100 minutes or more and display their title, length, and rating.
+-- 🟠 Level 3 — INNER JOIN + WHERE + ORDER BY
+-- Find movies with a rating of 8.0 or higher and list them from highest rating to lowest.
+-- Find movies with domestic sales above 200,000,000 and sort them by domestic sales from highest to lowest.
+-- Find movies released after 2000 and sort them by year from newest to oldest.
+-- Find movies directed by John Lasseter and sort them by international sales from highest to lowest.
+-- 🔴 Level 4 — A little more challenging
+-- Display the title and calculate the total sales by adding domestic and international sales.
+
+-- Use:
+
+-- domestic_sales + international_sales
+
+-- and give the result the alias Total_Sales.
+
+-- Find movies whose total sales are greater than 700,000,000.
+-- Display the top 3 movies with the highest international sales.
+-- Find movies where international sales are greater than domestic sales, and display:
+-- title
+-- domestic sales
+-- international sales
+-- Find movies with a rating between 7.5 and 8.5, and sort them by rating from highest to lowest.
+-- 🧠 One challenge question
+
+-- 18. Find the top 3 highest-rated movies released after 2000.
