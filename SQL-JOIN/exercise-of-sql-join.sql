@@ -120,9 +120,21 @@
 
     -- Level 4: Calculations
 
-    -- Display each movie's total sales (domestic + international) as a new column named Total_Sales.
+    -- a. Display each movie's total sales (domestic + international) as a new column named Total_Sales.
 
     -- Hint: Use + and AS.
+
+    SELECT m.title,
+    b.domestic_sales,
+    b.international_sales,
+    b.domestic_sales + b.international_sales AS Total_Sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id;
+
+-- Explanation: Join both tables and calculate total sales by adding domestic and international sales 
+-- for each movie.
+
 
     -- Find the movie with the highest total sales.
 
