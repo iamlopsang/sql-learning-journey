@@ -170,7 +170,14 @@
 
     -- a. Find movies released after 2005 and display their title and rating.
 
+    SELECT m.title, m.year, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE m.year > 2005;
 
+-- Explanation: Join both tables and display movies released after 2005 along with their 
+-- year and rating.
 
     -- Find movies with a rating below 8.0 and display their title and rating.
     -- Find movies whose international sales are greater than 400,000,000.
