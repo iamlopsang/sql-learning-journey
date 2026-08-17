@@ -136,9 +136,21 @@
 -- for each movie.
 
 
-    -- Find the movie with the highest total sales.
+    -- b. Find the movie with the highest total sales.
 
     -- Hint: Combine ORDER BY and TOP.
+
+    SELECT TOP 1 m.title,
+    b.domestic_sales,
+    b.international_sales,
+    b.domestic_sales + b.international_sales AS Total_Sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    ORDER BY Total_Sales DESC;
+
+-- Explanation: Join both tables, calculate total sales, and display the movie with the highest
+-- total sales.
 
 
 
