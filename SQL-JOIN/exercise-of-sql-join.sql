@@ -209,7 +209,16 @@
 
 -- Explanation: Join both tables and display Brad Bird's movies with their domestic sales.
 
-    -- Find movies with a length of 100 minutes or more and display their title, length, and rating.
+    -- e. Find movies with a length of 100 minutes or more and display their title, length, and rating.
+
+    SELECT m.title, m.length_minutes, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE m.length_minutes >= 100;
+
+-- Explanation: Join both tables and display movies that are at least 100 minutes long along with their 
+-- ratings.
     -- 🟠 Level 3 — INNER JOIN + WHERE + ORDER BY
     -- Find movies with a rating of 8.0 or higher and list them from highest rating to lowest.
     -- Find movies with domestic sales above 200,000,000 and sort them by domestic sales from highest to lowest.
