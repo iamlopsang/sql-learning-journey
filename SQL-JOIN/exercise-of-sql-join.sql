@@ -179,7 +179,16 @@
 -- Explanation: Join both tables and display movies released after 2005 along with their 
 -- year and rating.
 
-    -- Find movies with a rating below 8.0 and display their title and rating.
+    -- b. Find movies with a rating below 8.0 and display their title and rating.
+
+    SELECT m.title, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.rating < 8.0;
+
+-- Explanation: Join both tables and display movies with a rating below 8.0.
+
     -- Find movies whose international sales are greater than 400,000,000.
     -- Find movies directed by Brad Bird and display their title and domestic sales.
     -- Find movies with a length of 100 minutes or more and display their title, length, and rating.
