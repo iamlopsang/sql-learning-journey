@@ -199,7 +199,16 @@
 
 -- Explanation: Join both tables and display movies with international sales greater than 400 million.
 
-    -- Find movies directed by Brad Bird and display their title and domestic sales.
+    -- d. Find movies directed by Brad Bird and display their title and domestic sales.
+
+    SELECT m.title, b.domestic_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE m.director = 'Brad Bird';
+
+-- Explanation: Join both tables and display Brad Bird's movies with their domestic sales.
+
     -- Find movies with a length of 100 minutes or more and display their title, length, and rating.
     -- 🟠 Level 3 — INNER JOIN + WHERE + ORDER BY
     -- Find movies with a rating of 8.0 or higher and list them from highest rating to lowest.
