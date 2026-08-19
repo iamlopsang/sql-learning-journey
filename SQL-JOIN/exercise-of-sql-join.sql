@@ -246,7 +246,15 @@
 -- Explanation: Join both tables, filter movies with domestic sales above 200 million, and sort them 
 --from highest to lowest sales.
 
-    -- Find movies released after 2000 and sort them by year from newest to oldest.
+    -- c. Find movies released after 2000 and sort them by year from newest to oldest.
+
+    SELECT m.title, m.year
+    FROM movies AS m
+    WHERE m.year > 2000
+    ORDER BY m.year DESC;
+
+-- Explanation: Display movies released after 2000 and sort them from newest to oldest.
+
     -- Find movies directed by John Lasseter and sort them by international sales from highest to lowest.
     -- 🔴 Level 4 — A little more challenging
     -- Display the title and calculate the total sales by adding domestic and international sales.
