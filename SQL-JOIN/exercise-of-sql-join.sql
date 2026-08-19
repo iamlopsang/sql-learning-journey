@@ -234,7 +234,18 @@
 -- Explanation: Join both tables, filter movies rated 8.0 or higher,and sort them from highest
 -- to lowest rating.
 
-    -- Find movies with domestic sales above 200,000,000 and sort them by domestic sales from highest to lowest.
+    -- b. Find movies with domestic sales above 200,000,000 and sort them by domestic sales from highest to lowest.
+
+    SELECT m.title, b.domestic_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.domestic_sales > 200000000
+    ORDER BY b.domestic_sales DESC;
+
+-- Explanation: Join both tables, filter movies with domestic sales above 200 million, and sort them 
+--from highest to lowest sales.
+
     -- Find movies released after 2000 and sort them by year from newest to oldest.
     -- Find movies directed by John Lasseter and sort them by international sales from highest to lowest.
     -- 🔴 Level 4 — A little more challenging
