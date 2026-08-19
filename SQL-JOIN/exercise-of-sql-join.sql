@@ -255,7 +255,18 @@
 
 -- Explanation: Display movies released after 2000 and sort them from newest to oldest.
 
-    -- Find movies directed by John Lasseter and sort them by international sales from highest to lowest.
+    -- d. Find movies directed by John Lasseter and sort them by international sales from highest to lowest.
+
+    SELECT m.title, b.international_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE m.director = 'John Lasseter'
+    ORDER BY b.international_sales DESC;
+
+-- Explanation: Join both tables, find John Lasseter's movies, and sort them by international 
+-- sales from highest to lowest.
+
     -- 🔴 Level 4 — A little more challenging
     -- Display the title and calculate the total sales by adding domestic and international sales.
 
