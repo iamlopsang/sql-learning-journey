@@ -219,8 +219,21 @@
 
 -- Explanation: Join both tables and display movies that are at least 100 minutes long along with their 
 -- ratings.
+
+
     -- 🟠 Level 3 — INNER JOIN + WHERE + ORDER BY
-    -- Find movies with a rating of 8.0 or higher and list them from highest rating to lowest.
+    -- a. Find movies with a rating of 8.0 or higher and list them from highest rating to lowest.
+
+    SELECT m.title, b.rating
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.rating >= 8.0
+    ORDER BY b.rating DESC;
+
+-- Explanation: Join both tables, filter movies rated 8.0 or higher,and sort them from highest
+-- to lowest rating.
+
     -- Find movies with domestic sales above 200,000,000 and sort them by domestic sales from highest to lowest.
     -- Find movies released after 2000 and sort them by year from newest to oldest.
     -- Find movies directed by John Lasseter and sort them by international sales from highest to lowest.
