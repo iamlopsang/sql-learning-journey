@@ -267,14 +267,26 @@
 -- Explanation: Join both tables, find John Lasseter's movies, and sort them by international 
 -- sales from highest to lowest.
 
-    -- 🔴 Level 4 — A little more challenging
-    -- Display the title and calculate the total sales by adding domestic and international sales.
+            -- 🔴 Level 4 — A little more challenging --
+
+    -- a. Display the title and calculate the total sales by adding domestic and international sales.
 
     -- Use:
 
     -- domestic_sales + international_sales
 
     -- and give the result the alias Total_Sales.
+
+    SELECT m.title,
+    b.international_sales,
+    b.domestic_sales,
+    b.international_sales + b.domestic_sales AS total_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id;
+
+-- Explanation: Join both tables and calculate total sales by adding domestic and international 
+-- sales for each movie.
 
     -- Find movies whose total sales are greater than 700,000,000.
     -- Display the top 3 movies with the highest international sales.
