@@ -304,19 +304,33 @@
 
     -- c. Display the top 3 movies with the highest international sales.
 
-SELECT TOP 3 m.title, b.international_sales
-FROM movies AS m
-INNER JOIN boxoffice AS b
-ON m.id = b.movie_id
-ORDER BY b.international_sales DESC;
+    SELECT TOP 3 m.title, b.international_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    ORDER BY b.international_sales DESC;
 
 -- Explanation: Join both tables and display the top 3 movies with the highest international sales.
 
-    -- Find movies where international sales are greater than domestic sales, and display:
+    -- d. Find movies where international sales are greater than domestic sales, and display:
     -- title
     -- domestic sales
     -- international sales
-    -- Find movies with a rating between 7.5 and 8.5, and sort them by rating from highest to lowest.
+
+    SELECT m.title, b.domestic_sales, b.international_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.international_sales > b.domestic_sales;
+
+-- Explanation: Join both tables and display movies whose international sales are greater than 
+-- their domestic sales.
+
+    -- e. Find movies with a rating between 7.5 and 8.5, and sort them by rating from highest to lowest.
+
+    SELECT m.title, b.rating
+    FROM movies AS m 
+    inner join    
     -- 🧠 One challenge question
 
     -- 18. Find the top 3 highest-rated movies released after 2000.
