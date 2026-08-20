@@ -288,7 +288,20 @@
 -- Explanation: Join both tables and calculate total sales by adding domestic and international 
 -- sales for each movie.
 
-    -- Find movies whose total sales are greater than 700,000,000.
+    -- b. Find movies whose total sales are greater than 700,000,000.
+
+    SELECT m.title,
+    b.international_sales,
+    b.domestic_sales,
+    b.international_sales + b.domestic_sales AS total_sales
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.international_sales + b.domestic_sales > 700000000;
+
+-- Explanation: Join both tables, calculate total sales, and show movies
+-- whose total sales are greater than 700 million.
+
     -- Display the top 3 movies with the highest international sales.
     -- Find movies where international sales are greater than domestic sales, and display:
     -- title
