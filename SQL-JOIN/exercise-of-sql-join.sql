@@ -341,4 +341,13 @@
 
     -- 🧠 One challenge question
 
-    -- 18. Find the top 3 highest-rated movies released after 2000.
+    -- a. Find the top 3 highest-rated movies released after 2000.
+
+    SELECT TOP 3 m.title, b.rating, m.year
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE m.year > 2000
+    ORDER BY b.rating DESC;
+
+-- Explanation: Join both tables, find movies released after 2000, and return the 3 highest-rated movies.
