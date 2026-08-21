@@ -351,3 +351,28 @@
     ORDER BY b.rating DESC;
 
 -- Explanation: Join both tables, find movies released after 2000, and return the 3 highest-rated movies.
+
+
+    -- b. Find all movies directed by either John Lasseter or Brad Bird, and display their title, director,
+    -- and rating.
+
+SELECT m.title, m.director, b.rating
+FROM movies AS m
+INNER JOIN boxoffice AS b
+ON m.id = b.movie_id
+WHERE m.director IN ('John Lasseter', 'Brad Bird');
+
+-- Explanation: Join both tables and display movies directed by either John Lasseter or Brad Bird 
+-- with their ratings.
+
+
+    -- c. Find movies whose domestic sales are between 200,000,000 and 300,000,000. Display the movie title,
+    -- domestic sales, and rating.
+
+
+
+select top 3 m.title, b.rating, b.domestic_sales
+ from movies as m
+inner join boxoffice as b
+on m.id= b.movie_id
+where b.domestic_sales between 200,000,000 and 300,000,000;
