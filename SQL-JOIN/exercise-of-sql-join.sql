@@ -328,9 +328,17 @@
 
     -- e. Find movies with a rating between 7.5 and 8.5, and sort them by rating from highest to lowest.
 
+   
     SELECT m.title, b.rating
-    FROM movies AS m 
-    inner join    
+    FROM movies AS m
+    INNER JOIN boxoffice AS b
+    ON m.id = b.movie_id
+    WHERE b.rating BETWEEN 7.5 AND 8.5
+    ORDER BY b.rating DESC; 
+
+-- Explanation: Join both tables, find movies rated between 7.5 and 8.5, and sort them from
+-- highest to lowest rating.
+
     -- 🧠 One challenge question
 
     -- 18. Find the top 3 highest-rated movies released after 2000.
