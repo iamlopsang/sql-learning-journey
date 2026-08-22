@@ -31,6 +31,27 @@
 
         Movie Tile + Rating  
 
+      we need information from both tables.
+      Therefore, we use INNER JOIN to connect the two tables.
+
+##    How does INNER JOIN work?
+
+      The two tables are connected through related columns:
+
+        movies                         boxoffice
+        --------                       ----------------
+        id        ←────────────────→   movie_id
+        title                          rating
+        director                       domestic_sales
+        year                           international_sales  
+        
+       Even though the column names are different, they contain related values.
+
+       For example:
+                movies.id = 1
+                boxoffice.movie_id = 1
+
+
        
         | Table: movies (Read-only) |
         |---------------------------|
