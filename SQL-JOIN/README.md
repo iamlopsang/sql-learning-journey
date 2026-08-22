@@ -12,6 +12,25 @@
 
      It is useful when the information we need is stored in different tables.
 
+##   Why is INNER JOIN necessary?
+
+     The 'movies' table contains information such as:
+
+        > title
+        > director
+        > year
+        > length_minutes
+
+      The 'boxoffice' table contains:
+
+        > rating
+        > domestic_sales
+        > international_sales
+
+      If we want to display something like:
+
+        Movie Tile + Rating  
+
        
         | Table: movies (Read-only) |
         |---------------------------|
