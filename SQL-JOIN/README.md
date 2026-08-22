@@ -50,6 +50,18 @@
        For example:
                 movies.id = 1
                 boxoffice.movie_id = 1
+        
+        These records belong to the same movie.
+        Therefore, we use:
+                on movies.id = boxoffice.movie_id
+
+        Basic Syntax:
+           SQL:-
+             SELECT column_name
+             FROM table1
+             INNER JOIN table2
+             ON table1.common_column = table2.related_column;
+             
 
 
        
