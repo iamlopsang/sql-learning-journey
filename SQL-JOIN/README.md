@@ -1,4 +1,17 @@
-       
+##  SQL Lesson :INNER JOIN
+ 
+    This exercise focuses on using SQL INNER JOIN to combine related data from two tables: movies and boxoffice.
+
+    Instead of working with information from only one table, INNER JOIN allows us to connect related records from multiple tables using matching values.
+
+    This lesson also practices table aliases, filtering with WHERE, sorting with ORDER BY, claculations, TOP, BETWEEN, and IN.
+
+##   Introduction to INNER JOIN:
+     
+     INNER JOIN is used to combine rows from two tables when there is a matching value between them.
+
+     It is useful when the information we need is stored in different tables.
+
        
         | Table: movies (Read-only) |
         |---------------------------|
