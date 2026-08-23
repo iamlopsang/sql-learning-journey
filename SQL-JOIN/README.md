@@ -105,7 +105,20 @@
                 INNER JOIN boxoffice as b
                 ON m.id = b.movie_id;
 
-          
+    ##  Important INNER JOIN Concept:
+
+          The columns used in the 'ON' condition "do not have to have the same name".
+
+          For these tables:
+            SQL:-
+              ON m.id = b.movie_id
+
+              is correct because movies.id and boxoffice.movie_id contain the related movie IDs.
+              The important thing is that the values are related, not the column names are identical.
+
+        
+        
+         
 
         
 
