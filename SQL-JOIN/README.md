@@ -61,7 +61,32 @@
              FROM table1
              INNER JOIN table2
              ON table1.common_column = table2.related_column;
-             
+
+          Example:
+            SQL:-
+              SELECT movies.title, boxoffice.rating
+              FROM movies
+              INNER JOIN boxoffice
+              ON movies.id = boxoffice.movie_id;
+
+            Explanation: This query joins the 'movies' and 'boxoffice' tables using their related movie IDs and displays each movie's title and rating.
+
+    ## TABLE ALIASES :
+
+        Table aliases give tables shorter names, making queries easier to write and read.
+
+          For example:
+            SQL:-
+              FROM movies AS m
+              INNER JOIN boxoffice AS b 
+              ON m.id = b.movie_id;
+
+            Here:
+              m -> movies
+              b -> boxoffice
+
+            So, instead of writing:  
+        
 
 
        
