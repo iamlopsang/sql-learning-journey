@@ -77,15 +77,36 @@
 
           For example:
             SQL:-
+
               FROM movies AS m
               INNER JOIN boxoffice AS b 
               ON m.id = b.movie_id;
 
             Here:
+
               m -> movies
               b -> boxoffice
 
-            So, instead of writing:  
+            So, instead of writing:
+
+                movies.title
+                boxoffice.rating 
+
+            we can write:
+
+                 m.title
+                 b.rating
+
+          For example:
+              SQL:-
+
+                SELECT m.title, b.rating
+                FROM movies AS m
+                INNER JOIN boxoffice as b
+                ON m.id = b.movie_id;
+
+          
+
         
 
 
