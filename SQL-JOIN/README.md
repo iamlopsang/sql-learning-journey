@@ -116,7 +116,20 @@
               is correct because movies.id and boxoffice.movie_id contain the related movie IDs.
               The important thing is that the values are related, not the column names are identical.
 
-        
+        ## INNER JOIN with WHERE:
+            
+            INNER JOIN can be combined with WHERE to filter the joined results.
+
+            Example:
+              SQL:-
+
+                SELECT m.title, b.rating
+                FROM movies AS m
+                INNER JOIN boxoffice AS b
+                ON m.id = b.movie_id
+                WHERE b.rating >= 8.0;
+
+            Explanation: This query joins both tables and displays only movies with a rating of 8.0 or higher.
         
          
 
