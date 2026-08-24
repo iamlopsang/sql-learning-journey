@@ -149,7 +149,23 @@
             ASC -> Lowest to Highest
             DESC -> Highest to Lowest
 
-         
+         ## INNER JOIN with Calculations:
+
+         `  We can perform calculations using columns from the joined tables.
+            
+            For example, to calulate total sales:
+              SQl:-
+
+              SELECT m.title,
+                  b.international_sales + b.domestic_sales AS Total_Sales
+                FROM movies AS m
+                INNER JOIN
+                boxoffice AS b
+                ON m.id = b.movie_id;
+
+            Explantion: This query adds domestic and international sales for each movie and stores the calculated result in a new column called Total_Sales.
+
+              Note:- '+' is used to calculate values from columns in the same row . SUM() is an aggregate function used for adding values across multiple rows.
         
          
 
