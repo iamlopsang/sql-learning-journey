@@ -167,13 +167,11 @@
 
               Note:- '+' is used to calculate values from columns in the same row . SUM() is an aggregate function used for adding values across multiple rows.
         
-         
+    ##  TABLE OVERVIEW:
 
-        
+        Table 1: movies
 
-
-       
-        | Table: movies (Read-only) |
+        | Table: movies             |
         |---------------------------|
         | id                        | title               | director       | year | length_minutes |
         | 1                         | Toy Story           | John Lasseter  | 1995 | 81             |
@@ -192,8 +190,9 @@
         | 14                        | Monsters University | Dan Scanlon    | 2013 | 110            |
 
 
+        Table 2: boxoffice
 
-        | Table: boxoffice (Read-only) |
+        | Table: boxoffice             |
         |------------------------------|
         | movie_id                     | rating | domestic_sales | international_sales |
         | 5                            | 8.2    | 380843261      | 555900000           |
@@ -212,17 +211,4 @@
         | 13                           | 7.2    | 237283207      | 301700000           |
 
 
-        | Query results |
-        |---------------|
-        | id            | title           | director       | year | length_minutes |
-        | 1             | Toy Story       | John Lasseter  | 1995 | 81             |
-        | 2             | A Bug's Life    | John Lasseter  | 1998 | 95             |
-        | 3             | Toy Story 2     | John Lasseter  | 1999 | 93             |
-        | 4             | Monsters, Inc.  | Pete Docter    | 2001 | 92             |
-        | 5             | Finding Nemo    | Andrew Stanton | 2003 | 107            |
-        | 6             | The Incredibles | Brad Bird      | 2004 | 116            |
-        | 7             | Cars            | John Lasseter  | 2006 | 117            |
-        | 8             | Ratatouille     | Brad Bird      | 2007 | 115            |
-        | 9             | WALL-E          | Andrew Stanton | 2008 | 104            |
-        | 10            | Up              | Pete Docter    | 2009 | 101            |
-
+      
