@@ -130,6 +130,26 @@
                 WHERE b.rating >= 8.0;
 
             Explanation: This query joins both tables and displays only movies with a rating of 8.0 or higher.
+
+        ##  INNER JOIN with ORDER BY:
+
+            ORDER BY can be used to sort the joined results.
+
+            Example:
+              SQL:-
+
+                SELECT m.title, b.rating
+                FROM movies AS m
+                INNER JOIN boxoffice AS b
+                ON m.id = b.movie_id
+                ORDER BY b.rating DESC;
+
+            Explanation: This query joins both tables and sorts the movies from the highest rating to the lowest.
+
+            ASC -> Lowest to Highest
+            DESC -> Highest to Lowest
+
+         
         
          
 
