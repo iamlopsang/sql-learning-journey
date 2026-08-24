@@ -211,4 +211,8 @@
         | 13                           | 7.2    | 237283207      | 301700000           |
 
 
-      
+    ##  Queries and Solutions
+
+          All queries are written in:
+
+          📄 exercise-of-sql-join.sql
