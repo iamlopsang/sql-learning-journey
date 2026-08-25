@@ -216,3 +216,16 @@
           All queries are written in:
 
           📄 exercise-of-sql-join.sql
+
+    ##  What I have Learned?
+
+        > How to combine data from two related tables using INNER JOIN,
+        > How to identify related columns between tables,
+        > How to use 'ON' to specify the relationship between tables,
+        > How to use table aliases with 'AS',
+        > How to filter joined data using 'WHERE',
+        > How to sort results using 'ORDER BY',
+        > How to use 'TOP' to limit the number of results,
+        > How to use 'BETWEEN' and 'IN' with joined tables,
+        > How to perform calculations using columns from different tables,
+        > How to use aliases for calculated columns.
