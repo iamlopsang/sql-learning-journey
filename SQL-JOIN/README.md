@@ -243,3 +243,7 @@
         > Comparison Operators
         > Calculated Columns
         > Column Aliases    
+
+    ##  Goal:
+
+        To strengthen SQL querying skills by practicing INNER JOIN and learning how to combine, filter, sort, and calculate data from multiple related tables.
