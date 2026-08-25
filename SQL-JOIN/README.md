@@ -219,13 +219,15 @@
 
     ##  What I have Learned?
 
-        > How to combine data from two related tables using INNER JOIN,
-        > How to identify related columns between tables,
-        > How to use 'ON' to specify the relationship between tables,
-        > How to use table aliases with 'AS',
-        > How to filter joined data using 'WHERE',
-        > How to sort results using 'ORDER BY',
-        > How to use 'TOP' to limit the number of results,
-        > How to use 'BETWEEN' and 'IN' with joined tables,
-        > How to perform calculations using columns from different tables,
-        > How to use aliases for calculated columns.
+        > Combine data from multiple realted tables using INNER JOIN,
+        > Identifying related columns between tables,
+        > Utilizing the 'ON' clause to precisely define connections between datasets,
+        > Simplifying complex queries by implementing table aliases with 'AS',
+        > Filtering specific subsets of joined data using conditional 'WHERE' clauses,
+        > Sorting query outputs results orderly using 'ORDER BY',
+        > Use 'TOP' to limit the number of results,
+        > Applying 'BETWEEN' and 'IN' operators across joined tables for precise data targeting,
+        > Performing mathematical calculations using columns originating from different tables,
+        > Assigning clean, descriptive aliases to calculated columns for improved report readability.
+
+        
