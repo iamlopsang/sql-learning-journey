@@ -230,4 +230,16 @@
         > Performing mathematical calculations using columns originating from different tables,
         > Assigning clean, descriptive aliases to calculated columns for improved report readability.
 
-        
+    ##  Skill Covered:
+
+        > INNER JOIN
+        > ON Clause
+        > Table Aliases
+        > WHERE Clause
+        > ORDER BY
+        > TOP
+        > BETWEEN 
+        > IN
+        > Comparison Operators
+        > Calculated Columns
+        > Column Aliases    
