@@ -1,68 +1,77 @@
--- Level 1
--- Question 1
+                    -- Level 1 --
 
--- Display the student name and the course name.
+    -- a. Display the student name and the course name.
 
--- Hint: You need all three tables.
+    -- Hint: You need all three tables.
 
--- Question 2
+    SELECT s.name, c.course_name
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id;
 
--- Display the student name, course name, and grade.
+-- Explanation: Join the three tables using student and course IDs to display each student's
+-- name and the course they are enrolled in.
 
--- Question 3
+    -- Question 2
 
--- Display the student name, city, and course name.
+    -- Display the student name, course name, and grade.
 
--- 🟡 Level 2
--- Question 4
+    -- Question 3
 
--- Find students who are taking SQL and display their name and grade.
+    -- Display the student name, city, and course name.
 
--- Hint: You'll need:
+    -- 🟡 Level 2
+    -- Question 4
 
--- WHERE c.course_name = 'SQL'
--- Question 5
+    -- Find students who are taking SQL and display their name and grade.
 
--- Find students with a grade greater than 85 and display:
+    -- Hint: You'll need:
 
--- student name
--- course name
--- grade
--- Question 6
+    -- WHERE c.course_name = 'SQL'
+    -- Question 5
 
--- Display the student name, course name, and instructor for every enrollment.
+    -- Find students with a grade greater than 85 and display:
 
--- 🟠 Level 3
--- Question 7
+    -- student name
+    -- course name
+    -- grade
+    -- Question 6
 
--- Find students from Chicago or Seattle and display:
+    -- Display the student name, course name, and instructor for every enrollment.
 
--- student name
--- city
--- course name
--- grade
+    -- 🟠 Level 3
+    -- Question 7
 
--- Hint: You can use IN.
+    -- Find students from Chicago or Seattle and display:
 
--- Question 8
+    -- student name
+    -- city
+    -- course name
+    -- grade
 
--- Find students who scored 80 or higher in their courses and sort them from highest grade to lowest.
+    -- Hint: You can use IN.
 
--- Question 9
+    -- Question 8
 
--- Find all courses taken by Alice and display:
+    -- Find students who scored 80 or higher in their courses and sort them from highest grade to lowest.
 
--- course name
--- instructor
--- grade
--- 🔴 Challenge
--- Question 10
+    -- Question 9
 
--- Find the students who scored 85 or higher in SQL.
+    -- Find all courses taken by Alice and display:
 
--- Display:
+    -- course name
+    -- instructor
+    -- grade
+    -- 🔴 Challenge
+    -- Question 10
 
--- student name
--- course name
--- instructor
--- grade
+    -- Find the students who scored 85 or higher in SQL.
+
+    -- Display:
+
+    -- student name
+    -- course name
+    -- instructor
+    -- grade
