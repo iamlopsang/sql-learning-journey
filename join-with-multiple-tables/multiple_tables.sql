@@ -25,9 +25,18 @@
 
 -- Explanation: Join the three tables to display each student's name, course name, and grade.
 
-    -- Question 3
+    -- c. Display the student name, city, and course name.
 
-    -- Display the student name, city, and course name.
+    SELECT s.name, s.city, c.course_name
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id;  
+
+-- Explanation: Join the three tables to display the student's name and city along with the course 
+-- they are enrolled in.
+
 
     -- 🟡 Level 2
     -- Question 4
