@@ -14,9 +14,16 @@
 -- Explanation: Join the three tables using student and course IDs to display each student's
 -- name and the course they are enrolled in.
 
-    -- Question 2
+    -- b. Display the student name, course name, and grade.
 
-    -- Display the student name, course name, and grade.
+    SELECT s.name, c.course_name, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id;
+
+-- Explanation: Join the three tables to display each student's name, course name, and grade.
 
     -- Question 3
 
