@@ -82,10 +82,9 @@
 
 -- Explanation: Join the three tables to display each student's name, course name, and instructor.
 
-    -- 🟠 Level 3
-    -- Question 7
+                    -- 🟠 Level 3 --
 
-    -- Find students from Chicago or Seattle and display:
+    -- a. Find students from Chicago or Seattle and display:
 
     -- student name
     -- city
