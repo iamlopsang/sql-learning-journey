@@ -38,14 +38,23 @@
 -- they are enrolled in.
 
 
-    -- 🟡 Level 2
-    -- Question 4
+                    -- 🟡 Level 2 --
 
-    -- Find students who are taking SQL and display their name and grade.
+    -- a. Find students who are taking SQL and display their name and grade.
 
     -- Hint: You'll need:
-
     -- WHERE c.course_name = 'SQL'
+
+    SELECT s.name, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id
+    WHERE c.course_name = 'SQL';
+
+-- Explanation: Join the three tables and find students taking SQL, displaying their name and grade.
+
     -- Question 5
 
     -- Find students with a grade greater than 85 and display:
