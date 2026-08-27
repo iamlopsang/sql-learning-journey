@@ -71,7 +71,16 @@
 
 -- Explanation: Join the three tables and display students whose grade is greater than 85 along with their course and grade.
    
-    -- Display the student name, course name, and instructor for every enrollment.
+    -- c. Display the student name, course name, and instructor for every enrollment.
+
+    SELECT s.name, c.course_name, c.instructor
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id;
+
+-- Explanation: Join the three tables to display each student's name, course name, and instructor.
 
     -- 🟠 Level 3
     -- Question 7
