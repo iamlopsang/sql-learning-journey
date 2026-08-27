@@ -55,15 +55,22 @@
 
 -- Explanation: Join the three tables and find students taking SQL, displaying their name and grade.
 
-    -- Question 5
-
-    -- Find students with a grade greater than 85 and display:
+    -- b. Find students with a grade greater than 85 and display:
 
     -- student name
     -- course name
     -- grade
-    -- Question 6
 
+    SELECT s.name, c.course_name, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id
+    WHERE e.grade > 85;
+
+-- Explanation: Join the three tables and display students whose grade is greater than 85 along with their course and grade.
+   
     -- Display the student name, course name, and instructor for every enrollment.
 
     -- 🟠 Level 3
