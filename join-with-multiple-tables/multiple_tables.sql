@@ -90,8 +90,18 @@
     -- city
     -- course name
     -- grade
-
     -- Hint: You can use IN.
+
+    SELECT s.name, s.city, c.course_name, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id
+    WHERE s.city IN ('Chicago', 'Seattle');
+
+-- Explanation: Join the three tables and find students from Chicago or Seattle, displaying their 
+-- name, city, course, and grade.
 
     -- Question 8
 
