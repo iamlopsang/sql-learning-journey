@@ -135,7 +135,7 @@
 -- course name, instructor, and grade.
 
 
-    -- Find the students who scored 85 or higher in SQL.
+    -- d. Find the students who scored 85 or higher in SQL.
 
     -- Display:
 
@@ -143,3 +143,15 @@
     -- course name
     -- instructor
     -- grade
+
+    SELECT s.name, c.course_name, c.instructor, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id
+    WHERE e.grade >= 85
+    AND c.course_name = 'SQL';
+
+-- Explanation: Join the three tables and find students who scored 85 or higher in SQL,
+-- displaying their name, course, instructor, and grade.
