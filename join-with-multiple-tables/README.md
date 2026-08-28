@@ -1,4 +1,11 @@
+##  SQL Lesson  : Multiple join with INNER JOIN
 
+     This exercise focuses on using INNER JOIN with multiple tables to combine related data from three tables: students, enrollments, and courses.   
+
+     The main goal of this lesson is to understand how multiple tables can be connected using related columns and how to retrieve information from all three tables in a single query.
+
+     This lesson also practices table aliases, WHERE, IN, AND, and ORDER BY while working with multiple-table joins.
+     
        
        students
         | student_id | name    | city     |
