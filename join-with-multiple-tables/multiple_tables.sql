@@ -103,9 +103,7 @@
 -- Explanation: Join the three tables and find students from Chicago or Seattle, displaying their 
 -- name, city, course, and grade.
 
-    -- Question 8
-
-    -- Find students who scored 80 or higher in their courses and sort them from highest grade to lowest.
+    -- b. Find students who scored 80 or higher in their courses and sort them from highest grade to lowest.
 
     SELECT s.name, c.course_name, e.grade
     FROM students AS s
@@ -119,16 +117,23 @@
 -- Explanation: Join the three tables, find students with grades of 80 or higher, and sort their
 -- results from highest grade to lowest.
 
-
-    -- Question 9
-
-    -- Find all courses taken by Alice and display:
+    -- c. Find all courses taken by Alice and display:
 
     -- course name
     -- instructor
     -- grade
-    -- 🔴 Challenge
-    -- Question 10
+
+    SELECT c.course_name, c.instructor, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id
+    WHERE s.name = 'Alice';
+
+-- Explanation: Join the three tables and find all courses taken by Alice, displaying the 
+-- course name, instructor, and grade.
+
 
     -- Find the students who scored 85 or higher in SQL.
 
