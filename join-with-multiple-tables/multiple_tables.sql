@@ -107,6 +107,19 @@
 
     -- Find students who scored 80 or higher in their courses and sort them from highest grade to lowest.
 
+    SELECT s.name, c.course_name, e.grade
+    FROM students AS s
+    INNER JOIN enrollments AS e
+    ON s.student_id = e.student_id
+    INNER JOIN courses AS c
+    ON c.course_id = e.course_id
+    WHERE e.grade >= 80
+    ORDER BY e.grade DESC;
+
+-- Explanation: Join the three tables, find students with grades of 80 or higher, and sort their
+-- results from highest grade to lowest.
+
+
     -- Question 9
 
     -- Find all courses taken by Alice and display:
