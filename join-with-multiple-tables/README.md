@@ -6,6 +6,41 @@
 
      This lesson also practices table aliases, WHERE, IN, AND, and ORDER BY while working with multiple-table joins.
      
+##  Introduction to Multiple Table JOIN:
+
+     When information is stored in different tables, we can use 'INNER JOIN' to combine the related data.
+
+     In the previous 'INNER JOIN' lesson, we used two tables:
+
+        SQL:-
+          SELECT m.title, b.rating
+          FROM movies AS m
+          INNER JOIN boxoffice AS b
+          ON m.id = b.movie_id;
+
+        In this lesson, we extend the same concept to three tables.
+
+        ##  Tables Used:
+
+                students
+                   ↓
+                enrollments
+                   ↓ 
+                courses    
+
+             The 'enrollments' table acts as a connecting/bridge table between 'students' and 'courses'.
+
+          For example:
+
+              students.student_id 
+                    ↓ 
+              enrollments.student_id 
+              
+              enrollments.course_id
+                    ↓ 
+              courses.course_id   
+
+             This allows us to find which student is enrolled in which course. 
        
        students
         | student_id | name    | city     |
