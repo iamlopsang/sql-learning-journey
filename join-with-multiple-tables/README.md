@@ -106,7 +106,27 @@
                     ↓
                 course_id
                     ↓
-                courses                  
+                courses    
+
+    ## Understanding the Bridge Table:
+
+        The 'enrollments' table is important because it connects students and courses.
+        For example:
+
+                Student:
+                Alice → student_id 1
+
+                Enrollment:
+                student_id 1 → course_id 101
+
+                Course:
+                course_id 101 → SQL
+
+        Using these relationships, SQL can determine:
+
+                Alice → SQL
+
+        This is why the enrollments table is needed even when we don't always select columns from it.                  
        
        students
         | student_id | name    | city     |
