@@ -126,7 +126,7 @@
 
                 Alice → SQL
 
-        This is why the enrollments table is needed even when we don't always select columns from it.                  
+        This is why the 'enrollments' table is needed even when we don't always select columns from it.                 
        
        students
         | student_id | name    | city     |
