@@ -41,6 +41,36 @@
               courses.course_id   
 
              This allows us to find which student is enrolled in which course. 
+
+##  Why Do We Need Multiple Table JOINs?
+
+     The information we need may not exist in one table.
+
+     For example:
+        The 'students' table contains:
+
+           > student_name
+           > city
+
+        The courses table contains:
+
+           > course_name
+           > instructor
+
+        The enrollments table contains:
+
+           > student_id 
+           > course_id
+           > grade
+
+      If we want to display:
+
+        student_name + course_name + grade
+
+       we need information from all three tables.
+       Therefore, we use multiple 'INNER JOINs' to connect them.
+
+           
        
        students
         | student_id | name    | city     |
