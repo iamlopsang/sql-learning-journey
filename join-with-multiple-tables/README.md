@@ -70,7 +70,43 @@
        we need information from all three tables.
        Therefore, we use multiple 'INNER JOINs' to connect them.
 
-           
+##  How Does Multiple Table INNER JOIN Work?
+
+     The basic structure is:
+
+      SQL:-
+
+        SELECT columns
+        FROM table1 AS t1
+
+        INNER JOIN table2 AS t2
+        ON t1.column = t2.column
+
+        INNER JOIN table3 AS t3
+        ON t2.column = t3.column;
+        Example
+        SELECT s.name, c.course_name, e.grade
+        FROM students AS s
+        INNER JOIN enrollments AS e
+        ON s.student_id = e.student_id
+        INNER JOIN courses AS c
+        ON c.course_id = e.course_id;
+
+       Explanation:
+
+        This query connects the students, enrollments, and courses tables using their related IDs and displays the student's name, course name, and grade.
+
+                The JOIN happens step by step:
+
+                students
+                    ↓
+                student_id
+                    ↓
+                enrollments
+                    ↓
+                course_id
+                    ↓
+                courses                  
        
        students
         | student_id | name    | city     |
