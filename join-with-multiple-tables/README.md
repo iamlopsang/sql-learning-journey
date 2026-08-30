@@ -193,10 +193,25 @@
             Both conditions must be true:
 
             Grade >= 85
-            
                AND
             Course = SQL
 
+   ## Using 'IN' with Multiple Tables:
+
+      'IN' can be used when we want to match multiple possible values.
+
+      Example:
+         SQL:-
+            SELECT s.name, s.city, c.course_name, e.grade 
+            FROM students AS s 
+            INNER JOIN enrollments AS e 
+            ON s.student_id = e.student_id 
+            INNER JOIN courses AS c 
+            ON c.course_id = e.course_id 
+            WHERE s.city IN ('Chicago', 'Seattle');
+         
+         Explanation: This query displays students from either Chicago or Seattle along with their course and grade.
+         
          students
          | student_id | name    | city     |
          | ---------: | ------- | -------- |
