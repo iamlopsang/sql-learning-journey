@@ -127,8 +127,37 @@
                 Alice → SQL
 
         This is why the 'enrollments' table is needed even when we don't always select columns from it.     
-                    
-       
+
+    ## Table Aliases:
+
+        Aliases make multiple-table queries shorter and easier to understand.
+
+         SQL:-
+            FROM students AS S
+            INNER JOIN enrollments AS e
+            INNER JOIN courses AS c
+
+            Here:
+
+           | Alias	     |    Table      |
+           --------------------------------
+           |    s	        |  students     |
+           |   e	        |  enrollments  |
+           |  c	        |  courses      |  
+           |--------------|---------------|
+
+      ## Instead of writing:
+
+            students.name
+            courses.course_name 
+            enrollments.grade   
+
+         we can write:
+
+            s.name
+            c.course_name 
+            e.grade        
+                  
          students
          | student_id | name    | city     |
          | ---------: | ------- | -------- |
