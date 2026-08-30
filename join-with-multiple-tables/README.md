@@ -174,7 +174,28 @@
 
          Explanation: This query joins all three tables and displays students who are taking SQL along with their grades.
 
+   ## Multiple Conditions with AND:
 
+      'AND' allows us to apply more than one condition.
+
+      Example:
+         SQL:-
+            SELECT s.name, c.course_name, e.grade 
+            FROM students AS s 
+            INNER JOIN enrollments AS e 
+            ON s.student_id = e.student_id 
+            INNER JOIN courses AS c 
+            ON c.course_id = e.course_id 
+            WHERE e.grade >= 85 AND c.course_name = 'SQL';
+
+         Explanation: This query displays students who scored 85 or higher specifically in SQL.
+
+            Both conditions must be true:
+
+            Grade >= 85
+            
+               AND
+            Course = SQL
 
          students
          | student_id | name    | city     |
