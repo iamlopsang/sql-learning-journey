@@ -288,4 +288,24 @@
 
    > Identifying which table each column belongs to.
 
+## Skills Covered:
 
+   > Multiple Table INNER JOIN
+
+   > ON clause
+
+   > Table Aliases
+
+   > Bridge/Connecting Tables
+
+   > WHERE Clause
+
+   > AND Operator
+
+   > IN Operator
+
+   > ORDER BY
+
+   > ASC and DESC
+
+   > Data Filtering
