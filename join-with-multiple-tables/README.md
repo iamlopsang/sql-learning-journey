@@ -230,7 +230,10 @@
          ASC  → Lowest to Highest
          DESC → Highest to Lowest
          
-         students
+## TABLE OVERVIEW:
+
+      Table 1: students
+
          | student_id | name    | city     |
          | ---------: | ------- | -------- |
          |          1 | Alice   | New York |
@@ -239,7 +242,8 @@
          |          4 | David   | Boston   |
 
 
-         courses
+      Table 2: courses
+
          | course_id | course_name | instructor |
          | --------: | ----------- | ---------- |
          |       101 | SQL         | John       |
@@ -247,7 +251,7 @@
          |       103 | Excel       | Mike       |
 
 
-         enrollments
+      Table 3: enrollments
 
          | student_id | course_id | grade |
          | ---------: | --------: | ----: |
@@ -257,3 +261,9 @@
          |          2 |       103 |    88 |
          |          3 |       102 |    92 |
          |          4 |       103 |    75 |
+
+   ## Queries and Solutions
+
+      All queries are written in:
+
+         📄 multiple-tables.sql
