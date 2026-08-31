@@ -211,6 +211,24 @@
             WHERE s.city IN ('Chicago', 'Seattle');
          
          Explanation: This query displays students from either Chicago or Seattle along with their course and grade.
+
+   ## Sorting Joined Results:
+
+      'ORDER BY' can be used after joining multiple tables.
+
+      Example:
+      SELECT s.name, c.course_name, 
+      e.grade FROM students AS s 
+      INNER JOIN enrollments AS e 
+      ON s.student_id = e.student_id 
+      INNER JOIN courses AS c 
+      ON c.course_id = e.course_id 
+      ORDER BY e.grade DESC;
+
+      Explanation: This query displays the joined results and sorts students from the highest grade to the lowest.
+
+         ASC  → Lowest to Highest
+         DESC → Highest to Lowest
          
          students
          | student_id | name    | city     |
