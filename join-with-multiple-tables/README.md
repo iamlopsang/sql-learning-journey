@@ -267,3 +267,25 @@
       All queries are written in:
 
          📄 multiple-tables.sql
+
+## What I have Learned?
+
+   > Combining data from multiple related tables using INNER JOIN.
+
+   > Identifying related columns between tables.
+
+   > Using the ON clause to define relationships between tables.
+
+   > Simplifying queries with table aliases using AS.
+
+   > Filtering joined data with WHERE.
+
+   > Applying multiple conditions with AND.
+
+   > Using the IN operator to filter data from joined tables.
+
+   > Sorting query results with ORDER BY.
+
+   > Identifying which table each column belongs to.
+
+
