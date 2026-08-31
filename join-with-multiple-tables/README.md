@@ -309,3 +309,7 @@
    > ASC and DESC
 
    > Data Filtering
+
+## Goal:
+
+   To understand how multiple related tables can be connected using INNER JOIN and to strengthen SQL skills by retrieving, filtering, and sorting data from three tables.
