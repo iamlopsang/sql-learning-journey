@@ -17,4 +17,17 @@
 -- because both columns are already in the buildings table.
 
 
+   -- 3. List all buildings and the distinct employee roles in each building
+        -- including empty buildings.
+
+        SELECT DISTINCT b.building_name, e.role
+        FROM buildings AS b
+        LEFT JOIN employees AS e
+        ON b.building_name = e.building;
+
+-- Explanation: Join the buildings and employees tables using the building name. LEFT JOIN displays ALL
+--  buildings, including buildings that have no employees. DISTINCT removes duplicate building-role 
+--  combinations. Empty buildings will show NULL for the employee role.
+        
+
      
