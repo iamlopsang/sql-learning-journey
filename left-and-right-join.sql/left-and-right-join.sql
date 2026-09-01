@@ -1,0 +1,4 @@
+
+    Find the list of all buildings that have employees
+Find the list of all buildings and their capacity
+List all buildings and the distinct employee roles in each building (including empty buildings)
