@@ -212,7 +212,7 @@
 
 
     ##  Queries and Solutions
-
+  
           All queries are written in:
 
           📄 exercise-of-sql-join.sql
