@@ -71,12 +71,16 @@
 -- Explanation: Use LEFT JOIN to display all buildings and the number of years each employee has been 
 --employed, including buildings with no employees.
 
-    Display all buildings and the names of employees who work in them, but only show employees who have worked for more than 5 years.
+    -- e. Display all buildings and the names of employees who work in them, but only show employees who have worked for more than 5 years.
             
-    select b.building_name, e.name from buildings, e.years_employed as b
-    leftjoin employees as e
-    on b.building_name = e.building
-    where e.years_emploed > 5;
+    SELECT b.building_name, e.name, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.years_employed > 5;
+
+-- Explanation: Use LEFT JOIN to connect buildings with their employees and display employees who 
+--have worked for more than 5 years.
 
 
         
