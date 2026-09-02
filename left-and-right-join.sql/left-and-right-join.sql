@@ -41,8 +41,6 @@
 -- Explanation: Use LEFT JOIN to display all buildings and the employees working in each building,
 -- including buildings that have no employees.
 
-
-
     -- b. Display all buildings and the employee roles working in each building.
 
     SELECT b.building_name, e.role
@@ -52,7 +50,6 @@
 
 -- Explanation: Use LEFT JOIN to display all buildings and the employee roles in each building,
 -- including buildings that have no employees.
-
 
     -- c. Display all buildings, their capacity, and the names of employees working in each building.
 
@@ -64,16 +61,15 @@
 -- Explanation: Use LEFT JOIN to display all buildings, their capacity, and the names of employees
 -- working in each building, including empty buildings.
 
+    -- d. Display all buildings and the years each employee has been employed.
 
+    SELECT b.building_name, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building;
 
-    Display all buildings and the years each employee has been employed.
-
-    select b.building_name, e.years_employed from buildings as b
-    leftjoin employees as e
-    on b.building_name = e.building;
-
-
-
+-- Explanation: Use LEFT JOIN to display all buildings and the number of years each employee has been 
+--employed, including buildings with no employees.
 
     Display all buildings and the names of employees who work in them, but only show employees who have worked for more than 5 years.
             
