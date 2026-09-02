@@ -28,6 +28,53 @@
 -- Explanation: Join the buildings and employees tables using the building name. LEFT JOIN displays ALL
 --  buildings, including buildings that have no employees. DISTINCT removes duplicate building-role 
 --  combinations. Empty buildings will show NULL for the employee role.
-        
 
-     
+                   ==== Basic ===
+
+    -- a. Display all buildings and the names of employees working in each building.
+  
+    SELECT b.building_name, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building;
+
+-- Explanation: Use LEFT JOIN to display all buildings and the employees working in each building,
+-- including buildings that have no employees.
+
+
+
+    Display all buildings and the employee roles working in each building.
+
+    select b.building_name, e.role from buildings as b
+    leftjoin employees as e
+    on b.building_name = e.building;
+
+
+
+
+    Display all buildings, their capacity, and the names of employees working in each building.
+
+    select b.building_name,b.capacity, e.name from buildings as b
+    leftjoin employees as e
+    on b.building_name = e.building;
+
+
+
+    Display all buildings and the years each employee has been employed.
+
+    select b.building_name, e.years_employed from buildings as b
+    leftjoin employees as e
+    on b.building_name = e.building;
+
+
+
+
+    Display all buildings and the names of employees who work in them, but only show employees who have worked for more than 5 years.
+            
+    select b.building_name, e.name from buildings, e.years_employed as b
+    leftjoin employees as e
+    on b.building_name = e.building
+    where e.years_emploed > 5;
+
+
+        
