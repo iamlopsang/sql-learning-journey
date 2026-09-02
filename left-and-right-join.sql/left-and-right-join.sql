@@ -54,11 +54,15 @@
 -- including buildings that have no employees.
 
 
-    Display all buildings, their capacity, and the names of employees working in each building.
+    -- c. Display all buildings, their capacity, and the names of employees working in each building.
 
-    select b.building_name,b.capacity, e.name from buildings as b
-    leftjoin employees as e
-    on b.building_name = e.building;
+    SELECT b.building_name, b.capacity, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building;
+
+-- Explanation: Use LEFT JOIN to display all buildings, their capacity, and the names of employees
+-- working in each building, including empty buildings.
 
 
 
