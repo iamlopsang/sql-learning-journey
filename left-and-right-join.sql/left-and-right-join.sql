@@ -104,3 +104,13 @@
 
 -- Explanation: Use LEFT JOIN to display all buildings, their capacity, and the names and roles of employees working in each building.
 -- Buildings with no employees are also included.
+
+-- 3. Display all buildings and the distinct employee roles working in each building. Include buildings that have no employees.
+
+    SELECT DISTINCT b.building_name, e.role
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building;
+
+-- Explanation: Use LEFT JOIN to display all buildings and the distinct employee roles working in 
+-- each building, including buildings with no employees.
