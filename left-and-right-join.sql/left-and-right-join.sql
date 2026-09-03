@@ -114,3 +114,15 @@
 
 -- Explanation: Use LEFT JOIN to display all buildings and the distinct employee roles working in 
 -- each building, including buildings with no employees.
+
+-- 4. Display all buildings and the names of employees who have worked for more than 5 years. Include all buildings, even 
+-- if they don't have employees who meet this condition.
+
+    SELECT b.building_name, e.name, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed > 5;
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have worked for more than 5 years. The condition is placed in the
+-- ON clause so buildings without qualifying employees are still included.
