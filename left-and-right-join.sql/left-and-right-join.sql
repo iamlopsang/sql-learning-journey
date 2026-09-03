@@ -82,5 +82,15 @@
 -- Explanation: Use LEFT JOIN to connect buildings with their employees and display employees who 
 --have worked for more than 5 years.
 
+            =====Hard=====
 
-        
+    -- 1. Display all buildings and the names of employees who work in them. Sort the results by building_name in ascending order.
+
+    SELECT b.building_name, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    ORDER BY b.building_name ASC;
+
+-- Explanation: Use LEFT JOIN to display all buildings and the names of employees working in each building, including buildings with no employees.
+-- Sort the results by building name in ascending order.
