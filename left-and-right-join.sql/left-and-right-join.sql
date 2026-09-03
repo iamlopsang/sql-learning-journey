@@ -94,3 +94,13 @@
 
 -- Explanation: Use LEFT JOIN to display all buildings and the names of employees working in each building, including buildings with no employees.
 -- Sort the results by building name in ascending order.
+
+-- 2. Display all buildings, their capacity, and the names and roles of employees working in each building. Include buildings that have no employees.
+
+    SELECT b.building_name, b.capacity, e.name, e.role
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building;
+
+-- Explanation: Use LEFT JOIN to display all buildings, their capacity, and the names and roles of employees working in each building.
+-- Buildings with no employees are also included.
