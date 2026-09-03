@@ -126,3 +126,15 @@
 
 -- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have worked for more than 5 years. The condition is placed in the
 -- ON clause so buildings without qualifying employees are still included.
+
+    -- 5. Display all buildings, their capacity, and the names of employees who have been employed for 4 or more 
+    -- years. Include buildings even if they don't have anemployee who meets this condition.
+
+    SELECT b.building_name, b.capacity, e.name, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed >= 4;
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have been employed for 4 or more years. The condition is placed in
+-- the ON clause so buildings without qualifying employees are still included.
