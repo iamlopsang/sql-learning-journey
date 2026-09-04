@@ -151,16 +151,17 @@
 -- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have been employed for 6 or more years.
 -- Buildings without qualifying employees are also included.
 
-    Question 2 — ⭐⭐
-
-    Display all buildings, their capacity, and the roles of employees working in them. Show only 
-    employees whose role is Engineer or Manager, but keep all buildings.
+    -- 7. Display all buildings, their capacity, and the roles of employees working in them. Show only 
+    -- employees whose role is Engineer or Manager, but keep all buildings.
 
     SELECT b.building_name, b.capacity, e.role
-        FROM buildings AS b
-        LEFT JOIN employees AS e
-        ON b.building_name = e.building
-    where e.role in ('Engineer','Manager');
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.role IN ('Engineer', 'Manager');  
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only employees whose role is Engineer or Manager. The role condition is placed in the
+-- ON clause so buildings without qualifying employees are still included.
 
     Question 3 — ⭐⭐
 
