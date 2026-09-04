@@ -138,3 +138,69 @@
 
 -- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have been employed for 4 or more years. The condition is placed in
 -- the ON clause so buildings without qualifying employees are still included.
+
+    -- 6. Display all buildings and the names of employees working in them, but only include employees who have worked for 6 or more years.
+    -- Keep all buildings, even those with no qualifying employees.
+
+    SELECT b.building_name, e.name, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed >= 6;
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have been employed for 6 or more years.
+-- Buildings without qualifying employees are also included.
+
+    Question 2 — ⭐⭐
+
+    Display all buildings, their capacity, and the roles of employees working in them. Show only 
+    employees whose role is Engineer or Manager, but keep all buildings.
+
+    SELECT b.building_name, b.capacity, e.role
+        FROM buildings AS b
+        LEFT JOIN employees AS e
+        ON b.building_name = e.building
+    where e.role in ('Engineer','Manager');
+
+    Question 3 — ⭐⭐
+
+    Display all buildings and the names of employees working in them, but only include employees whose names start with D. Keep all buildings, 
+    even if they have no employee whose name starts with D.
+
+    SELECT b.building_name, e.name
+        FROM buildings AS b
+        LEFT JOIN employees AS e
+        ON b.building_name = e.building
+        AND e.name like '%D';
+
+
+    Question 4 — ⭐⭐⭐
+
+    Display all buildings, their capacity, and employees who have worked for 4 or more years. Show only employees whose role is Engineer. 
+    Keep all buildings, even if they don't have a qualifying employee.
+
+    SELECT b.building_name, b.capacity,e.role, e.years_employed
+        FROM buildings AS b
+        LEFT JOIN employees AS e
+        ON b.building_name = e.building
+    where e.years_employed >= 4
+        AND e.role = 'Engineer';
+
+
+Question 5 — 🔥 Challenge
+
+Display all buildings and the names of employees working in them, but only match employees who:
+
+have worked for more than 5 years, AND
+are a Manager
+
+All buildings must still be displayed, including buildings with no matching employees.
+
+SELECT b.building_name, e.name,e.role, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+and (where e.years_employed >= 5
+    AND e.role = 'Manager');
+
+
