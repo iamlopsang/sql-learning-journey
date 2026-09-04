@@ -175,18 +175,18 @@
 -- Explanation: Use LEFT JOIN to keep all buildings and match only employees whose names start with D. The condition is placed in the ON clause so
 -- buildings without a matching employee are still included.
 
+    -- 9. Display all buildings, their capacity, and employees who have worked for 4 or more years. Show only employees whose role is Engineer. 
+    -- Keep all buildings, even if they don't have a qualifying employee.
 
-    Question 4 — ⭐⭐⭐
+    SELECT b.building_name, b.capacity, e.name, e.role, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed >= 4
+    AND e.role = 'Engineer';
 
-    Display all buildings, their capacity, and employees who have worked for 4 or more years. Show only employees whose role is Engineer. 
-    Keep all buildings, even if they don't have a qualifying employee.
-
-    SELECT b.building_name, b.capacity,e.role, e.years_employed
-        FROM buildings AS b
-        LEFT JOIN employees AS e
-        ON b.building_name = e.building
-    where e.years_employed >= 4
-        AND e.role = 'Engineer';
+-- Explanation: Use LEFT JOIN to keep all buildings and match only Engineers who have been employed for 4 or more years. The employee conditions are
+-- placed in the ON clause so buildings without qualifying employees remain included.
 
 
 Question 5 — 🔥 Challenge
