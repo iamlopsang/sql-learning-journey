@@ -189,20 +189,18 @@
 -- placed in the ON clause so buildings without qualifying employees remain included.
 
 
-Question 5 — 🔥 Challenge
+    -- 10. Display all buildings and the names of employees working in them, but only match employees who: have 
+    -- worked for more than 5 years, AND are a Manager.All buildings must still be displayed, including 
+    -- buildings with no matching employees.
 
-Display all buildings and the names of employees working in them, but only match employees who:
-
-have worked for more than 5 years, AND
-are a Manager
-
-All buildings must still be displayed, including buildings with no matching employees.
-
-SELECT b.building_name, e.name,e.role, e.years_employed
+    SELECT b.building_name, e.name, e.role, e.years_employed
     FROM buildings AS b
     LEFT JOIN employees AS e
     ON b.building_name = e.building
-and (where e.years_employed >= 5
-    AND e.role = 'Manager');
+    AND e.years_employed > 5
+    AND e.role = 'Manager';
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only Managers who have been employed for more than 5 years. The employee conditions are
+-- placed in the ON clause so buildings without qualifying employees are included.
 
 
