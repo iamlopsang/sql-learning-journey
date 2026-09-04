@@ -163,16 +163,17 @@
 -- Explanation: Use LEFT JOIN to keep all buildings and match only employees whose role is Engineer or Manager. The role condition is placed in the
 -- ON clause so buildings without qualifying employees are still included.
 
-    Question 3 — ⭐⭐
-
-    Display all buildings and the names of employees working in them, but only include employees whose names start with D. Keep all buildings, 
-    even if they have no employee whose name starts with D.
+    -- 8. Display all buildings and the names of employees working in them, but only include employees whose names start with D. Keep all buildings, 
+    -- even if they have no employee whose name starts with D.
 
     SELECT b.building_name, e.name
-        FROM buildings AS b
-        LEFT JOIN employees AS e
-        ON b.building_name = e.building
-        AND e.name like '%D';
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.name LIKE 'D%';
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only employees whose names start with D. The condition is placed in the ON clause so
+-- buildings without a matching employee are still included.
 
 
     Question 4 — ⭐⭐⭐
