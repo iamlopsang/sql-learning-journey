@@ -215,5 +215,18 @@
 -- Explanation: Use LEFT JOIN to keep all buildings, even when there is no matching employee. The LIKE condition matches only employee names
 -- that end with the letter M, while the ON clause preserves empty buildings.
 
+    -- 12. Display all buildings and employee names, but only match employees who have been employed for more than 
+    -- 5 years AND whose role is Manager. Keep all buildings.
+
+    SELECT b.building_name, e.name, e.years_employed, e.role
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed > 5
+    AND e.role = 'Manager';
+
+-- Explanation: Use LEFT JOIN to keep all buildings and match only employees who have been employed for more than 5 years and whose role is Manager.
+-- The conditions are placed in the ON clause so buildings without a matching employee are still included.
+
 
 
