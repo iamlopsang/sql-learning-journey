@@ -257,3 +257,21 @@
     AND e.name LIKE 'D%';
 
 -- Explanation: Keep all buildings and match only Engineers named D with 4+ years.
+
+-- 15. Display all buildings, their capacity, and employee names, but only match employees who:
+-- are Artists OR Managers
+-- have been employed for more than 5 years
+-- have names that start with S or D
+
+-- Keep all buildings, even if no employee matches all conditions.
+
+    SELECT b.building_name, b.capacity, e.name, e.role, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.role IN ('Artist', 'Manager')
+    AND e.years_employed > 5
+    AND (e.name LIKE 'S%' OR e.name LIKE 'D%');
+
+-- Explanation: Keep all buildings and match Artists or Managers with 5+ years whose names
+-- start with S or D.
