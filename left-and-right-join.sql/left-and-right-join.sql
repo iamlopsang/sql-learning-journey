@@ -275,3 +275,14 @@
 
 -- Explanation: Keep all buildings and match Artists or Managers with 5+ years whose names
 -- start with S or D.
+
+    -- 16. Display all buildings and the names of employees who work in them, but show only employees whose name 
+    -- contains the letter a.Keep all buildings, including buildings with no matching employee.
+
+    SELECT DISTINCT b.building_name, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.name LIKE '%a%';
+
+-- Explanation: Keep all buildings and match only employees whose names contain the letter a.
