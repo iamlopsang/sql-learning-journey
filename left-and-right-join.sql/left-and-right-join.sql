@@ -309,3 +309,14 @@
     ON b.building_name = e.building;
 
 -- Explanation: LEFT JOIN keeps all buildings and shows NULL for buildings with no employees.
+
+    -- 19. Display all buildings and employee names, but only show the buildings where the 
+    -- employee name is available.
+
+    SELECT DISTINCT b.building_name, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.name IS NOT NULL;
+
+-- Explanation: Use LEFT JOIN and remove rows where the employee name is NULL.
