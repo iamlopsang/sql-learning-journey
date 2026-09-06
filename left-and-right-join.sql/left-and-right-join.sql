@@ -286,3 +286,15 @@
     AND e.name LIKE '%a%';
 
 -- Explanation: Keep all buildings and match only employees whose names contain the letter a.
+
+    -- 17. Display every building and the capacity of the building, along with the names of employees working there.
+    -- But only show employees who do NOT work in building 1e.
+    -- Keep all buildings, including 1e and the empty buildings.
+
+    SELECT b.building_name, b.capacity, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.building <> '1e';
+
+-- Explanation: Keep all buildings and match only employees who do not work in 1e.
