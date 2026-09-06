@@ -298,3 +298,14 @@
     AND e.building <> '1e';
 
 -- Explanation: Keep all buildings and match only employees who do not work in 1e.
+
+    -- 18. Display every building and its capacity, along with employee names.
+    -- For buildings that have employees, show their names.
+    -- For buildings with no employees, show the building with NULL for the employee name.
+
+    SELECT b.building_name, b.capacity, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building;
+
+-- Explanation: LEFT JOIN keeps all buildings and shows NULL for buildings with no employees.
