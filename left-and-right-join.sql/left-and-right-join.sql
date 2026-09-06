@@ -320,3 +320,17 @@
     WHERE e.name IS NOT NULL;
 
 -- Explanation: Use LEFT JOIN and remove rows where the employee name is NULL.
+
+    -- 20. Display every building, its capacity, and the employee's name.
+    -- However:
+    -- If a building has no employees, show NULL for the employee name.
+    -- Do not show employees who have been employed for less than 3 years.
+    -- Keep all buildings, even if they have no employee who meets the condition.
+
+    SELECT b.building_name, b.capacity, e.name, e.years_employed
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed >= 3;
+
+-- Explanation: Keep all buildings and match employees with 3 or more years of experience.
