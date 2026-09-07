@@ -334,3 +334,17 @@
     AND e.years_employed >= 3;
 
 -- Explanation: Keep all buildings and match employees with 3 or more years of experience.
+
+    -- 21. Display all buildings and their capacity, along with the names of employees working in each building.
+
+    -- But:
+    -- Show employees who work in building 1e or 2w
+    -- Keep all buildings in the result, including 1w and 2e
+
+    SELECT b.building_name, b.capacity, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.building IN ('1e', '2w');     
+
+-- Explanation: Keep all buildings and match employees only from 1e or 2w.
