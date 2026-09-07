@@ -348,3 +348,15 @@
     AND e.building IN ('1e', '2w');     
 
 -- Explanation: Keep all buildings and match employees only from 1e or 2w.
+
+    -- 22. Display all buildings and the names of employees who work there.
+    -- But exclude employees whose names contain the letter a.
+    -- Keep all buildings, including buildings that have no employees remaining after the condition.
+
+    SELECT b.building_name, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.name NOT LIKE '%a%';
+
+-- Explanation: Keep all buildings and match only employees whose names do not contain the letter a.
