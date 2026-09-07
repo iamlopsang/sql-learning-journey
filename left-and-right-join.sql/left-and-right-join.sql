@@ -372,3 +372,16 @@
     AND e.building <> '2w';
 
 -- Explanation: Keep all buildings and match only employees who are not in 2w.
+
+    -- Display all buildings and their capacity, along with employee names.
+    -- Only match employees who work in a building whose capacity is greater than 20.
+    -- Keep all buildings, including buildings whose capacity is 20 or less.
+
+
+    SELECT b.building_name, b.capacity, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity > 20;
+
+-- Explanation: Keep all buildings and match employees only in buildings with capacity over 20.
