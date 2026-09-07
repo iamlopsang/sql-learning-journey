@@ -360,3 +360,15 @@
     AND e.name NOT LIKE '%a%';
 
 -- Explanation: Keep all buildings and match only employees whose names do not contain the letter a.
+
+    -- 23. Display all buildings and their capacity, along with employee names.
+    -- But only match employees whose building is NOT 2w.
+    -- Keep all buildings, including 2w.
+
+    SELECT b.building_name, b.capacity, e.name
+    FROM buildings AS b
+    LEFT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.building <> '2w';
+
+-- Explanation: Keep all buildings and match only employees who are not in 2w.
