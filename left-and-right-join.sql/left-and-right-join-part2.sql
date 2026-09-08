@@ -9,4 +9,13 @@
 
 -- Explanation: Use RIGHT JOIN to keep every employee and match their building information.
 
+    -- 2. Display every employee and their building's capacity.
+
+    SELECT b.capacity, e.name
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building;
+
+-- Explanation: Use RIGHT JOIN to keep every employee and match their building capacity.
+
     
