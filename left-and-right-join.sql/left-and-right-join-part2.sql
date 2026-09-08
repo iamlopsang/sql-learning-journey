@@ -41,16 +41,17 @@
 
 -- Explanation: Keep every employee and match building information only for Artists or Managers.
 
-Display every employee and their building capacity.
-Only match building information when the building's capacity is between 20 and 32, inclusive.
-Keep every employee, even if their building capacity is outside that range.
+    --5. Display every employee and their building capacity.
+    -- Only match building information when the building's capacity is between 20 and 32, inclusive.
+    -- Keep every employee, even if their building capacity is outside that range.
 
-
-SELECT e.name,b.capacity, b.building_name, e.role
+    SELECT e.name, b.capacity, b.building_name, e.role
     FROM buildings AS b
     RIGHT JOIN employees AS e
     ON b.building_name = e.building
-and b.capacity between 20 and 32;
+    AND b.capacity BETWEEN 20 AND 32;   
+
+-- Explanation: Keep every employee and match only buildings with capacity between 20 and 32.
 
 
 
