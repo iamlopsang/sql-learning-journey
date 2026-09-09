@@ -53,6 +53,23 @@
 
 -- Explanation: Keep every employee and match only buildings with capacity between 20 and 32.
 
+    -- 6. Display every employee and their building information.
+
+    -- Only match building information when:
+    -- the building capacity is greater than 20
+    -- AND the employee has worked for the company for at least 4 years
+
+    -- Keep every employee, regardless of whether they satisfy these conditions.
+
+    SELECT b.building_name, b.capacity, e.name, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity > 20
+    AND e.years_employed >= 4;
+
+-- Explanation: Keep every employee and match building information only
+--  when capacity is over 20 and employment is 4+ years.
 
 
     
