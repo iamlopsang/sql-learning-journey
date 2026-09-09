@@ -102,5 +102,22 @@
 
 -- Explanation: Keep every employee and match only buildings outside the 20–32 capacity range.
 
+    -- 9. Display every employee's name, role, and building.
+
+    -- Only show building information when the employee:
+    -- works in building 1e or 2w
+    -- AND has worked for more than 3 years
+    -- Keep every employee, even those who don't satisfy these conditions.
+
+    SELECT b.building_name, e.name, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.building_name IN ('1e', '2w')
+    AND e.years_employed > 3;
+
+-- Explanation: Keep every employee and match building information 
+-- only for employees in 1e or 2w who have worked more than 3 years.
+
 
     
