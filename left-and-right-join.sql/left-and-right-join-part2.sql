@@ -89,5 +89,18 @@
 -- Explanation: Keep every employee and match
 --  building information for employees over 5 years whose names start with S or D.
 
+    -- 8. Display every employee and their building information.
+
+    -- Only match the building information when the building capacity is NOT between 20 and 32.
+    -- Keep every employee, even if there is no match.
+
+    SELECT b.building_name, e.name, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity NOT BETWEEN 20 AND 32;
+
+-- Explanation: Keep every employee and match only buildings outside the 20–32 capacity range.
+
 
     
