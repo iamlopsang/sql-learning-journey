@@ -119,5 +119,16 @@
 -- Explanation: Keep every employee and match building information 
 -- only for employees in 1e or 2w who have worked more than 3 years.
 
+    -- 10. A company wants a list of all buildings and the employees assigned to them.
 
+    -- However, they only want employees who have worked for the company for more than 5 years.
+    -- Buildings with no qualifying employees should still appear.
+
+    SELECT b.building_name, e.name, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed > 5;
+
+-- Explanation: Keep every employee and match building information only for employees with 5+ years.
     
