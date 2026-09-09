@@ -71,5 +71,23 @@
 -- Explanation: Keep every employee and match building information only
 --  when capacity is over 20 and employment is 4+ years.
 
+    -- 7. Display every employee and their building name.
+
+    -- Only match building information for employees who:
+    -- have worked for the company for more than 5 years
+    -- AND their name starts with S or D
+
+    -- Keep every employee, even if they don't meet these conditions.
+
+    SELECT b.building_name, e.name, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND e.years_employed > 5
+    AND (e.name LIKE 'S%' OR e.name LIKE 'D%');
+
+-- Explanation: Keep every employee and match
+--  building information for employees over 5 years whose names start with S or D.
+
 
     
