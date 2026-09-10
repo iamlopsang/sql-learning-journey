@@ -131,4 +131,15 @@
     AND e.years_employed > 5;
 
 -- Explanation: Keep every employee and match building information only for employees with 5+ years.
+
+    -- 11. Find employees who are Engineers or Managers, have worked for the company for more than 5 years,
+    -- and whose names do not start with S.
+
+    SELECT e.name, e.role, e.years_employed
+    FROM employees AS e
+    WHERE e.role IN ('Engineer', 'Manager')
+    AND e.years_employed > 5
+    AND e.name NOT LIKE 'S%';
+
+-- Explanation: Filter Engineers and Managers with 5+ years whose names don't start with S.
     
