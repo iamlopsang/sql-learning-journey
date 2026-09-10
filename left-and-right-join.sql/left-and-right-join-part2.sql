@@ -162,3 +162,13 @@
     AND e.role != 'Engineer';
 
 -- Explanation: Find non-engineers working in buildings with capacity over 20.
+
+    -- 14. Find all buildings that have at least one employee who has worked for more than 5 years.
+
+    SELECT DISTINCT e.building, e.name, e.years_employed
+    FROM buildings AS b
+    INNER JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.years_employed > 5;
+
+-- Explanation: Join buildings with employees and keep employees with more than 5 years.
