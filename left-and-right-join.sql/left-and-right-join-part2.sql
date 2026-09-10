@@ -151,4 +151,14 @@
     AND name LIKE '%a%';
 
 -- Explanation: Find employees outside 1e and 2w whose names contain "a".
-    
+
+    -- 13. Find employees who work in a building with a capacity greater than 20, but exclude Engineers.
+
+    SELECT e.building, e.name, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE b.capacity > 20
+    AND e.role != 'Engineer';
+
+-- Explanation: Find non-engineers working in buildings with capacity over 20.
