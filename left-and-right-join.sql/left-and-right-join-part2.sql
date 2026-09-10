@@ -142,4 +142,13 @@
     AND e.name NOT LIKE 'S%';
 
 -- Explanation: Filter Engineers and Managers with 5+ years whose names don't start with S.
+
+    -- 12. Find employees who do not work in building 1e or 2w, and whose names contain the letter a.
+
+    SELECT name, building
+    FROM employees
+    WHERE building NOT IN ('1e', '2w')
+    AND name LIKE '%a%';
+
+-- Explanation: Find employees outside 1e and 2w whose names contain "a".
     
