@@ -216,3 +216,17 @@
     AND e.years_employed >= 4;
 
 -- Explanation: Match employees with building 1e and show those who have worked for at least 4 years.
+
+    -- 19. Find the employees who work in a building with the same capacity as building 1e.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity = (
+        SELECT capacity
+        FROM buildings
+        WHERE building_name = '1e'
+    );
+
+-- Explanation: Match employees to buildings whose capacity equals building 1e's capacity.
