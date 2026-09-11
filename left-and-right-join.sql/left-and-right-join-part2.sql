@@ -230,3 +230,13 @@
     );
 
 -- Explanation: Match employees to buildings whose capacity equals building 1e's capacity.
+
+    -- 20. Find all employees whose building has a capacity of 20 or less.
+
+    SELECT b.capacity, e.building, e.name
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE b.capacity <= 20;
+
+-- Explanation: Match employees with their buildings and keep buildings with capacity 20 or less.
