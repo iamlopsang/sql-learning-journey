@@ -204,3 +204,15 @@
     AND b.capacity >= 20;
 
 -- Explanation: Find 2w employees and show the building capacity when it is 20 or more.
+
+    -- 18. Find every employee whose building is 1e, and display their name, role, and building capacity.
+    -- Only employees with at least 4 years of employment should have their building capacity displayed.
+
+    SELECT b.capacity, e.building, e.name, e.role, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building = '1e'
+    AND e.years_employed >= 4;
+
+-- Explanation: Match employees with building 1e and show those who have worked for at least 4 years.
