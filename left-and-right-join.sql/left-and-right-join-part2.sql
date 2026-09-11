@@ -192,3 +192,15 @@
     WHERE b.capacity IS NULL;
 
 -- Explanation: Keep employees and find those whose building capacity is NULL.
+
+    -- 17. Find all employees who work in building 2w, but display the building's capacity only if the 
+    -- capacity is greater than 20.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building = '2w'
+    AND b.capacity >= 20;
+
+-- Explanation: Find 2w employees and show the building capacity when it is 20 or more.
