@@ -182,3 +182,13 @@
     WHERE b.building_name IS NULL;
 
 -- Explanation: Keep employees and find those with no matching building.
+
+    -- 16. Find employees who are assigned to a building, but the building's capacity is missing.
+
+    SELECT e.building, b.capacity, e.name
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE b.capacity IS NULL;
+
+-- Explanation: Keep employees and find those whose building capacity is NULL.
