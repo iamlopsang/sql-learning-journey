@@ -240,3 +240,14 @@
     WHERE b.capacity <= 20;
 
 -- Explanation: Match employees with their buildings and keep buildings with capacity 20 or less.
+
+    --21. Find employees who work in building 1e or 2w and have worked for the company for at least 6 years.
+
+    SELECT e.name, e.role, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building IN ('1e', '2w')
+    AND e.years_employed >= 6;
+
+-- Explanation: Match employees to buildings and filter 1e/2w employees with 6+ years.
