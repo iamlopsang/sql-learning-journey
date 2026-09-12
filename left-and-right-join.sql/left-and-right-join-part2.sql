@@ -288,3 +288,14 @@
 -- Explanation: Match employees with their buildings, then filter employees
 --  in 1e or 2w whose names do not contain "a".
 
+-- 25. Find every employee and show their building capacity, but only show the capacity when the building's capacity is greater than 20.
+    -- If the building's capacity is 20 or less, the capacity should appear as NULL.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity > 20;
+
+-- Explanation: Match each employee to their building only when the building
+-- capacity is greater than 20; otherwise, the capacity appears as NULL.
