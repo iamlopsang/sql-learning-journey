@@ -251,3 +251,14 @@
     AND e.years_employed >= 6;
 
 -- Explanation: Match employees to buildings and filter 1e/2w employees with 6+ years.
+
+    --22. Find employees whose role is Artist or Manager and whose building has a capacity of exactly 20 or 24.
+
+    SELECT e.name, e.role, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.role IN ('Artist', 'Manager')
+    AND b.capacity IN (20, 24);
+
+-- Explanation: Match employees to buildings, then filter Artists/Managers in 20 or 24 capacity buildings.
