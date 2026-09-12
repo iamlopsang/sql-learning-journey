@@ -275,4 +275,16 @@
 
 -- Explanation: Match employees to buildings, then find 1e/2w employees whose names do not contain "a".
 
+ --24. Find employees who are Engineers with more than 3 years of employment OR Artists with
+    --  at least 7 years of employment.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building IN ('1e', '2w')
+    AND e.name NOT LIKE '%a%';
+
+-- Explanation: Match employees with their buildings, then filter employees
+--  in 1e or 2w whose names do not contain "a".
 
