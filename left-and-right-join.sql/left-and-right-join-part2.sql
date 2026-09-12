@@ -262,3 +262,17 @@
     AND b.capacity IN (20, 24);
 
 -- Explanation: Match employees to buildings, then filter Artists/Managers in 20 or 24 capacity buildings.
+
+
+    --23.  Find employees who work in building 1e or 2w, but exclude employees whose names contain the letter a.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building IN ('1e', '2w')
+    AND e.name NOT LIKE '%a%';
+
+-- Explanation: Match employees to buildings, then find 1e/2w employees whose names do not contain "a".
+
+
