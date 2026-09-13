@@ -313,3 +313,16 @@
 -- Explanation: Match employees to buildings, then find names starting with S or D,
 -- while excluding Engineers who have worked for less than 4 years.
 
+
+    --27. Find all employees whose name starts with S or D, but exclude Engineers with les
+    -- than 4 years of employment.
+
+    SELECT e.name, e.role, e.years_employed, e.building
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE (e.name LIKE 'S%' OR e.name LIKE 'D%')
+    AND NOT (e.role = 'Engineer' AND e.years_employed < 4);
+
+-- Explanation: Match employees to buildings, then find names starting with S or D,
+-- while excluding Engineers who have worked for less than 4 years.
