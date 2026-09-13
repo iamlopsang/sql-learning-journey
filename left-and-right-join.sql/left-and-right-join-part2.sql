@@ -354,3 +354,17 @@
 
 -- Explanation: Match employees to buildings, then find employees in buildings
 -- with capacity from 16 to 24, excluding names that start with S.
+
+    --30. Find all employees whose building capacity is greater than 20 OR whose role is Manager, 
+    -- but exclude employees who have worked for less than 3 years.
+
+    SELECT e.name, e.role, e.building, e.years_employed, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE (b.capacity > 20 OR e.role = 'Manager')
+    AND e.years_employed >= 3;
+
+-- Explanation: Match employees to buildings, then find employees in buildings
+-- with capacity greater than 20 or employees who are Managers, while excluding
+-- anyone with less than 3 years of employment.
