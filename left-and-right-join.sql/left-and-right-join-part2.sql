@@ -299,3 +299,17 @@
 
 -- Explanation: Match each employee to their building only when the building
 -- capacity is greater than 20; otherwise, the capacity appears as NULL.
+
+    --26. Find all employees who have worked for at least 6 years and whose building has a capacity
+    -- of 20 or more.
+
+    SELECT e.name, e.role, e.years_employed, e.building
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE (e.name LIKE 'S%' OR e.name LIKE 'D%')
+    AND NOT (e.role = 'Engineer' AND e.years_employed < 4);
+
+-- Explanation: Match employees to buildings, then find names starting with S or D,
+-- while excluding Engineers who have worked for less than 4 years.
+
