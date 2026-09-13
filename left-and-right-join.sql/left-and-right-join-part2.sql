@@ -326,3 +326,18 @@
 
 -- Explanation: Match employees to buildings, then find names starting with S or D,
 -- while excluding Engineers who have worked for less than 4 years.
+
+
+    --28. Find employees who work in building 1e or 2w, have more than 5 years of employment,
+    -- and whose role is not Manager.
+
+    SELECT e.name, e.role, e.building, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building IN ('1e', '2w')
+    AND e.years_employed > 5
+    AND e.role != 'Manager';
+
+-- Explanation: Match employees to buildings, then find employees in 1e or 2w
+-- with more than 5 years of employment who are not Managers.
