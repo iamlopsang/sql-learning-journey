@@ -341,3 +341,16 @@
 
 -- Explanation: Match employees to buildings, then find employees in 1e or 2w
 -- with more than 5 years of employment who are not Managers.
+
+    --29. Find all employees whose building capacity is between 16 and 24, but exclude Artists whose
+    -- names start with S.
+
+    SELECT e.name, e.role, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE b.capacity BETWEEN 16 AND 24
+    AND e.name NOT LIKE 'S%';
+
+-- Explanation: Match employees to buildings, then find employees in buildings
+-- with capacity from 16 to 24, excluding names that start with S.
