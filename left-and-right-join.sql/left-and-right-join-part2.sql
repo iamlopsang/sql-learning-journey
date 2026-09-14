@@ -382,3 +382,17 @@
 
 -- Explanation: Match employees to buildings, then filter names containing "a",
 -- employees with at least 6 years, and buildings with capacity of 20 or more.
+
+    --32. Find employees who do not work in building 1e, whose names end with J., and who have worked
+    -- for more than 5 years.
+
+    SELECT e.name, e.role, e.building, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.name LIKE '%J.'
+    AND e.years_employed > 5
+    AND e.building != '1e';
+
+-- Explanation: Match employees to buildings, then find employees whose names
+-- end with J., who have more than 5 years of employment, and don't work in 1e.
