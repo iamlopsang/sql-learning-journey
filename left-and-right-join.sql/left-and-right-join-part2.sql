@@ -428,4 +428,17 @@
 -- with 3–7 years, building capacity of 20–32, and names without "a".
 
 
+    --35. Find employees whose building has a capacity of 16 or 32, who have worked for more than 5 years, 
+    -- and whose name does not start with S.
+
+    SELECT e.name, e.role, e.building, e.years_employed, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.name NOT LIKE 'S%'
+    AND e.years_employed > 5
+    AND b.capacity IN (16, 32);
+
+-- Explanation: Match employees to buildings, then find employees in buildings
+-- with capacity 16 or 32, more than 5 years of experience, and names not starting with S.
 
