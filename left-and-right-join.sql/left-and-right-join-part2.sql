@@ -410,3 +410,22 @@
 
 -- Explanation: Match employees to buildings, then find non-Managers whose names
 -- start with B, D, or S and whose building capacity is between 20 and 32.
+
+
+    --34. Find employees who have worked for 3–7 years inclusive, whose role is Engineer or Artist,
+    -- and whose building has a capacity between 20 and 32. Exclude employees whose names contain a.
+
+    SELECT e.name, e.role, e.years_employed, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.name NOT LIKE '%a%'
+    AND e.years_employed BETWEEN 3 AND 7
+    AND e.role IN ('Engineer', 'Artist')
+    AND b.capacity BETWEEN 20 AND 32;
+
+-- Explanation: Match employees to buildings, then filter Engineers or Artists
+-- with 3–7 years, building capacity of 20–32, and names without "a".
+
+
+
