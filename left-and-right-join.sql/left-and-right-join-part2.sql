@@ -396,3 +396,17 @@
 
 -- Explanation: Match employees to buildings, then find employees whose names
 -- end with J., who have more than 5 years of employment, and don't work in 1e.
+
+    --33. Find employees who are not Managers, whose names start with B, D, or S, and who work in a building
+    -- with capacity between 20 and 32.
+
+    SELECT e.name, e.role, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE (e.name LIKE 'B%' OR e.name LIKE 'D%' OR e.name LIKE 'S%')
+    AND e.role != 'Manager'
+    AND b.capacity BETWEEN 20 AND 32;
+
+-- Explanation: Match employees to buildings, then find non-Managers whose names
+-- start with B, D, or S and whose building capacity is between 20 and 32.
