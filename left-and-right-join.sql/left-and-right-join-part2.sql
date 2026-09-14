@@ -368,3 +368,17 @@
 -- Explanation: Match employees to buildings, then find employees in buildings
 -- with capacity greater than 20 or employees who are Managers, while excluding
 -- anyone with less than 3 years of employment.
+
+    --31. Find employees whose name contains the letter a, who have worked for at least 6 years,
+    -- and whose building has a capacity of 20 or more.
+
+    SELECT e.name, e.role, e.years_employed, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.name LIKE '%a%'
+    AND e.years_employed >= 6
+    AND b.capacity >= 20;
+
+-- Explanation: Match employees to buildings, then filter names containing "a",
+-- employees with at least 6 years, and buildings with capacity of 20 or more.
