@@ -498,3 +498,16 @@
 -- Explanation: Match employees to their buildings, then find Engineers
 -- outside 2w who have worked between 2 and 6 years.
 
+    --40. Find employees whose name starts with M, S, or T, whose role is not Engineer, and whose building
+    -- has a capacity greater than 16.
+
+    SELECT e.name, e.role, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE (e.name LIKE 'M%' OR e.name LIKE 'S%' OR e.name LIKE 'T%')
+    AND e.role != 'Engineer'
+    AND b.capacity > 16;
+
+-- Explanation: Match employees to buildings, then find non-Engineers whose names
+-- start with M, S, or T and whose building capacity is greater than 16.
