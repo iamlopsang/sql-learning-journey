@@ -484,3 +484,17 @@
 -- Explanation: Match employees to buildings, then find employees whose
 -- building capacity is 24 or 32 and whose name contains "o".
 
+    --39. Find employees whose building is not 2w, whose role is Engineer, and whose years employed is 
+    -- between 2 and 6 inclusive.
+
+    SELECT e.name, e.role, e.building, e.years_employed, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE e.building != '2w'
+    AND e.role = 'Engineer'
+    AND e.years_employed BETWEEN 2 AND 6;
+
+-- Explanation: Match employees to their buildings, then find Engineers
+-- outside 2w who have worked between 2 and 6 years.
+
