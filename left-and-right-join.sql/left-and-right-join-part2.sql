@@ -442,3 +442,15 @@
 -- Explanation: Match employees to buildings, then find employees in buildings
 -- with capacity 16 or 32, more than 5 years of experience, and names not starting with S.
 
+    --36. Find every employee, but show the building's capacity only when the capacity is 24 or higher.
+    -- If the building capacity is below 24, the capacity should appear as NULL.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity >= 24;
+
+-- Explanation: Match every employee to a building with capacity 24 or higher;
+-- employees in smaller buildings still remain, but capacity becomes NULL.
+
