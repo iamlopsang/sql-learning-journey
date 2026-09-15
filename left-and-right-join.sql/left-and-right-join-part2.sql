@@ -454,3 +454,20 @@
 -- Explanation: Match every employee to a building with capacity 24 or higher;
 -- employees in smaller buildings still remain, but capacity becomes NULL.
 
+    --37. Find every employee, but only match their building information when:
+
+    -- the building capacity is between 20 and 32, AND
+    -- the employee has worked for at least 6 years.
+    -- If either condition is not satisfied, the employee should still appear, but the building 
+    -- information should be NULL.
+
+    SELECT b.capacity, e.name, b.building_name, e.years_employed
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    AND b.capacity BETWEEN 20 AND 32
+    AND e.years_employed >= 6;
+
+-- Explanation: Match employees to their buildings only when the building
+-- capacity is 20–32 and the employee has at least 6 years of employment.
+
