@@ -471,3 +471,16 @@
 -- Explanation: Match employees to their buildings only when the building
 -- capacity is 20–32 and the employee has at least 6 years of employment.
 
+    --38. Find employees who work in a building whose capacity is exactly 24 or 32, and whose name contains 
+    -- the letter o.
+
+    SELECT e.name, e.building, b.capacity
+    FROM buildings AS b
+    RIGHT JOIN employees AS e
+    ON b.building_name = e.building
+    WHERE b.capacity IN (24, 32)
+    AND e.name LIKE '%o%';
+
+-- Explanation: Match employees to buildings, then find employees whose
+-- building capacity is 24 or 32 and whose name contains "o".
+
