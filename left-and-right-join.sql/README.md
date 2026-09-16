@@ -97,3 +97,27 @@
         | Manager                     | Scott K.   | 1e       | 9              |
         | Manager                     | Shirlee M. | 1e       | 3              |
         | Manager                     | Daria O.   | 2w       | 6              |
+
+    ## LEFT JOIN
+        ## What is LEFT JOIN?
+
+        A LEFT JOIN returns:
+
+        All rows from the left table, plus matching rows from the right table.
+        If there is no matching row in the right table, SQL returns NULL for the right table's columns.
+
+            Basic Syntax
+            SELECT columns
+            FROM table1 AS t1
+            LEFT JOIN table2 AS t2
+            ON t1.column = t2.column;
+
+        The table after FROM is the left table.
+
+    The table after LEFT JOIN is the right table.
+
+        Example of LEFT JOIN
+        SELECT b.building_name, b.capacity, e.name
+        FROM buildings AS b
+        LEFT JOIN employees AS e
+        ON b.building_name = e.building;
