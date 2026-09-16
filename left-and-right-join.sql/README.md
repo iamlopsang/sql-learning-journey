@@ -1,3 +1,31 @@
+=============== SQL LESSON - LEFT AND RIGHT JOIN ===================
+
+    This lesson focuses on using 'LEFT JOIN' and 'RIGHT JOIN' to combine related data from two tables:
+        > buildings
+        > employees
+
+    The main goal of this lesson is to understand how 'JOIN' direction affects which records are preserved, how unmatched records produce NULL values, and how filtering conditions can change the result of an outer join.
+
+        This lesson also practices:
+
+        > ON
+        > WHERE
+        > AND
+        > OR
+        > NOT
+        > IN
+        > BETWEEN
+        > LIKE
+        > NOT LIKE
+        > IS NULL
+        > ORDER BY
+        > DISTINCT
+        > Table aliases
+        > Filtering joined data
+        > NULL handling
+        
+
+
 
 
         | Table: buildings (Read-only) |
