@@ -24,6 +24,16 @@
         > Filtering joined data
         > NULL handling
         
+    ##  Introduction to OUTER JOIN
+
+        Unlike INNER JOIN, which returns only matching records from both tables, LEFT JOIN and RIGHT JOIN can keep records that do not have a match.
+
+        The two types covered in this lesson are:
+
+        > LEFT JOIN
+        > RIGHT JOIN
+
+        The main difference is which table is preserved.
 
 
 
