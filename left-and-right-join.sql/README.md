@@ -35,6 +35,25 @@
 
         The main difference is which table is preserved.
 
+        ## Tables Used
+
+          This lesson uses two tables:
+
+            buildings
+                |
+                | building_name = building
+                |
+            employees
+
+        The tables are related through the building name.
+
+            For example:
+
+            buildings.building_name
+                    ↓
+            employees.building
+
+        This relationship allows us to find which employees work in which buildings.
 
 
 
