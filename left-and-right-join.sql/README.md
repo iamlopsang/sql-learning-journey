@@ -143,6 +143,25 @@
 
         ## Think:
 
-        LEFT JOIN = Keep everything from the LEFT table
+            LEFT JOIN = Keep everything from the LEFT table
+
+    ## RIGHT JOIN
+    What is RIGHT JOIN?
+
+        A RIGHT JOIN returns:
+
+        All rows from the right table, plus matching rows from the left table.
+
+        If there is no matching row in the left table, SQL returns NULL for the left table's columns.
+
+            Basic Syntax
+            SELECT columns
+            FROM table1 AS t1
+            RIGHT JOIN table2 AS t2
+            ON t1.column = t2.column;
+
+        The table after RIGHT JOIN is the table that is preserved.
+
+        
 
     
