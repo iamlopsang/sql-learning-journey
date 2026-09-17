@@ -121,3 +121,28 @@
         FROM buildings AS b
         LEFT JOIN employees AS e
         ON b.building_name = e.building;
+
+    Explanation: Keep every building and match employees who work in each building.
+
+    Here:
+
+        buildings = LEFT table
+        employees = RIGHT table
+
+    Therefore, all buildings are preserved.
+
+        If a building has no matching employee, the employee columns will contain NULL.
+
+        LEFT JOIN Visual Idea
+
+        LEFT TABLE                    RIGHT TABLE
+
+        buildings                      employees
+        ↓                               ↓
+        ALL          +          MATCHING ROWS
+
+        ## Think:
+
+        LEFT JOIN = Keep everything from the LEFT table
+
+    
