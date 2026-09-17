@@ -212,3 +212,23 @@
             Keeps:
                 ALL employees
                     
+    ## Important Rule: JOIN Direction
+
+        The word LEFT or RIGHT refers to the position of the table in the query, not whether the table is naturally "important."
+
+            For example:
+
+            FROM buildings AS b
+            LEFT JOIN employees AS e
+
+        buildings is the left table.
+
+            FROM buildings AS b
+            RIGHT JOIN employees AS e
+
+        employees is the right table.
+
+        Therefore:
+
+            LEFT JOIN  → preserve the table on the LEFT
+            RIGHT JOIN → preserve the table on the RIGHT                
