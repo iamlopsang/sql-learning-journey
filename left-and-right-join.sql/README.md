@@ -176,5 +176,16 @@
 
         Explanation: Keep every employee and match their building information. 
 
+        Here:
 
-    
+        buildings = LEFT table
+        employees = RIGHT table
+
+        Because employees is on the right side:
+
+        "Every employee is preserved."
+
+        If an employee does not have a matching building, the building columns will contain NULL.
+
+
+            
