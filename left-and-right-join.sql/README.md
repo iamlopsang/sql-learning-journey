@@ -187,5 +187,28 @@
 
         If an employee does not have a matching building, the building columns will contain NULL.
 
+    ##  LEFT JOIN vs RIGHT JOIN
 
-            
+        The easiest way to remember the difference:
+
+        JOIN	Preserves
+        LEFT JOIN	Left table
+        RIGHT JOIN	Right table
+        INNER JOIN	Only matching rows
+
+        ## LEFT JOIN:
+
+            FROM buildings AS b
+            LEFT JOIN employees AS e
+
+            Keeps:
+                ALL buildings
+
+        ## RIGHT JOIN:
+
+            FROM buildings AS b
+            RIGHT JOIN employees AS e
+
+            Keeps:
+                ALL employees
+                    
