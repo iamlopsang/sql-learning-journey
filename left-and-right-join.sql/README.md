@@ -251,4 +251,41 @@
 
     Both approaches preserve all employees.
 
-    This is useful to understand because many SQL developers prefer LEFT JOIN for consistency, but knowing RIGHT JOIN helps you understand how JOIN direction works.           
+    This is useful to understand because many SQL developers prefer LEFT JOIN for consistency, but knowing RIGHT JOIN helps you understand how JOIN direction works.  
+
+    ## Understanding NULL with OUTER JOIN:
+
+        NULL means that SQL could not find a matching value for that side of the JOIN.
+
+        For example:
+
+            SELECT b.building_name, e.name
+            FROM buildings AS b
+            LEFT JOIN employees AS e
+            ON b.building_name = e.building;
+
+    If a building has no employee:
+
+        building_name    name
+        -------------    ----
+        2e               NULL
+
+    The building still appears because LEFT JOIN preserves the buildings.
+
+        ## Checking for NULL:-
+
+        To check for NULL, use:
+
+        IS NULL
+
+        Example:
+
+            SELECT e.name, b.capacity
+            FROM buildings AS b
+            RIGHT JOIN employees AS e
+            ON b.building_name = e.building
+            WHERE b.capacity IS NULL;   
+
+        Explanation: Find employees whose building information did not match a building.
+    
+          
