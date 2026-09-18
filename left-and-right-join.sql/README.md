@@ -319,3 +319,21 @@
         Explanation: Keep every employee, but match building information only when capacity is above 20.
 
     Employees whose building has capacity 20 or less can still appear, but the building information can become NULL.
+
+        Example: Condition in WHERE
+        SELECT e.name, e.building, b.capacity
+        FROM buildings AS b
+        RIGHT JOIN employees AS e
+        ON b.building_name = e.building
+        WHERE b.capacity > 20;
+
+    Explanation: Match employees to buildings first, then keep only rows where capacity is above 20.
+
+    This can remove employees whose building does not satisfy the condition.
+
+    ## Note:- (Important idea)
+    
+        ON    → controls matching
+        WHERE → filters the final result
+
+        This distinction is especially important when working with LEFT JOIN and RIGHT JOIN.
