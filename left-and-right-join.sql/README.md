@@ -231,4 +231,24 @@
         Therefore:
 
             LEFT JOIN  → preserve the table on the LEFT
-            RIGHT JOIN → preserve the table on the RIGHT                
+            RIGHT JOIN → preserve the table on the RIGHT     
+
+    ## RIGHT JOIN Can Be Rewritten as LEFT JOIN:
+
+        A useful SQL concept is that a RIGHT JOIN can usually be rewritten as a LEFT JOIN by switching the order of the tables.
+
+        For example:
+
+            FROM buildings AS b
+            RIGHT JOIN employees AS e
+            ON b.building_name = e.building;
+
+        can be written as:
+
+            FROM employees AS e
+            LEFT JOIN buildings AS b
+            ON b.building = e.building_name;
+
+    Both approaches preserve all employees.
+
+    This is useful to understand because many SQL developers prefer LEFT JOIN for consistency, but knowing RIGHT JOIN helps you understand how JOIN direction works.           
