@@ -287,5 +287,19 @@
             WHERE b.capacity IS NULL;   
 
         Explanation: Find employees whose building information did not match a building.
-    
-          
+
+    ##  Note:-
+
+        Do not use:
+
+        = NULL
+
+        Instead use:
+
+        IS NULL
+
+        or:
+
+        IS NOT NULL
+
+
