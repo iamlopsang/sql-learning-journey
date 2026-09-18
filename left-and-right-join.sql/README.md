@@ -302,4 +302,20 @@
 
         IS NOT NULL
 
+    ##  ON vs WHERE with LEFT and RIGHT JOIN:
 
+    This is one of the most important concepts from this lesson.
+    A condition placed in ON can control which rows are matched while still preserving the main table.
+
+    A condition placed in WHERE filters the final result.
+
+        Example: Condition in ON
+        SELECT e.name, e.building, b.capacity
+        FROM buildings AS b
+        RIGHT JOIN employees AS e
+        ON b.building_name = e.building
+        AND b.capacity > 20;
+
+        Explanation: Keep every employee, but match building information only when capacity is above 20.
+
+    Employees whose building has capacity 20 or less can still appear, but the building information can become NULL.
