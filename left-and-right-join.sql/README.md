@@ -24,7 +24,7 @@
         > Filtering joined data
         > NULL handling
         
-    ##  Introduction to OUTER JOIN
+   ###  Introduction to OUTER JOIN
 
         Unlike INNER JOIN, which returns only matching records from both tables, LEFT JOIN and RIGHT JOIN can keep records that do not have a match.
 
@@ -55,7 +55,7 @@
 
         This relationship allows us to find which employees work in which buildings.
 
-    ## Table Overview 
+    ### Table Overview 
 
         Table Name: buildings
         Columns include:
@@ -98,7 +98,7 @@
         | Manager                     | Shirlee M. | 1e       | 3              |
         | Manager                     | Daria O.   | 2w       | 6              |
 
-    ## LEFT JOIN
+    ### LEFT JOIN
         ## What is LEFT JOIN?
 
         A LEFT JOIN returns:
@@ -148,7 +148,7 @@
 
             LEFT JOIN = Keep everything from the LEFT table
 
-    ## RIGHT JOIN
+    ### RIGHT JOIN
     What is RIGHT JOIN?
 
         A RIGHT JOIN returns:
@@ -187,7 +187,7 @@
 
         If an employee does not have a matching building, the building columns will contain NULL.
 
-    ##  LEFT JOIN vs RIGHT JOIN
+    ###  LEFT JOIN vs RIGHT JOIN
 
         The easiest way to remember the difference:
 
@@ -233,7 +233,7 @@
             LEFT JOIN  → preserve the table on the LEFT
             RIGHT JOIN → preserve the table on the RIGHT     
 
-    ## RIGHT JOIN Can Be Rewritten as LEFT JOIN:
+    ### RIGHT JOIN Can Be Rewritten as LEFT JOIN:
 
         A useful SQL concept is that a RIGHT JOIN can usually be rewritten as a LEFT JOIN by switching the order of the tables.
 
@@ -302,7 +302,7 @@
 
         IS NOT NULL
 
-    ##  ON vs WHERE with LEFT and RIGHT JOIN:
+    ###  ON vs WHERE with LEFT and RIGHT JOIN:
 
     This is one of the most important concepts from this lesson.
     A condition placed in ON can control which rows are matched while still preserving the main table.
@@ -337,3 +337,34 @@
         WHERE → filters the final result
 
         This distinction is especially important when working with LEFT JOIN and RIGHT JOIN.
+
+    ### Filtering with WHERE:
+
+        After joining the tables, WHERE can be used to filter the results.
+
+            Example:
+
+                SELECT e.name, e.role, e.building
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                WHERE e.role = 'Engineer';
+
+            Explanation: Match employees to buildings, then show only Engineers.
+
+    ### Using AND:
+
+        AND requires all conditions to be true.
+
+            Example:
+
+                SELECT e.name, e.role, e.years_employed
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                WHERE e.role = 'Engineer'
+                AND e.years_employed >= 4;
+
+            Explanation: Show Engineers who have worked for at least 4 years.
+
+    
