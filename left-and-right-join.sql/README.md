@@ -468,5 +468,21 @@
             OR e.name LIKE 'D%'
             OR e.name LIKE 'S%'
 
-            
+    ### DISTINCT with JOINs:
+
+        DISTINCT removes duplicate rows from the result.
+
+            Example:
+
+                SELECT DISTINCT b.building_name, b.capacity
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building;
+
+        Explanation: Show each building and capacity only once.
+
+        It is useful when a JOIN produces repeated building information because multiple employees work in the same building.
+
+    
+
 
