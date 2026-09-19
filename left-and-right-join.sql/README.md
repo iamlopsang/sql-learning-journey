@@ -424,4 +424,48 @@
 
             e.building IN ('1e', '2w')
 
-    
+    ### Using BETWEEN:
+
+        BETWEEN checks whether a value falls within an inclusive range.
+
+            Example:
+
+                SELECT e.name, e.years_employed
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                WHERE e.years_employed BETWEEN 3 AND 7;
+
+    ### Using LIKE and Wildcards:
+
+        => LIKE is useful for pattern matching.
+
+            Starts with
+            e.name LIKE 'D%'
+
+        Means the name starts with D.
+
+            Ends with
+            e.name LIKE '%a'
+
+        Means the name ends with a.
+
+            Contains
+            e.name LIKE '%a%'
+
+        Means the name contains a anywhere.
+
+            Does not contain
+            e.name NOT LIKE '%a%'
+
+        Means the name does not contain a.
+
+        ## Multiple patterns:-
+
+        For several different patterns, use OR:
+
+            WHERE e.name LIKE 'B%'
+            OR e.name LIKE 'D%'
+            OR e.name LIKE 'S%'
+
+            
