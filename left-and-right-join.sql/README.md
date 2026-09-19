@@ -401,4 +401,27 @@
 
         The parentheses make the intended logic clear.
 
+    ### Using IN:
+
+        IN is useful when checking several exact values.
+
+            Example:
+
+                SELECT e.name, e.role, e.building
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                WHERE e.building IN ('1e', '2w');
+
+            Explanation: Show employees who work in either 1e or 2w.
+
+        Instead of:
+
+            e.building = '1e'
+            OR e.building = '2w'
+
+            we can use:
+
+            e.building IN ('1e', '2w')
+
     
