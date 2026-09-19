@@ -367,4 +367,38 @@
 
             Explanation: Show Engineers who have worked for at least 4 years.
 
+    Both conditions must be satisfied.
+
+    ### Using OR:
+
+        OR allows either condition to be true.
+
+            Example:
+
+                SELECT e.name, e.role
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                WHERE e.role = 'Engineer'
+                OR e.role = 'Artist';
+
+            Explanation: Show employees who are either Engineers or Artists.
+
+    ### AND + OR with Parentheses:
+
+        Parentheses are important when combining AND and OR.
+
+            Example:
+
+                SELECT e.name, e.role, e.years_employed
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                WHERE (e.role = 'Engineer' AND e.years_employed > 3)
+                OR (e.role = 'Artist' AND e.years_employed >= 7);
+
+            Explanation: Find experienced Engineers or experienced Artists using two separate conditions.
+
+        The parentheses make the intended logic clear.
+
     
