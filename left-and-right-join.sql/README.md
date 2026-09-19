@@ -483,6 +483,24 @@
 
         It is useful when a JOIN produces repeated building information because multiple employees work in the same building.
 
-    
+    ### ORDER BY with JOINs:
+
+        ORDER BY can sort the results after joining.
+
+            Example:
+
+                SELECT e.name, e.years_employed, b.capacity
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+                ON b.building_name = e.building
+                ORDER BY e.years_employed DESC;
+
+        Explanation: Display employees from the highest number of years employed to the lowest.
+
+    Sorting:
+
+        ASC  → Lowest to highest
+        DESC → Highest to lowest
+
 
 
