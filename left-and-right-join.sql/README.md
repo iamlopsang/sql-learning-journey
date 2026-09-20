@@ -556,6 +556,32 @@
         LEFT JOIN	All rows from the left table + matches
         RIGHT JOIN	All rows from the right table + matches
 
-    
+
+##  Queries and Solutions:
+
+    All practice queries for this lesson are written in:
+
+    > 📄 left-right-join.sql
+    > 📄 left-right-join-part2.sql
+
+    The SQL file contains practice questions and solutions covering:
+
+    > Basic LEFT JOIN
+    > Basic RIGHT JOIN
+    > Filtering joined data
+    > ON vs WHERE
+    > NULL
+    > IS NULL
+    > IN
+    > BETWEEN
+    > LIKE
+    > NOT LIKE
+    > AND
+    > OR
+    > NOT
+    > DISTINCT
+    > ORDER BY
+    > Multiple filtering conditions
+    > Tricky filtering logic
 
 
