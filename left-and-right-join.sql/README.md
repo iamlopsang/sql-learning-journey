@@ -638,3 +638,10 @@
         > Conditional logic
         > Data filtering
 
+    ### Goal:
+
+   >  The goal of this lesson is to build a strong foundation in LEFT JOIN and RIGHT JOIN and understand how JOIN direction determines which records remain in the result.
+
+   > The exercises also strengthen SQL filtering and logical reasoning by combining JOINs with conditions such as AND, OR, NOT, IN, BETWEEN, LIKE, and NOT LIKE.
+
+   > The focus is not only on writing JOIN syntax, but on understanding which records are preserved, how unmatched records are represented, and how filtering conditions affect the final result.
