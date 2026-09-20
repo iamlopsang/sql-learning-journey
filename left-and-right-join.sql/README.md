@@ -502,5 +502,26 @@
         ASC  → Lowest to highest
         DESC → Highest to lowest
 
+### Qualifying Columns with Table Aliases:
+
+    When multiple tables contain related column names, table aliases make it clear which table a column belongs to.
+
+        Example:
+
+            SELECT e.name, e.building, b.building_name, b.capacity
+            FROM buildings AS b
+            RIGHT JOIN employees AS e
+            ON b.building_name = e.building;
+
+        Here:
+
+        e.name          → employees.name
+        e.building      → employees.building
+        b.building_name → buildings.building_name
+        b.capacity      → buildings.capacity
+
+    This is especially important when writing JOIN queries because using the wrong table's column can change the result or cause an error.
+
+    
 
 
