@@ -584,4 +584,37 @@
     > Multiple filtering conditions
     > Tricky filtering logic
 
+### What I Have Learned:
+
+    > Combining related data from two tables through `LEFT JOIN` and `RIGHT JOIN`,
+
+    > Identifying the preserved table based on the direction of an outer JOIN,
+
+    > Defining table relationships precisely through the `ON` clause,
+
+    > Handling unmatched records and interpreting `NULL` values in outer JOIN results,
+
+    > Distinguishing between `ON` and `WHERE` conditions when filtering joined data,
+
+    > Applying `AND`, `OR`, and `NOT` to construct more precise filtering logic,
+
+    > Controlling complex `AND`/`OR` conditions with parentheses to maintain the intended logic,
+
+    > Targeting multiple exact values efficiently with the `IN` operator,
+
+    > Restricting results to inclusive value ranges with the `BETWEEN` operator,
+
+    > Searching for specific text patterns through `LIKE` and `NOT LIKE` with wildcards,
+
+    > Eliminating duplicate rows from JOIN results with `DISTINCT`,
+
+    > Organizing joined query results according to specific columns with `ORDER BY`,
+
+    > Qualifying columns with table aliases to clearly identify their source table,
+
+    > Recognizing that a `RIGHT JOIN` can be expressed as a `LEFT JOIN` by reversing the table order,
+
+    > Developing logical reasoning for filtering and retrieving relevant records from related datasets.
+
+
 
