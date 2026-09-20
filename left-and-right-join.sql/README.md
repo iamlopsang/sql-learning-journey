@@ -548,4 +548,14 @@
 
             Keep ALL employees.
 
+    ### JOIN Comparison:
+
+        JOIN Type	What it returns,
+
+        INNER JOIN	Matching rows from both tables
+        LEFT JOIN	All rows from the left table + matches
+        RIGHT JOIN	All rows from the right table + matches
+
+    
+
 
