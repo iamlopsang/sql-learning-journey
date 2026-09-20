@@ -616,5 +616,25 @@
 
     > Developing logical reasoning for filtering and retrieving relevant records from related datasets.
 
+    ### Skills Covered:
 
+        > LEFT JOIN
+        > RIGHT JOIN
+        > INNER JOIN comparison
+        > JOIN direction
+        > ON clause
+        > WHERE clause
+        > NULL handling
+        > IS NULL / IS NOT NULL
+        > Table aliases
+        > AND / OR / NOT
+        > IN
+        > BETWEEN
+        > LIKE / NOT LIKE
+        > DISTINCT
+        > ORDER BY
+        > ASC / DESC
+        > Outer JOIN filtering
+        > Conditional logic
+        > Data filtering
 
