@@ -522,6 +522,30 @@
 
     This is especially important when writing JOIN queries because using the wrong table's column can change the result or cause an error.
 
-    
+    ### Choosing LEFT JOIN or RIGHT JOIN
+
+        A simple way to decide:
+
+        ## Use LEFT JOIN when:-
+
+            You want to keep every row from the table after FROM.
+
+                FROM buildings AS b
+                LEFT JOIN employees AS e
+
+            Think:
+
+            Keep ALL buildings.
+
+        ## Use RIGHT JOIN when:-
+
+            You want to keep every row from the table after RIGHT JOIN.
+
+                FROM buildings AS b
+                RIGHT JOIN employees AS e
+
+            Think:
+
+            Keep ALL employees.
 
 
