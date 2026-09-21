@@ -38,3 +38,18 @@ WHERE e.manager_id = m.employee_id;
 -- e represents the employee, and m represents the manager.
 -- Match e.manager_id with m.employee_id to find each employee's manager.
 -- Use e.department because the question asks for the employee's department.
+
+    -- 4. Find employees whose manager works in the IT department.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name,
+    m.department AS manager_department
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND m.department = 'IT';
+
+-- Explanation: Use the employees table twice.
+-- e represents the employee, and m represents the manager.
+-- Match e.manager_id with m.employee_id to find the employee's manager.
+-- Filter m.department to find managers who work in the IT department.
+
