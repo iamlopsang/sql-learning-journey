@@ -53,3 +53,23 @@ WHERE e.manager_id = m.employee_id;
 -- Match e.manager_id with m.employee_id to find the employee's manager.
 -- Filter m.department to find managers who work in the IT department.
 
+    -- 5. Find employees who have the same manager as another employee.
+
+    SELECT e.name AS employee_name,
+    e2.name AS other_employee_name,
+    m.name AS manager_name
+    FROM employees AS e,
+    employees AS e2,
+    employees AS m
+    WHERE e.manager_id = e2.manager_id
+    AND e.manager_id = m.employee_id
+    AND e.employee_id < e2.employee_id;
+
+-- Explanation: Use the employees table three times.
+-- e represents the first employee.
+-- e2 represents the other employee.
+-- m represents their manager.
+-- Match e.manager_id and e2.manager_id to find employees with the same manager.
+-- Match e.manager_id with m.employee_id to find the manager's name.
+-- e.employee_id < e2.employee_id prevents employees from being matched with themselves
+-- and prevents the same pair from appearing twice in reverse order.
