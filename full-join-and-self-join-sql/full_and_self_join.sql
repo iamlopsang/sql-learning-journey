@@ -103,3 +103,16 @@ WHERE e.manager_id = m.employee_id;
 -- Explanation: e represents the employee and m represents the manager.
 -- Match e.manager_id with m.employee_id to connect the employee to the manager.
 -- Filter m.name to find employees whose manager is Alice.
+
+    -- 9. Find employees whose manager works in the IT department.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name,
+    m.department AS manager_department
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND m.department = 'IT';
+
+-- Explanation: e represents the employee and m represents the manager.
+-- Match e.manager_id with m.employee_id to find the manager.
+-- Filter m.department to find managers who work in IT.
