@@ -73,3 +73,11 @@ WHERE e.manager_id = m.employee_id;
 -- Match e.manager_id with m.employee_id to find the manager's name.
 -- e.employee_id < e2.employee_id prevents employees from being matched with themselves
 -- and prevents the same pair from appearing twice in reverse order.
+
+    -- 6. Find the names of all employees who have a manager.
+
+    SELECT name AS employee_name
+    FROM employees
+    WHERE manager_id IS NOT NULL;
+
+-- Explanation: An employee has a manager when their manager_id is not NULL.
