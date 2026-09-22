@@ -85,9 +85,21 @@ WHERE e.manager_id = m.employee_id;
     -- 7. Find each employee and their manager.
 
     SELECT e.name AS employee_name,
-        m.name AS manager_name
+    m.name AS manager_name
     FROM employees AS e, employees AS m
     WHERE e.manager_id = m.employee_id;
 
 -- Explanation: e represents the employee and m represents the manager.
 -- Match the employee's manager_id with the manager's employee_id.
+
+    -- 8. Find all employees who report directly to Alice.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND m.name = 'Alice';
+
+-- Explanation: e represents the employee and m represents the manager.
+-- Match e.manager_id with m.employee_id to connect the employee to the manager.
+-- Filter m.name to find employees whose manager is Alice.
