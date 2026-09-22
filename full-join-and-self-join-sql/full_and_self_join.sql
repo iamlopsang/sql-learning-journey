@@ -116,3 +116,17 @@ WHERE e.manager_id = m.employee_id;
 -- Explanation: e represents the employee and m represents the manager.
 -- Match e.manager_id with m.employee_id to find the manager.
 -- Filter m.department to find managers who work in IT.
+
+    -- 10. Find employees whose manager is also an employee in the same department.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name,
+    e.department AS department
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.department = m.department;
+
+-- Explanation: e represents the employee and m represents the manager.
+-- Match e.manager_id with m.employee_id to find the manager.
+-- Compare e.department and m.department to find employees
+-- whose manager works in the same department.
