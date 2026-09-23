@@ -141,3 +141,14 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: e represents the employee and m represents the manager.
 -- First find employee 2, then match their manager_id with the manager's employee_id.
+
+    -- 12. Find the name and department of each employee's manager.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name,
+    m.department AS manager_department
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id;
+
+-- Explanation: Match each employee's manager_id with the manager's employee_id.
+-- m.name and m.department give us the manager's information.
