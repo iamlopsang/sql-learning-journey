@@ -152,3 +152,16 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: Match each employee's manager_id with the manager's employee_id.
 -- m.name and m.department give us the manager's information.
+
+    -- 13. Find employees whose department is different from their manager's department.
+
+    SELECT e.name AS employee_name,
+    e.department AS employee_department,
+    m.name AS manager_name,
+    m.department AS manager_department
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.department <> m.department;
+
+-- Explanation: Match each employee with their manager.
+-- Then compare the employee's department with the manager's department.
