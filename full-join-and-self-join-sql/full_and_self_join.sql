@@ -130,3 +130,14 @@ WHERE e.manager_id = m.employee_id;
 -- Match e.manager_id with m.employee_id to find the manager.
 -- Compare e.department and m.department to find employees
 -- whose manager works in the same department.
+
+    -- 11. Find the employee whose employee_id is 2 and display their manager.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.employee_id = 2
+    AND e.manager_id = m.employee_id;
+
+-- Explanation: e represents the employee and m represents the manager.
+-- First find employee 2, then match their manager_id with the manager's employee_id.
