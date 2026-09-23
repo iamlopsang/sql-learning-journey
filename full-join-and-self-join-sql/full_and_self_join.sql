@@ -166,7 +166,7 @@ WHERE e.manager_id = m.employee_id;
 -- Explanation: Match each employee with their manager.
 -- Then compare the employee's department with the manager's department.
 
-    -- 4. Find employees in the HR department and display their manager's name.
+    -- 14. Find employees in the HR department and display their manager's name.
 
     SELECT e.name AS employee_name,
     m.name AS manager_name
@@ -176,3 +176,19 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: Match each employee with their manager.
 -- Filter e.department because we want employees who work in HR.
+
+    -- 15. Find Bob's manager and that manager's manager.
+
+    SELECT e.name AS employee_name,
+        m.name AS manager_name,
+        mm.name AS manager_manager_name
+    FROM employees AS e,
+        employees AS m,
+        employees AS mm
+    WHERE e.manager_id = m.employee_id
+    AND m.manager_id = mm.employee_id
+    AND e.name = 'Bob';
+
+-- Explanation: e represents Bob, m represents Bob's manager,
+-- and mm represents Bob's manager's manager.
+-- First connect Bob to Alice, then connect Alice to her manager.
