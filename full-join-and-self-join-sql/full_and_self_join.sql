@@ -192,3 +192,19 @@ WHERE e.manager_id = m.employee_id;
 -- Explanation: e represents Bob, m represents Bob's manager,
 -- and mm represents Bob's manager's manager.
 -- First connect Bob to Alice, then connect Alice to her manager.
+
+    -- 16. Find employees whose manager has the same department as Alice.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name
+    FROM employees AS e,
+    employees AS m,
+    employees AS a
+    WHERE e.manager_id = m.employee_id
+    AND a.name = 'Alice'
+    AND m.department = a.department;
+
+-- Explanation: e represents the employee, m represents the manager,
+-- and a represents Alice.
+-- First connect the employee to their manager.
+-- Then compare the manager's department with Alice's department.
