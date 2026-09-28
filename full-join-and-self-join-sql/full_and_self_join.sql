@@ -219,3 +219,14 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: e represents David and m represents his manager.
 -- Match David's manager_id with the manager's employee_id.
+
+    --18. Find Emma's manager and display both names.
+
+    SELECT e.name AS employee_name,
+        m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.name = 'Emma';
+
+-- Explanation: e represents Emma and m represents her manager.
+-- Match Emma's manager_id with the manager's employee_id.
