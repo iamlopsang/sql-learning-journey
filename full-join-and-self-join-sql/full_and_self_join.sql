@@ -208,3 +208,14 @@ WHERE e.manager_id = m.employee_id;
 -- and a represents Alice.
 -- First connect the employee to their manager.
 -- Then compare the manager's department with Alice's department.
+
+    --17. Find David's manager and display both names.
+
+    SELECT e.name AS employee_name,
+        m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.name = 'David';
+
+-- Explanation: e represents David and m represents his manager.
+-- Match David's manager_id with the manager's employee_id.
