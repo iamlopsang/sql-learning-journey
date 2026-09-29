@@ -241,3 +241,14 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: e represents Charlie and m represents his manager.
 -- Match Charlie's manager_id with the manager's employee_id.
+
+    -- 20. Find all employees who have a manager.
+
+    SELECT e.name AS employee_name,
+        m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.manager_id IS NOT NULL;
+
+-- Explanation: Match each employee with their manager.
+-- IS NOT NULL ensures that the employee has a manager.
