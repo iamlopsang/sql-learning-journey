@@ -245,7 +245,7 @@ WHERE e.manager_id = m.employee_id;
     -- 20. Find all employees who have a manager.
 
     SELECT e.name AS employee_name,
-        m.name AS manager_name
+    m.name AS manager_name
     FROM employees AS e, employees AS m
     WHERE e.manager_id = m.employee_id
     AND e.manager_id IS NOT NULL;
@@ -256,10 +256,21 @@ WHERE e.manager_id = m.employee_id;
     -- 21. Find all employees who report directly to Bob.
 
     SELECT e.name AS employee_name,
-        m.name AS manager_name
+    m.name AS manager_name
     FROM employees AS e, employees AS m
     WHERE e.manager_id = m.employee_id
     AND m.name = 'Bob';
 
 -- Explanation: Match each employee with their manager,
 -- then keep only employees whose manager is Bob.
+
+    -- 22. Find all employees whose manager is Alice.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND m.name = 'Alice';
+
+-- Explanation: Match each employee with their manager,
+-- then keep only employees whose manager's name is Alice.
