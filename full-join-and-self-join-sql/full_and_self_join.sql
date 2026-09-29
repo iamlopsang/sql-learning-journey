@@ -274,3 +274,14 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: Match each employee with their manager,
 -- then keep only employees whose manager's name is Alice.
+
+    -- 23. Find employees who work in the HR department and display their manager's name.
+
+    SELECT e.name AS employee_name,
+    m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.department = 'HR';
+
+-- Explanation: Match each employee with their manager,
+-- then filter employees who work in HR.
