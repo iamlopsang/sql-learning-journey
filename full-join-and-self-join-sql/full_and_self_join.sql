@@ -285,3 +285,19 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: Match each employee with their manager,
 -- then filter employees who work in HR.
+
+    -- 24. Find employees who work in a different department from their manager,
+    -- but whose manager works in IT.
+
+    SELECT e.name AS employee_name,
+        e.department AS employee_department,
+        m.name AS manager_name,
+        m.department AS manager_department
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND e.department <> m.department
+    AND m.department = 'IT';
+
+-- Explanation: Match each employee with their manager.
+-- Then find employees whose department differs from their manager's
+-- and whose manager works in IT.
