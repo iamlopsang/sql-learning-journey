@@ -252,3 +252,14 @@ WHERE e.manager_id = m.employee_id;
 
 -- Explanation: Match each employee with their manager.
 -- IS NOT NULL ensures that the employee has a manager.
+
+    -- 21. Find all employees who report directly to Bob.
+
+    SELECT e.name AS employee_name,
+        m.name AS manager_name
+    FROM employees AS e, employees AS m
+    WHERE e.manager_id = m.employee_id
+    AND m.name = 'Bob';
+
+-- Explanation: Match each employee with their manager,
+-- then keep only employees whose manager is Bob.
